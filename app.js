@@ -6,6 +6,7 @@ const MongoStore = require('connect-mongodb-session')(session)
 const csrf = require('csurf')
 const multer = require('multer')
 const app = express()
+const port = process.env.PORT || 3000
 
 let path = require('path')
 
@@ -161,7 +162,7 @@ mongoose.connect('mongodb+srv://prymususermain:prymususermain@test-cluster1.mxen
   }
 )
 .then(result => {
-    server.listen(3000)
+    server.listen(port)
 })
 .catch(err => {
     console.log(err)
