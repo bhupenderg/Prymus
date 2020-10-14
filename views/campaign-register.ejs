@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/campaign-register.css">
+    <title>PRYMUS</title>
+
+    
+</head>
+<body>
+
+    <div class="header-main">
+        <div class="top-header">
+            <div class="logo-container">
+                <img src="/images/Prymus-logo.PNG" alt="" class="logo">
+            </div>
+            <div class="navbar">
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="/" class="item">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.ejs/#about" class="item">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="item">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/webdesignanddevelopment" class="item">Web</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="seo" class="item">SEO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="smo" class="item">SMO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/myaccount" class="item">My Account</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="item chat-header">Chat Us</a>
+                  </li>
+                  <li>
+                    <form action="/logout" method="POST">
+                        <input type="submit" name="logout" value="Logout!">
+                    </form>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>     
+
+
+    <!-- contact heading -->
+
+    <div class="form-contact">
+        <div class="form-contact-heading">
+            <h1>tell us about your project</h1>
+        </div>
+        <div class="contact-form">
+            <form action="/campaignregister" method="POST" class="campaign-form" enctype="multipart/form-data">
+
+                <input type="tel" name="whatsapp_no" class="whatsapp_no" placeholder="Whatsapp No">
+                <input type="text" name="company_name" class="company_name" placeholder= "Company Name">
+                <input type="text" name="website" class="website" placeholder="Company Website">
+                <input type="text" name="position" class="position" placeholder=" Position">
+                <label for="Category">Business Category:</label>
+                <select class="form-control" name="category" style="width: 21%; height: 3.5%;">
+                    <option value="Doctor">Doctor</option>
+                    <option value="Shop Owner">Shop Owner</option>
+                    <option value="Dentist">Dentist</option>
+                    <option value="Businessman">Businessman</option>
+                    <option value="Book Seller">Book Seller</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="I.T Services">I.T Services</option>
+                    
+                  </select>
+                <label for="Facebook">Facebook Marketing</label>
+                <input type="range" min="0" max="10000" value="5000" name="facebook_marketing" class="facebook_marketing" id="facebook_marketing">
+                <output for="range" class="output-facebook"></output>
+                
+                <label for="Linkedin">Linkedin Marketing</label>
+                <input type="range" min="0" max="10000" value="5000" name="linkedin_marketing" class="linkedin_marketing" id="linkedin_marketing">
+                <output for="range" class="linkedin_marketing"></output>
+                
+                <label for="Instagram">Instagram Marketing</label>
+                <input type="range" min="0" max="10000" value="5000" name="instagram_marketing" class="instagram_marketing" id="instagram_marketing">
+                <output for="range" class="instagram_marketing"></output>
+                
+                <label for="Email">Email Marketing</label>
+                <input type="range" min="0" max="10000" value="5000" name="email_marketing" class="email_marketing" id="email_marketing">
+                <output for="range" class="email_marketing"></output>
+                
+                <label for="seo">SEO</label>
+                <input type="range" min="0" max="10000" value="5000" name="seo" class="seo" id="seo">
+                <output for="range" class="seo"></output>
+                
+                
+                <label for="smo">SMO</label>
+                <input type="range" min="0" max="10000" value="5000" name="smo" class="smo" id="smo">
+                <output for="range" class="smo"></output>
+
+                <label for="files">Upload logo/ creatives:</label>
+
+                <input type="file" name="image" id="image" class="image">
+
+                
+                
+                <input type="submit" name="submit" value="Submit!">
+                
+            </form>
+        </div>
+
+        <div class="total-container">
+            <h1 class="total_amount"></h1>
+        </div>
+        
+    </div>
+
+    
+
+    
+    
+    <!-- footer starts -->
+
+    <div class="footer-container">
+        <div class="footer">
+            <p>Copyright © 2020 Prymus Brandcom India Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- footer ends -->
+    
+<script>
+    
+    $('#facebook_marketing').on("input", function() {
+    $('.output-facebook').val(this.value );
+    }).trigger("change");
+
+    
+    $('#linkedin_marketing').on("input", function() {
+    $('.linkedin_marketing').val(this.value );
+    }).trigger("change");
+
+    $('#instagram_marketing').on("input", function() {
+    $('.instagram_marketing').val(this.value );
+    }).trigger("change");
+
+    $('#email_marketing').on("input", function() {
+    $('.email_marketing').val(this.value );
+    }).trigger("change");
+
+    $('#seo').on("input", function() {
+    $('.seo').val(this.value );
+    }).trigger("change");
+
+    $('#smo').on("input", function() {
+    $('.smo').val(this.value );
+    }).trigger("change");
+
+    
+</script>
+<script src="/js/campaign-register.js"></script> 
+</body>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/myplan.css">
+    
+        <title>PRYMUS</title>
+    </head>
+    <body>
+
+        <div class="header-main">
+            <div class="top-header">
+                <div class="logo-container">
+                    <img src="/images/Prymus-logo.PNG" alt="" class="logo">
+                </div>
+                <div class="navbar">
+                    <ul class="nav-items">
+                        <li class="nav-item">
+                            <a href="/" class="item">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.ejs/#about" class="item">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="item">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/webdesignanddevelopment" class="item">Web</a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="seo" class="item">SEO</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="smo" class="item">SMO</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="/myaccount" class="item">My Account</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="item chat-header">Chat Us</a>
+                      </li>
+                      <li>
+                        <form action="/logout" method="POST">
+                            <input type="submit" name="logout" value="Logout!">
+                        </form>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>      
+    
+    <!-- container-1 -->
+
+    <div class="container-1">
+        <div class="headings-container">
+            <h1>Congratulations, you have successfully created your plan.</h1>
+            <h2>Your plans includes:</h2>
+        </div>
+
+    <% myplan.forEach(plan => { %>
+    
+    <div class="data-container">
+        <div class="data-name">
+            <h3>Facebook Marketing:</h3>
+            <h3>Linkedin Marketing:</h3>
+            <h3>Instagrm Marketing:</h3>
+            <h3>Email Marketing:</h3>
+            <h3>SEO:</h3>
+            <h3>SMO:</h3>
+        </div>
+        <div class="data-value">
+            <h3 class="fb_value"><%= plan.facebook_marketing %></h3>
+            <h3 class="lnk_value"><%= plan.linkedin_marketing %></h3>
+            <h3 class="insta_value"><%= plan.instagram_marketing %></h3>
+            <h3 class="email_value"><%= plan.email_marketing %></h3>
+            <h3 class="seo_value"><%= plan.seo %></h3>
+            <h3 class="smo_value"><%= plan.smo %></h3>
+
+        </div>
+    </div> 
+
+    <div class="total-amount">
+        <h2 style="color: #000; font-size: 2vw;">The total sum of your plan is Rs <%= plan.total %> </h2>
+    </div>
+
+    <div class="payment">
+        <h1><a href="/payments">Review & Pay</a></h1>
+    </div>
+
+
+    <% }) %>   
+
+
+        
+    </div>
+
+    <!-- footer starts -->
+
+    <div class="footer-container">
+        <div class="footer">
+            <p>Copyright © 2020 Prymus Brandcom India Pvt. Ltd. All rights reserved.</p>
+        </div>
+    </div>
+
+    <% if (user) { %>
+        <div id="chat-wrapper" class="chat-wrapper shadow border-left border-right"></div>
+        <script src="/socket.io/socket.io.js"></script>
+    <% } %>
+
+<script src="/js/index.js"></script>  
+<script src="/js/chat.js"></script>
+
+    <!-- footer ends -->
+
+    <script>
+        let fb = document.querySelector('.fb_value').textContent
+        let link = document.querySelector('.lnk_value').textContent
+        let total = parseInt(fb) + parseInt(link)
+
+        let sum = document.querySelector('.sum').textContent = total
+        
+    </script>
+</body>
+</html>

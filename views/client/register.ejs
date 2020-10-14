@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/client-register.css">
+    
+
+    <title>PRYMUS</title>
+</head>
+<body>
+
+    <div class="header-main">
+        <div class="top-header">
+            <div class="logo-container">
+                <img src="/images/Prymus-logo.PNG" alt="" class="logo">
+            </div>
+            <div class="navbar">
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="/" class="item">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.ejs/#about" class="item">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/webdesignanddevelopment" class="item">Web</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/seo" class="item">SEO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/smo" class="item">SMO</a>
+                  </li>
+                    <li class="nav-item">
+                        <a href="/connect-with-us" class="item connect-btn">Connect With Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- container-1 register/login -->
+    <div class="container-1">
+        <div class="sign-up">
+            <h1>Register Here!</h1>
+            <div class="form-container-register">
+                <form action="/registerclient" method="POST" class="client-register">
+                    <input type="text" name="name" class="register-name" placeholder="Name">
+                    <input type="text" name="email" class="register-email" placeholder="Email">
+                    <input type="password" name="password" class="register-password" placeholder="Password">
+                    <input type="password" name="passwordConfirm" class="register-password-confirm" placeholder="Password-confirm">
+                    <input type="tel" name="phone" class="register-phone" placeholder="Phone No.">
+                    <input type="text" name="city" class="register-city" placeholder="City">
+                    <input type="text" name="state" class="register-state" placeholder="state">
+                    <input type="number" name="pincode" class="register-pincode" placeholder="Pin">
+                    <input type="text" name="country" class="register-country" placeholder="Country">
+                    <input type="submit" name="register" value="Register">
+                </form>
+            </div>
+
+            
+        </div>
+        <div class="sign-in">
+            <h1>Login Here!</h1>
+            <div class="form-container-login">
+                <form action="myaccount" method="POST" class="client-login">
+                    <input type="text" name="email" class="register-email" placeholder="Email">
+                    <input type="password" name="password" class="register-password" placeholder="Password">
+                    <input type="submit" name="login" value="Login">
+                    
+                </form>
+            </div>
+
+           
+        </div>
+    </div>
+    <!-- footer starts -->
+
+    
+     </body>
+     </html>
