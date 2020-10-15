@@ -9,4 +9,9 @@ router.post('/campaignregister', campaignController.createCampaign)
 router.get('/campaignregister', authController.mustBeLoggedIn, campaignController.getCampaign)
 
 
+router.get('/registeraffiliate', (req, res) => {
+    res.render('client/register')
+})
+
+
 module.exports = router;
