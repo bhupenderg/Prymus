@@ -22,7 +22,7 @@ body{
 }
 
 /* ----------- Non-Retina Screens ----------- */
-@media only screen and (min-width: 990px) { 
+@media only screen and (min-width: 999px) { 
 
 
     .header-main{
@@ -685,12 +685,12 @@ body{
 }
 
 
-@media only screen and (max-width: 915px) {
+@media only screen and (max-width: 998px) {
 
     
     .container-one{
         width: 100%;
-        height: 100%;
+        height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -698,7 +698,7 @@ body{
         
 
         /* displaying none */
-        display: none;
+        
         
     }
     
@@ -711,18 +711,28 @@ body{
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: 3.5%;
+        top: 5.5%;
+        z-index: -1;
     }
 
     .img1-cover img{
-        width: 15vw;
+        width: 30vw;
         height: 50vh;   
     }
 
 
     .img2-cover img{
-        width: 15vw;
+        width: 30vw;
         height: 50vh;
+    }
+
+    .services-btn a {
+        text-decoration: none;
+        color: black;
+        padding: 2rem 4rem;
+        border: 3px solid #ff4f03; 
+        border-radius: 50px;   
+    
     }
 
     
@@ -730,11 +740,12 @@ body{
     .container-one .main-heading{
         width: 100vw;
         position: absolute;
-        top: 9%;
+        top: 11%;
         display: flex;  
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        z-index: -1;
     }
 
     .container-one .main-heading .heading-main{
@@ -742,27 +753,29 @@ body{
         height: 20%;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         
     }
 
     .container-one .main-heading .heading-main h1{
         font-size: 5vw;
-        transform: translateX(-2%);
+        transform: translateX(20px);
+        color: #000;
     }
 
     .service-btns{
         width: 150vw;
-        height: 20vh;
+        height: 25vh;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         overflow: hidden;
         margin-top: 5%;
-    
-        transform: translateX(-4%);
+        position: relative;
+        z-index: 50;
+        transform: translateY(-10%);
     }
     
     .service-btns .services-btn{
@@ -777,7 +790,23 @@ body{
     .service-btns .services-btn a {
         font-size: 2vw;
     }
+
+    .is-visible_2 {
+        opacity: 1 !important;
+        animation: comeRight 3s !important;
+    }
+
+    .is-visible_3{
+        opacity: 1 !important;
+        animation: comeDown 3s !important;
+    }
     
+    .heading-main span::after{
+        content: '';
+        animation: wordsChanger infinite 6s;
+    
+    }
+
     /* 2nd container */
     
     
@@ -1222,7 +1251,7 @@ body{
     }
 
     .container-2 .h1-container h1.h1-heading{
-        
+        font-size: 30vw;
     }
 
     .container-2 .paragraph-container{
@@ -1231,7 +1260,7 @@ body{
     }
 
     .container-2 .paragraph-container p{
-        font-size: 2.2vw;
+        font-size: 3.2vw;
     }
     .container-2 .paragraph-container p span{
         font-size: 2.8vw;
@@ -1312,7 +1341,7 @@ body{
     }
 }
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 450px){
     
     .container-one{
         width: 100vw;
@@ -1410,7 +1439,8 @@ body{
 }
 
 .container-2 .h1-container .h1-heading{
-    transform: translate(0, 5%);   
+    transform: translate(0, 5%);
+    font-size: 40vw;   
 }
 
 .container-2 .paragraph-container{
@@ -1591,4 +1621,3 @@ input[type=submit]{
 
 }
    
-
