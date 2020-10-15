@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "node-sass -w scss/ -o public/css/",
     "start": "node app.js",
-    "run": "nodemon app.js"
+    "runs": "nodemon app.js"
   },
   "keywords": [],
   "author": "",

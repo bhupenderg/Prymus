@@ -22,13 +22,13 @@ body{
 }
 
 /* ----------- Non-Retina Screens ----------- */
-@media only screen and (min-width: 150px) { 
+@media only screen and (min-width: 990px) { 
 
 
     .header-main{
         
         width: 100vw;
-        height: 90vh;
+        height: 2vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -696,6 +696,9 @@ body{
         justify-content: center;
         align-items: center;
         
+
+        /* displaying none */
+        display: none;
         
     }
     
