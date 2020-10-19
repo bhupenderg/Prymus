@@ -175,6 +175,10 @@ app.get('/smo', (req, res) => {
     res.render('smo')
 })
 
+app.get('/privacy-policy', (req, res) => {
+    res.render('privacy-policy')
+})
+
 app.get('/', (req, res) => {
     res.render('index')
 })

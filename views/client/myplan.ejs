@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="/css/header_updated_s.css">
         <link rel="stylesheet" href="/css/myplan.css">
         <link rel="stylesheet" href="/css/chat.css">
+        <link rel="stylesheet" href="/css/footer.css">
     
         <title>PRYMUS</title>
 
@@ -27,10 +28,10 @@
 
         <div class="header-main">
             <% if (user) { %>
-                <%- include ('includes/header_updated_s.ejs') %>     
+                <%- include ('../includes/header_updated_s.ejs') %>     
             <% } else { %>
                 <div class="header-main">
-                    <%- include ('includes/header_updated_n.ejs') %>
+                    <%- include ('../includes/header_updated_n.ejs') %>
                 </div>     
             
             <% } %>
@@ -95,12 +96,7 @@
 
     <!-- footer starts -->
 
-    <div class="footer-container">
-        <div class="footer">
-            <p>Copyright © 2020 Prymus Brandcom India Pvt. Ltd. All rights reserved.</p>
-        </div>
-    </div>
-
+    <%- include('../footer.ejs') %>
     <% if (user) { %>
         <div id="chat-wrapper" class="chat-wrapper shadow border-left border-right"></div>
         <script src="/socket.io/socket.io.js"></script>

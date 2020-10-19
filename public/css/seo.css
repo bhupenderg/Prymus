@@ -23,7 +23,7 @@ body{
 }
 
 
-@media only screen and (min-width: 916px){
+
     .header-main{
         height: 15%;
         width: 100%;
@@ -297,8 +297,6 @@ body{
 
 
 
-}
-
 @keyframes wordsChanger{
     0% {
         content: 'leads';
@@ -359,3 +357,206 @@ body{
         transform: translate(0);
     }
 }
+
+@media only screen and (max-width: 1150px) {
+    .seo-container-1{
+        width: 100%;
+        height: 120%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20rem;
+    }
+
+    .data-container{
+        margin-left: rem;
+        width: 100% !important;
+    }
+
+    .data-container h1{
+        font-size: 4.5rem !important;
+        text-align: center;
+    }
+
+    .image-container{
+        width: 100% !important;
+        
+    }
+    .seo-triangle-container{
+        
+    }
+
+    .seo-triangle{
+        height: 15rem;
+        margin-top: -5px;
+    }
+
+    .seo-container-2{
+        margin-top: -20rem;
+    }
+
+    .seo-container-2 .seo-timeline{
+        border-left: none !important;
+        flex-direction: column;
+    }
+
+    .seo-container-2 .seo-timeline .seo-timeline-sub{
+        width: 100% !important;
+        flex-direction: column;
+    }
+
+    .seo-timeline-header{
+        width: 100%;
+    }
+    .seo-timeline-header h1{
+        width: 100% !important;
+        font-size: 3.5rem !important;
+        margin-left: -4rem !important;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .seo-timeline-header h1 span{
+        margin-left: 0 !important;
+    }
+
+    .seo-timeline-header p{
+        width: 100% !important;
+        font-size: 1.8rem !important;
+        margin-left: rem !important;
+        text-align: center;
+    }
+
+    .seo-timeline-paragraph{
+        width: 100% !important;
+        font-size: 2.6rem !important;
+        margin-left: -8rem !important;
+        text-align: center;
+        
+        
+
+    }
+    .para-color{
+        font-size: 3rem;
+    }
+
+    .seo-container-2 .seo-timeline .seo-timeline-sub::before{
+        display: none;
+        
+    }
+
+    .seo-container-4{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seo-image-container{
+        width: 100%;
+        transform: translateY(-20rem);
+    }
+
+    .seo-connect-us{
+        width: 100%;
+    }
+
+    .seo-connect-us h1{
+        font-size: 3.5rem;
+        margin-top: -65rem;
+    }
+    .seo-connect-us a{
+        font-size: 2.6rem;
+        margin-top: 50rem;
+        
+    }
+
+}
+
+    @media only screen and (max-width: 750px) {
+        .data-container{
+            margin-top: -5rem;
+            
+        }
+        .data-container h1{
+            font-size: 2.3rem !important;
+        }
+
+        .image-container img{
+            width: 400px;
+        }
+
+        .seo-triangle{
+            margin-top: -1.5px;
+            height: 60px;
+        }
+
+        .seo-container-2{
+            text-align: left;
+            margin: 0 2px;
+            margin-top: -20rem;
+        }
+
+        .seo-container-2 .seo-timeline .seo-timeline-sub .seo-timeline-header{
+            width: 100% !important;
+                        
+        }
+        .seo-container-2 .seo-timeline .seo-timeline-sub .seo-timeline-header h1{
+            font-size: 2.5rem !important;
+            
+            text-align: center;
+            margin-left: -1.5rem !important;
+        }
+
+       .seo-timeline-paragraph{
+           font-size: 1.5rem !important;
+       }
+
+       .para-color{
+           font-size: 2rem !important;
+           margin-left: 4.5rem !important;
+       }
+       .para-white{
+        font-size: 1.5rem !important;
+        margin-left: 4.5rem !important;
+
+       }
+
+       .seo-container-4{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seo-image-container{
+        margin-top: 10rem;
+        width: 100%;
+        transform: translateY(-10rem);
+        
+    }
+
+    .seo-image-container img{
+        width: 450px;
+        transform: translateX(-8rem);
+    }
+
+    .seo-connect-us{
+        width: 100%;
+        text-align: center;
+    }
+
+    .seo-connect-us h1{
+        font-size: 3rem;
+        margin-top: -42rem;
+    }
+    .seo-connect-us a{
+        font-size: 1.6rem;
+        margin-top: 25rem;
+        
+    }
+        
+
+    }
