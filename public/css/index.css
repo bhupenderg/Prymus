@@ -958,8 +958,12 @@ body{
     .container-5 .data-container ul{
         margin-top: 6%;
     }
-    .container-5 .data-container ul li{
-        font-size: 2.8vw;
+    .items li{
+        font-size: 8vw;
+    }
+
+    li{
+        font-size: 3rem !important;
     }
 
     .contact-us h1{
@@ -1211,9 +1215,10 @@ body{
     width: 90%;
 }
 
-.container-5 .data-container ul li{
-    font-size: 5vw;
+ul.items li{
+    font-size: 6rem;
 }
+
 
 /* ---------contact us------- */
 
