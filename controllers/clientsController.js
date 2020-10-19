@@ -9,7 +9,7 @@ exports.getMyPlan = async (req, res) => {
         const clientId = req.session.user.id
     const myplan = await Campaign.find({clientId, payment_done: "no"})
     
-    console.log(myplan)
+    //console.log(myplan)
 
     if(myplan.length === 0) {
         res.send("<h1>You have not created any plans yet. Create your plan <a href = '/campaignregister'>here</a> and take your business to the next level.")

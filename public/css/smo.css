@@ -81,7 +81,7 @@ body{
     width: 100%;
     height: 40vh;
     background: #000;
-    margin-top: -.1%;
+    margin-top: -.2%;
 }
 
 .smo-triangle{
@@ -107,7 +107,7 @@ body{
 
 .smo-container-2{
     width: 100vw;
-    height: 340vh;
+    height: 120%;
     background: black;
     
 }
@@ -142,7 +142,7 @@ body{
 }
 
 .smo-container-2 .smo-timeline .smo-timeline-sub .smo-timeline-header h1{
-    font-size: 2.5vw;
+    font-size: 1.7vw;
     color: white;
 }
 .smo-container-2 .smo-timeline .smo-timeline-sub::before{
@@ -230,11 +230,12 @@ body{
 
 .smo-container-4{
     width: 100%;
-    height: 60vh;
+    height: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    transform: translateY(-20rem);
 }
 
 .smo-image-container{

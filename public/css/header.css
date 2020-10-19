@@ -14,7 +14,7 @@
         position: fixed;
         top: 0;
         background-color: white;
-        z-index: 10;
+        z-index: 100;
     }
     
     .logo-container{
@@ -51,11 +51,11 @@
     }
     
     .navbar .nav-items .nav-item .item:hover{
-        color: #ff4f30;
+        color: #ff4f03;
     }
     
     .navbar .nav-items .nav-item .connect-btn {
-        border: 3px solid #ff4f30;
+        border: 3px solid #ff4f03;
         padding: 2rem 4rem;
         border-radius: 50px;
         font-weight: 100;
@@ -63,7 +63,7 @@
     
     .navbar .nav-items .nav-item .connect-btn:hover {
         
-        background-color: #ff4f30;
+        background-color: #ff4f03;
         padding: 2rem 4rem;
         border-radius: 50px;
         color: #fff;

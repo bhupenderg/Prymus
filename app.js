@@ -5,8 +5,38 @@ const session = require('express-session')
 const MongoStore = require('connect-mongodb-session')(session)
 const csrf = require('csurf')
 const multer = require('multer')
+
+// Payment Gateway 
+
+var ResMsgDTO = require('./ResMsgDTO.js');
+var ReqMsgDTO = require('./ReqMsgDTO.js');
+var VtransactSecurity = require('./VtransactSecurity.js');
+var HTTPPost = require('./HTTPPost.js');
+var AWLMEAPI = require('./AWLMEAPI.js');
+
+
 const app = express()
-const port = process.env.PORT || 5000
+
+var bodyParser = require('body-parser')
+
+var reqMsgDTO = new ReqMsgDTO();
+var resMsgDTO = new ResMsgDTO();
+var transactMeAPI = new AWLMEAPI();
+var vTransactSecurity = new VtransactSecurity();
+const fs = require('fs');
+const ini = require('ini');
+const ini_array = ini.parse(fs.readFileSync('./ClientAPI.ini', 'utf-8'));
+
+ // parse application/x-www-form-urlencoded
+ app.use(bodyParser.urlencoded({ extended: false }))
+ 
+ // parse application/json
+ app.use(bodyParser.json())
+
+
+// // Payment Gateway ends
+
+const port = process.env.PORT || 5500
 
 let path = require('path')
 
@@ -58,15 +88,11 @@ app.use(express.static('public'))
 // all routes
 const campaignRoutes = require('./routes/campaignRoute')
 const clientRoutes = require('./routes/users/clients/clientRoutes')
+const paymentRoutes = require('./routes/paymentsRoute')
+const blogsRoutes = require('./routes/blogRoutes')
 // all routes end
 
 
-var bodyParser = require('body-parser')
- // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
- 
-// parse application/json
-app.use(bodyParser.json())
 
 // app.use(express.json())
 app.use(express.urlencoded({extended: false}))
@@ -81,6 +107,8 @@ app.use(function(req, res, next) {
 
 app.use(campaignRoutes)
 app.use(clientRoutes)
+app.use(paymentRoutes)
+app.use(blogsRoutes)
 
 // chat system starts
 
@@ -149,6 +177,10 @@ app.get('/smo', (req, res) => {
 
 app.get('/', (req, res) => {
     res.render('index')
+})
+
+app.use('*', (req, res) => {
+    res.send("<h1>Error 404 Page not found!")
 })
 
 

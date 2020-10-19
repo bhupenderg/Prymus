@@ -3,191 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="description" content="Prymus- Technical Blogs">
+    <meta name="author" content="Prymus">
+    <link rel="icon" href="/images/prymus.png" type="image/gif" sizes="16x16">
+ 
+    <link rel="stylesheet" href="/css/header_updated_n.css">
+    <link rel="stylesheet" href="/css/header_updated_s.css">
     <link rel="stylesheet" href="/css/web.css">
-    <link rel="stylesheet" href="/css/header.css">
+    <!-- <link rel="stylesheet" href="/css/header.css"> -->
     <link rel="stylesheet" href="/css/seo.css">
     <link rel="stylesheet" href="/css/chat.css">
 
     <title>PRYMUS</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180719275-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180719275-1');
+</script>
 </head>
 <body>
 
     <% if (user) { %>
+        <%- include ('includes/header_updated_s.ejs') %>     
+    <% } else { %>
         <div class="header-main">
-       <div class="top-header">
-           <div class="logo-container">
-               <img src="/images/prymus.png" alt="prymus-logo" class="logo">
-           </div>
-           <div class="navbar">
-               <ul class="nav-items">
-                   <li class="nav-item">
-                       <a href="/" class="item">Home</a>
-                   </li>
-                   <!-- <li class="nav-item">
-                       <a href="index.ejs/#about" class="item">About</a>
-                   </li> -->
-                   <li class="nav-item">
-                       <a href="#" class="item">Projects</a>
-                   </li>
-                   <li class="nav-item">
-                       <a href="/webdesignanddevelopment" class="item">Web</a>
-                   </li>
-                   <li class="nav-item">
-                     <a href="/seo" class="item">SEO</a>
-                 </li>
-                 <li class="nav-item">
-                   <a href="/smo" class="item">SMO</a>
-                 </li>
-                 <li class="nav-item">
-                   <a href="/myaccount" class="item">My Account</a>
-                 </li>
-                 <li class="nav-item">
-                   <a href="#" class="item chat-header">Chat Us</a>
-                 </li>
-                   <li>
-                       <form action="/logout" method="POST">
-                           <input type="submit" value="Logout">
-                       </form>
-                   </li>
-               </ul>
-           </div>
-       </div>
-   </div>     
-   <% } else { %>
-       <div class="header-main">
-           <div class="top-header">
-               <div class="logo-container">
-                   <img src="/images/prymus.png" alt="prymus-logo" class="logo">
-               </div>
-               <div class="navbar">
-                   <ul class="nav-items">
-                       <li class="nav-item">
-                           <a href="/" class="item">Home</a>
-                       </li>
-                       <!-- <li class="nav-item">
-                           <a href="index.ejs/#about" class="item">About</a>
-                       </li> -->
-                       <li class="nav-item">
-                           <a href="#" class="item">Projects</a>
-                       </li>
-                       <li class="nav-item">
-                           <a href="/webdesignanddevelopment" class="item">Web</a>
-                       </li>
-                       <li class="nav-item">
-                         <a href="/seo" class="item">SEO</a>
-                     </li>
-                     <li class="nav-item">
-                       <a href="/smo" class="item">SMO</a>
-                     </li>
-                       <li class="nav-item">
-                           <a href="/connect-with-us" class="item connect-btn">Connect With Us</a>
-                       </li>
-                   </ul>
-               </div>
-           </div>
-       </div>     
-   
-   <% } %>
-
-
-<!-- mobile nav starts  -->
-
-<% if (user) { %>
-<div class="mobile-header-main">
-  <div class="mobile-top-header">
-      <div class="mobile-logo-container">
-          <img src="/images/prymus.png" alt="prymus-logo" class="logo">
-      </div>
-
-      <div class="mobile-nav-logo">
-       <img src="/images/mobile-nav.png" alt="prymus-logo" class="logo">
-      </div>
-
-      <div class="mobile-navbar">
-          <div class="mobile-nav-items mob-hidden">
-           <ul class="nav-items">
-               <li class="nav-item">
-                   <a href="#home" class="item">Home</a>
-               </li>
-               <!-- <li class="nav-item">
-                   <a href="index.ejs/#about" class="item">About</a>
-               </li> -->
-               <li class="nav-item">
-                   <a href="#" class="item">Projects</a>
-               </li>
-               <li class="nav-item">
-                   <a href="/webdesignanddevelopment" class="item">Web</a>
-               </li>
-               <li class="nav-item">
-                 <a href="seo" class="item">SEO</a>
-             </li>
-             <li class="nav-item">
-               <a href="smo" class="item">SMO</a>
-             </li>
-             <li class="nav-item">
-               <a href="/myaccount" class="item">My Account</a>
-             </li>
-             <li class="nav-item">
-               <a href="#" class="item chat-header">Chat Us</a>
-             </li>
-               <li>
-                   <form action="/logout" method="POST">
-                       <input type="submit" value="Logout">
-                   </form>
-               </li>
-           </ul>
-          </div>
-          
-      </div>
-  </div>
-</div>     
-<% } else { %>
-   <div class="mobile-header-main">
-       <div class="mobile-top-header">
-           <div class="mobile-logo-container">
-               <img src="/images/prymus.png" alt="prymus-logo" class="logo">
-           </div>
-
-           <div class="mobile-nav-logo">
-               <img src="/images/mobile-nav.png" alt="prymus-logo" class="logo">
-              </div>
-
-           <div class="mobile-navbar">
-               
-               <div class="mobile-nav-items mob-hidden">
-                <ul class="nav-items">
-                    <li class="nav-item">
-                        <a href="#home" class="item">Home</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a href="index.ejs/#about" class="item">About</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a href="#" class="item">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/webdesignanddevelopment" class="item">Web</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="seo" class="item">SEO</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="smo" class="item">SMO</a>
-                  </li>
-
-                  <li class="nav-item">
-                   <a href="/connect-with-us" class="item connect-btn">Connect With Us</a>
-               </li>
-                  
-                </ul>
-               </div>
-               
-           </div>
-       </div>
-    </div>
-
-<% } %>
+            <%- include ('includes/header_updated_n.ejs') %>
+        </div>     
+    
+    <% } %>
 
 <!-- container-1 -->
 <div class="web-container-1">
@@ -216,7 +63,7 @@
     <div class="web-timeline">
         <div class="web-timeline-sub">
             <div class="web-timeline-header">
-                <h1>1. Design the website</h1>
+                <h1 style="margin-left: 4rem;">1. <span style="margin-left: 8rem;">Design the website</span> </h1>
             </div>
             <div class="web-timeline-paragraph">
                 <div class="para-color">57% of internet users say they won’t recommend a business with a poorly designed website on mobile
@@ -231,7 +78,7 @@
 
         <div class="web-timeline-sub">
             <div class="web-timeline-header">
-                <h1>2. Agile Website support system</h1>
+                <h1 style="margin-left: 4rem;">2. <span style="margin-left: 8rem;"></span> Agile Website support system</h1>
             </div>
             <div class="web-timeline-paragraph">
                 <div class="para-color">Mobile visitors are 123% more likely to bounce from a mobile website if it takes 10 seconds to load (as opposed to 1 second).
@@ -248,7 +95,7 @@
 
         <div class="web-timeline-sub">
             <div class="web-timeline-header">
-                <h1>3. Sitemapping for all search engines</h1>
+                <h1 style="margin-left: 4rem;">3. <span style="margin-left: 8rem;"></span> Sitemapping for all search engines</h1>
             </div>
             <div class="web-timeline-paragraph">
                 <div class="para-color">Google holds the majority market share of all search engine activity, with 92.07%.
@@ -266,7 +113,7 @@
 
         <div class="web-timeline-sub">
             <div class="web-timeline-header">
-                <h1>4. Revamping and Maintenance of website</h1>
+                <h1 style="margin-left: 4rem;">4. <span style="margin-left: 8rem;"></span> Revamping and Maintenance of website</h1>
             </div>
             <div class="web-timeline-paragraph">
                 <div class="para-color">38% of people will stop engaging with a website if the content or layout are unattractive
@@ -284,7 +131,7 @@
 
         <div class="web-timeline-sub">
             <div class="web-timeline-header">
-                <h1>5. Analyze the website traffic and customer acquistion</h1>
+                <h1 style="margin-left: 4rem;">5. <span style="margin-left: 8rem;"></span> Analyze website traffic & customer acquistion</h1>
             </div>
             <div class="web-timeline-paragraph">
                 <div class="para-color">88% of online consumers are less likely to return to a site after a bad experience
@@ -318,7 +165,7 @@
 <!-- conatiner-3 -->
 
 <div class="web-container-3">
-    <div class="web-recent-stories section-30">
+    <!-- <div class="web-recent-stories section-30">
         <div><h1>our recent stories.</h1></div>
         <div><p>Discover industry insights and case studies on successful product development, powerful growth marketing tactics, and effective engineering solutions.</p></div>
         <div><a href="#">More Insights</a></div>
@@ -332,7 +179,7 @@
         <div><img src="" alt=""></div>
         <div><p>Insights</p></div>
         <div><h3>Flutter: 6 Key Questions Answered</h3></div>
-    </div>
+    </div> -->
 </div>
 
 <!-- container-4 -->
@@ -342,7 +189,7 @@
     </div>
     <div class="web-connect-us">
         <h1>ready to generate some real sale?</h1>
-        <a href="#">Connect-Us</a>
+        <a href="/connect-with-us">Connect-Us</a>
     </div>
 </div>
 
@@ -362,6 +209,6 @@
 
 <script src="/js/index.js"></script>  
 <script src="/js/chat.js"></script>
-<script src="/js/mobile-nav.js"></script>
+<script src="/js/header_updated_n.js"></script>
 
 </body>
