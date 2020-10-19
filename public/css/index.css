@@ -480,7 +480,7 @@ body{
 
     .container-5 .data-container li{
         color: #000;
-        font-size: 2vw;
+        font-size: 3rem;
         margin-top: 7%;
         list-style-type: square;
         
@@ -851,404 +851,136 @@ body{
     .container-5 .data-container h1{
 
     font-size: 6rem !important;
-}
-
-.container-5 .data-container h1 ul{
-    width: ;
-}
-
-.container-5 .data-container h1 ul li::marker{
-    font-size: 4rem;
-}
-@media only screen and (max-width: 849px){
-    .triangle{
-        margin-top: -.1rem;
-    }
-}
-
-
-
-@media only screen and (max-width: 700px){
+    margin-top: 5rem !important;
     
-
-    .container-2 .h1-container{
-        
-        margin-top: 2%;
     }
 
-    .container-2 .h1-container h1.h1-heading{
-        font-size: 30vw;
-    }
-
-    .container-2 .paragraph-container{
-        
-        width: 70%;
-    }
-
-    .container-2 .paragraph-container p{
-        font-size: 3.2vw;
-    }
-    .container-2 .paragraph-container p span{
-        font-size: 2.8vw;
-    }
-
-    .triangle{
-        height: 35vh;
-    }
-
-    .container-3{
-
-    }
-
-    .container-3 h1{
-        font-size: 10vw;
-    }
-    .container-3 h2{
-        font-size: 5vw;
-    }
-
-    .container-3 h3{
-        font-size: 4vw;
-        height: 8vh;
-    }
-    .awareness{
-        width: 70vw;
-    }
-
-    .aquisition{
-        width: 62vw;
-    }
-    .activation{
-        width: 54vw;
-    }
-    .retention{
-        width: 46vw;
-    }
-    .revenue{
-        width: 38vw;;
-    }
-    .referral{
-        width: 30vw;
-    }
-
-    .connect-with-us a{
-        transform: translateY(-50%);
-        
-    }
-
-
-
-    .container-5 .image-container img{
-        width: 70vw !important;
-    }
-
-    .container-5 .data-container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .container-5 .data-container h1{
-        margin-top: 7%;
-        font-size: 5vw;
-    }
-
-    .container-5 .data-container ul{
-        margin-top: 6%;
-    }
-    .items li{
-        font-size: 8vw;
-    }
-
-    li{
-        font-size: 3rem !important;
+    .data-container .items{
+        transform: translateX(0) !important;
     }
 
     .contact-us h1{
-        margin-top: 10%;
+        margin-top:10rem;
     }
-}
-
-@media only screen and (max-width: 450px){
     
-    .container-one{
-        width: 100vw;
-        height: 130vh;
+
+    .contact-us .form-container{
+        margin-top: -5rem;
+        width: 100%;
+        height: 80%;
+        border: none;
     }
 
-    .container-one .main-heading{
-        width: 120%;
-        height: 100vh;
-        transform: translate(0%, -50%);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;    
-}
+    form{
+        width: 60%;
+    }
 
-.container-one .main-heading .heading-main{
-    margin-top: -135vw;
-    margin-right: 7vw;
-    
-    width: 80%;
-}
+    form input[type=text] {
+        height: 6rem;
+        font-size: 3rem;
+    }
 
-.container-one .main-heading .heading-main h1{
-    font-size: 9.5vw;
-    margin-right: 6vw;
-    margin-left: 6vw;
-    transform: translate(5%, 80%);
-    line-height: 5rem;
-}
+    form input[type=email] {
+        height: 6rem;
+        font-size: 3rem;
+    }
 
-.container-one .main-heading .service-btns{
-    height: 35vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-11%, 175%);
-    overflow: hidden;
-    width: 100%;
-    z-index: 10;
-}
+    form textarea{
+    font-size: 3rem;
+    height: 12rem !important;
+    }
+    form input[type=submit]{
+        height: 6rem !important;
+        font-size: 3rem;
+    }
 
-.container-one .main-heading .service-btns .services-btn{
-    
-}
 
-.container-one .main-heading .service-btns .services-btn a{
-    font-size: 3.5vw;
-    padding: 1.2rem 2.2rem;
-    margin-top: 1vw;
-    position: relative;
-    z-index: 100;
-    
-}
 
-.container-one .image-container{
-
-    height: 96vw;
-    transform: translate(-6%, 28%);
-    position: relative;
-    z-index: -10;
-}
-
-.container-one .image-container .img1-cover{
-    height: 28rem;
-
-    transform: translateY(-60%);
-}
-
-.container-one .image-container .img1-cover img{
-    height: 28rem;
-    
 
 }
+@media only screen and (max-width: 750px){
+    .main-heading{
+        margin-top: -10rem;
+    }
+    .heading-main h1{
+        font-size: 2.2rem !important;
+        line-height: 3rem !important;
+        margin-top: -5rem;
+        margin-left: -4rem;
+    }
 
-.container-one .image-container .img2-cover{
-    height: 28rem;
+    .service-btns .services-btn{
+        margin-top: 5rem;
+    }
 
-    transform: translateY(-50%);
-}
+    .service-btns .services-btn a {
+        font-size: 1.8rem;
+        
+    }
 
-.container-one .image-container .img2-cover img{
-    height: 28rem;
-}
+    .h1-heading{
+        font-size: 15rem !important;
+    }
 
+    .paragraph-container p{
+        font-size: 1.8rem !important;
+        text-align: center;
+    }
+    .triangle{
+        height: 12rem;
+    }
 
-/* ----------container-2------------- */
+    .container-3 h1{
+        font-size: 4rem;
+    }
+    .container-3 h2{
+        font-size: 2.8rem;
+        
+        text-align: center;
+    }
 
-.container-2 .h1-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
+    .container-3 h3{
+        height: 60px !important;
+        font-size: 3rem;
+    }
+    .referral{
+        width: 33%;
+    }
 
-.container-2 .h1-container .h1-heading{
-    transform: translate(0, 5%);
-    font-size: 40vw;   
-}
+    .para-container{
+        width: 100% !important;
+    }
 
-.container-2 .paragraph-container{
-    width: 90%;
-    margin-top: 0%;
-    transform: translateX(5%);
-    
-}
+    .para-container p {
+        font-size: 1.7rem !important;
+        text-align: center;
+        margin: 0 1.2rem !important;
+    }
 
-.container-2 .paragraph-container p{
-    font-size: 4vw;
-    line-height: 7vw;
-    
-}
+    .connect-with-us a{
+        margin-top: 2.9rem;
+        font-size: 1.3rem;
+    }
 
-.container-2 .paragraph-container p span{
-    font-size: 4.5vw;
-}
+    .container-5{
+        display: none;
+    }
 
-.triangle{
-    height: 25vh;
-}
+    .contact-us h1{
+        margin-top: 2rem;
+    }
 
-/* ----container-3-------------- */
+    form input[type=text]   {
+        height: 3.5rem;
+        font-size: 2rem;
+    }
 
-.container-3 h1{
-    
-    font-size: 12vw;
-    margin-top: 8vw;
-    
-}
+    form input[type=email]   {
+        height: 3.5rem;
+        font-size: 2rem;
+    }
 
-.container-3 h2{
-    
-    font-size: 5vw;
-    margin-top: 5vw;
-    
-}
-
-.container-3 h3{
-
-    font-size: 5vw;
-    height: 10vw;
-    margin-top: 7vw;
-}
-
-.awareness{
-    width: 75vw;
-}
-
-.aquisition{
-    width: 68vw;
-}
-
-.activation{
-    width: 61vw;
-}
-.retention{
-    width: 54vw;
-}
-
-.revenue{
-    width: 47vw;
-}
-
-.referral{
-    width: 39vw;
 }
 
 
-/* ----------conatiner-4------------- */
 
-.container-4{
-    height: 120vh !important;
-}
-
-.container-4 .para-container{
-    width: 90%;
-}
-
-.container-4 .para-container p {
-    width: 100%;
-    font-size: 3.8vw;
-    
-}
-
-.container-4 .para-container p:first-child{
-    margin-top: 30%;
-}
-
-.container-4 .side-container{
-    width: 100%;
-    
-}
-
-.container-4 .side-container h1{
-    width: 100%;
-    height: 100%;
-    font-size: 12vw;
-}
-
-
-/* ----connect-btn--------- */
-
-.connect-with-us{
-    transform: translateY(-40%);
-}
-
-.connect-with-us a{
-    font-size: 5vw;
-}
-
-/* -------container-5-------- */
-
-.container-5{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 90vh;
-}
-
-.container-5 .image-container{
-    width: 100%;
-    transform: translateY(-30%);
-}
-
-.container-5 .image-container img{
-    width: 90vw !important;
-}
-
-.container-5 .data-container{
-    width: 100%;
-    transform: translateY(-30%);
-}
-
-.container-5 .data-container h1{
-    font-size: 7vw;
-}
-
-.container-5 .data-container ul{
-    width: 90%;
-}
-
-ul.items li{
-    font-size: 6rem;
-}
-
-
-/* ---------contact us------- */
-
-.contact-us{
-
-}
-.contact-us h1{
-    font-size: 12vw;
-    margin-bottom: 10vw;
-}
-
-.contact-us .form-container{
-    border: none;
-}
-
-.i-phone{
-    margin-top: 3vw;
-}
-
-.i-email{
-    margin-top: 3vw;
-}
-
-textarea{
-    margin-top: 3vw;
-}
-
-input[type=submit]{
-    margin-top: 6vw;
-}
-
-}
-   

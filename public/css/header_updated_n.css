@@ -157,16 +157,22 @@ body{
 }
 
 @media (max-width: 750px){
+	.prymus-logo{
+		margin-top: 1.6rem !important;
+	}
+
     .toggle-button{
         display: flex;
-        margin-top: 5rem;
+        margin-top: 6rem !important;
         margin-right: 2rem;
         width: 30px;
         height: 26px;
     }
     .prymus-logo img{
         width: 200px !important;
-    }
+	}
+	
+
 
     .navbar-links ul li a{
         font-size: 2rem;
