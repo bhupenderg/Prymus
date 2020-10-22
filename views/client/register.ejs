@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/header_updated_s.css">
     <link rel="stylesheet" href="/css/client-register.css">
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/footer.ejs">
+    <link rel="stylesheet" href="/css/footer.css">
 
     <title>PRYMUS</title>
 
@@ -30,10 +30,7 @@
     <% if (user) { %>
         <%- include ('../includes/header_updated_s.ejs') %>     
     <% } else { %>
-        <div class="header-main">
-            <%- include ('../includes/header_updated_n.ejs') %>
-        </div>     
-    
+        <%- include ('../includes/header_updated_n.ejs') %>
     <% } %>
     <!-- container-1 register/login -->
     <div class="container-1">
