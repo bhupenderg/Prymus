@@ -6,8 +6,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    bottom: 10;
+    position: absolute;
+    bottom: 0;
     background: #000;
 }
 
