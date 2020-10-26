@@ -86,10 +86,10 @@ app.use(sessionOptions)
 app.use(express.static('public'))
 
 // all routes
-const campaignRoutes = require('./routes/campaignRoute')
-const clientRoutes = require('./routes/users/clients/clientRoutes')
-const paymentRoutes = require('./routes/paymentsRoute')
-const blogsRoutes = require('./routes/blogRoutes')
+//const campaignRoutes = require('./routes/campaignRoute')
+//const clientRoutes = require('./routes/users/clients/clientRoutes')
+//const paymentRoutes = require('./routes/paymentsRoute')
+//const blogsRoutes = require('./routes/blogRoutes')
 // all routes end
 
 
@@ -105,10 +105,10 @@ app.use(function(req, res, next) {
     next()
 })
 
-app.use(campaignRoutes)
-app.use(clientRoutes)
-app.use(paymentRoutes)
-app.use(blogsRoutes)
+// app.use(campaignRoutes)
+// app.use(clientRoutes)
+// app.use(paymentRoutes)
+// app.use(blogsRoutes)
 
 // chat system starts
 
@@ -132,55 +132,59 @@ io.on('connection', function(socket){
 
 
 
-app.get('/affiliate-register', (req, res) => {
-    res.render('affiliate-register')
-})
+// app.get('/affiliate-register', (req, res) => {
+//     res.render('affiliate-register')
+// })
 
 
 
 
 
-app.get('/services/seo', (req, res) => {
-    res.render('seo')
-})
+// app.get('/services/seo', (req, res) => {
+//     res.render('seo')
+// })
 
-app.get('/services/webdesignanddevelopment', (req, res) => {
-    res.render('webdesignanddevelopment')
-})
+// app.get('/services/webdesignanddevelopment', (req, res) => {
+//     res.render('webdesignanddevelopment')
+// })
 
-app.get('/services/smo', (req, res) => {
-    res.render('smo')
-})
+// app.get('/services/smo', (req, res) => {
+//     res.render('smo')
+// })
 
-app.get('/contact', (req, res) => {
-    res.render('contact')
-})
+// app.get('/contact', (req, res) => {
+//     res.render('contact')
+// })
 
-app.get('/campaign-register.ejs', (req, res) => {
-    res.render('campaign-register')
-})
+// app.get('/campaign-register.ejs', (req, res) => {
+//     res.render('campaign-register')
+// })
 
-app.get('/connect-with-us', (req, res) => {
-    res.render('connect-with-us')
-})
-app.get('/webdesignanddevelopment', (req, res) => {
-    res.render('webdesignanddevelopment')
-})
+// app.get('/connect-with-us', (req, res) => {
+//     res.render('connect-with-us')
+// })
+// app.get('/webdesignanddevelopment', (req, res) => {
+//     res.render('webdesignanddevelopment')
+// })
 
-app.get('/seo', (req, res) => {
-    res.render('seo')
-})
+// app.get('/seo', (req, res) => {
+//     res.render('seo')
+// })
 
-app.get('/smo', (req, res) => {
-    res.render('smo')
-})
+// app.get('/smo', (req, res) => {
+//     res.render('smo')
+// })
 
-app.get('/privacy-policy', (req, res) => {
-    res.render('privacy-policy')
-})
+// app.get('/privacy-policy', (req, res) => {
+//     res.render('privacy-policy')
+// })
+
+// app.get('/', (req, res) => {
+//     res.render('index')
+// })
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('coming-soon')
 })
 
 app.use('*', (req, res) => {

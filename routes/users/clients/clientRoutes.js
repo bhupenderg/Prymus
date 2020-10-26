@@ -13,6 +13,8 @@ router.post('/registerclient', authController.signup)
 router.post('/myaccount', authController.login)
 router.post('/logout', authController.logout)
 
+router.post('/doesNameExist', clientsController.doesNameExist)
+
 //auth
 
 //router.post('/client-register', campaignController.createCampaign)

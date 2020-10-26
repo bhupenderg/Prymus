@@ -16,12 +16,13 @@
     justify-content: center;
     align-items: center;
     border-right: 5px solid #ff4f03;
-    margin-top: -8rem;
+    margin-top: -55rem;
 }
 
 .sign-up h1{
     font-size: 5rem;
     color: #ff4f03;
+    margin-bottom: 5rem;
 }
 .sign-in{
     width: 50%;
@@ -36,6 +37,7 @@
 .sign-in h1{
     font-size: 5rem;
     color: #ff4f03;
+    margin-bottom: 6rem;
 }
 
 form{
@@ -56,15 +58,17 @@ form input{
    text-align: justify;
    padding: 1rem;
    box-shadow: 2px 2px 0px 0px rgb(197, 195, 195);
+   z-index: 10;
 }
 
 form input:focus{
     outline: none;
+    border: #ff4f03 3px solid;
 }
 
 form input::placeholder{
     font-size: 1.6rem;
-    color: #01020e2a;
+    color: #01020e7e;
 }
 
 form input[type=submit]{

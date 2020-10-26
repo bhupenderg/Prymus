@@ -59,8 +59,15 @@ const clientSchema = new Schema({
     },
     country:{type: String,
         required: true,
-        trim: true}
+        trim: true},
+    confirmation:{
+        type: Boolean,
+        default: false
+    }    
 
+},
+{
+    timestamps: true
 })
 
 clientSchema.pre('save', async function(next) {

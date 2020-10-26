@@ -25,30 +25,33 @@ body{
 
 
 
-    .header-main{
+    
+
+.header-main{
         
         width: 100vw;
-        height: 2vh;
+        height: 30vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         
     }
-    
-    
-    
-    
-    .container-one{
-        width: 100%;
-        height: 90vh;
+
+    .container-one {
+        width: 100vw;
+        height: 100vh;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-start;
-        margin-top: 6%;
+        background-color: #fff;
         
     }
+    
+    
+    
+    
     
     .container-one .main-heading{
         width: 50%;
@@ -57,7 +60,7 @@ body{
         justify-content: center;
         align-items: center;        
         margin-left: 6rem;
-        padding-top: 8rem;
+        margin-top: 22rem;
 
     }
 
@@ -67,27 +70,27 @@ body{
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding-top: 8rem;
+        margin-top: 15rem;
         margin-left: 6rem;
     }
     
     .container-one .heading-main{
         
         font-family: century gothic, sans-serif;
-        font-size: 2.7vw;
+        font-size: 2.5vw;
         line-height: 1.1;
-        color: black;
+        color: #000;
         
     }
     
     .service-btns{
-        width: 150vw;
+        width: 100%;
         height: 40vh;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
-        
+        transform: translateX(-1rem);
     }
     
     .services-btn{
@@ -103,7 +106,7 @@ body{
     .services-btn a {
         text-decoration: none;
         color: black;
-        padding: 2rem 4rem;
+        padding: 2rem 3.1rem;
         border: 3px solid #ff4f03; 
         border-radius: 50px;   
     
@@ -125,18 +128,20 @@ body{
     }
     
     .container-one .img1-cover{
-        width: 100%;
+        width: 180%;
+        margin-right: 25rem;
     }
     
     .container-one .img2-cover{
-        width: 100%;
+        width: 180%;
     }
     
     
     .container-one .img1{
-        width: 100%;
+        width: 120%;
         /* animation: comeRight 3s; */
         opacity: 0;
+        
     }
     
     .container-one .img2{
@@ -607,33 +612,33 @@ body{
 @keyframes wordsChanger{
     0% {
         content: 'leads';
-        color: #ff4f30;
+        color: crimson;
         
     }
 
     20% {
         content: 'users';
-        color: #ff4f03;
+        color: crimson;
     }
 
     40% {
         content: 'revenue';
-        color: #ff4f03;
+        color: crimson;
     }
 
     60% {
         content: 'sales';
-        color: #ff4f03;
+        color: crimson;
     }
     
     80% {
         content: 'conversions';
-        color: #ff4f03;
+        color: crimson;
     }
 
     100% {
         content: 'leads';
-        color: #ff4f03;
+        color: crimson;
         
     }
 }
@@ -653,12 +658,12 @@ body{
 @keyframes comeRight{
     0%{
         opacity: 0;
-        transform: translateX(-10rem);
+        transform: translateX(10rem);
     }
 
     100%{
         opacity: 1;
-        transform: translate(0);
+        transform: translate(-20rem);
     }
 }
 
@@ -690,15 +695,23 @@ body{
         width: 100%;
         flex-direction: column;
         margin-top: 16rem;
-        height: 80%;
+        height: 100%;
+
     }
     
     .main-heading{
         width: 100% !important;
     }
+
+    .header-main{
+        width: 100% !important;
+        position: absolute;
+        right: 30px;
+    }
     .heading-main h1{
         font-size: 7rem !important;
         line-height: 11rem !important;
+        
     }
 
     .service-btns{
@@ -899,14 +912,45 @@ body{
 
 }
 @media only screen and (max-width: 750px){
+    .container-one{
+        width: 100%;
+        margin: 15rem 3rem 1rem 1rem;
+        
+
+    }
     .main-heading{
-        margin-top: -10rem;
+        width: 100% !important;
+        margin-top: 10rem;
+        margin-left: em !important;
+        
+    }
+
+    .heading-main{
+        width: 100% !important;
+        margin: 0 8rem 0 -5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
     .heading-main h1{
-        font-size: 2.2rem !important;
+        width: 100% !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.1rem !important;
         line-height: 3rem !important;
-        margin-top: -5rem;
-        margin-left: -4rem;
+        margin-right: 1rem !important;
+        
+        
+    }
+
+    .heading-main span{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     .service-btns .services-btn{

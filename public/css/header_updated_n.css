@@ -22,7 +22,7 @@ body{
 
 .prymus-logo{
 	font-size: 2rem;
-	margin: .5rem;
+	margin: 3rem !important;
 }
 
 .navbar-links ul{
@@ -44,13 +44,10 @@ body{
 	display: block;
 	color: #000;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 3.2rem;
 
 }
 
-.navbar-links ul li a:active{
-    color: #ff4f03;
-}
 
 .navbar-links ul li a:hover{
 	color: #ff4f03;
@@ -59,13 +56,14 @@ body{
 
 .toggle-button{
 	position: absolute;
-	top: 1.05rem;
+	top: 3rem !important;
 	right: 1rem;
 	display: none;
 	flex-direction: column;
 	justify-content: space-between;
 	width: 30px;
-    height: 26px;
+	height: 26px;
+	
     
 }
 
@@ -94,16 +92,22 @@ body{
 @media (max-width: 1350px) {
 
     .navbar{
-        position: fixed;
-        top: -30px;
-    }
+		position: fixed;
+		
+		top: -30px;
+		width: 50%;
+	}
+	
+	.navbar-links{
+		height: 30% !important;
+	}
     
     .prymus-logo img{
         width: 350px !important;
     }
     .toggle-button{
         display: flex;
-        margin-top: 9rem;
+        margin-top: 9rem !important;
         margin-right: 6rem;
         width: 40px;
         height: 36px;
@@ -148,7 +152,9 @@ body{
 
 	.active{
 		display: block;
-    }
+		
+	}
+	
     
     .connect{
         padding: .8rem .2rem !important;
@@ -157,22 +163,16 @@ body{
 }
 
 @media (max-width: 750px){
-	.prymus-logo{
-		margin-top: 1.6rem !important;
-	}
-
     .toggle-button{
         display: flex;
-        margin-top: 6rem !important;
+        margin-top: 3rem !important;
         margin-right: 2rem;
         width: 30px;
         height: 26px;
     }
     .prymus-logo img{
         width: 200px !important;
-	}
-	
-
+    }
 
     .navbar-links ul li a{
         font-size: 2rem;
