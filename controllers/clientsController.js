@@ -1,4 +1,17 @@
 const Campaign = require('../models/campaignModel')
+const Client = require('../models/clientModel')
+
+exports.doesNameExist = function(req, res) {
+
+    // let client = Client.findOne({name: req.body.name})
+    // .then((response) => {
+    //     res.json(true)
+    // })
+    // .catch(() => {
+    //     res.json(false)
+    //})
+    
+}
 
 exports.getRegisterClient = async(req, res) => {
     res.render('client/register')

@@ -11,7 +11,8 @@ const sendgridTransport = require('nodemailer-sendgrid-transport')
 const transporter = nodemailer.createTransport(sendgridTransport({
     
     auth: {
-        api_key: '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',
+        //api_key: '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',
+        api_key: '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'
     }
 }))
 
@@ -34,7 +35,7 @@ exports.signup = async (req, res) => {
     
 
             to: req.body.email,
-            from: 'i.bhupendr@gmail.com',
+            from: 'info@prymus.co.in',
             subject: 'Signed up succeeded',
             html: '<h1 style = "color: green;"> You have successfully signed up! Now you can create your own marketing plan by signing in to your account.</h1>'
         })
@@ -63,12 +64,12 @@ exports.signup = async (req, res) => {
 
        // -----------------postmark----------------
 
-            return res.status(200).json({
-                status: "Success",
-                msg: newClient
+            return res.status(200).send("<h1 style = 'color: green;'>You are successfully registered with us. Please <a href = '/registerclient'>login</a> to proceed.</h1>")
+    //         req.session.user = {username: client.name, email: client.email, id: client._id}
 
-            })
-
+    //         req.session.save(function() {
+    //             res.redirect('/myaccount')
+    //         })
 
     }
     catch(err){
@@ -106,6 +107,11 @@ exports.login = async (req, res, next) => {
         if(!comaparePassword){
             return res.status(400).send("Please provide valid email and password")
         }
+        
+        if(client.confirmation === false) {
+            return res.status(400).send("Please verify your email first before first login")
+        }   
+        
         // sessions starts
 
         req.session.user = {username: client.name, email: client.email, id: client._id}
