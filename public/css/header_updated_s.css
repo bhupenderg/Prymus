@@ -3,6 +3,8 @@
     height: 20vh;
     background: #fff;
     overflow: hidden;
+    position: fixed;
+    top: 0;
     
 }
 
@@ -31,6 +33,9 @@
 .logo-conatiner img{
     width: 330px;
     margin-top: 30px;
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .nav-container {
@@ -60,6 +65,9 @@
     color: #000;
     font-size: 1.8em;
     font-weight: bold;
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .brand{
