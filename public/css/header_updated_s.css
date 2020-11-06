@@ -62,6 +62,24 @@
     font-weight: bold;
 }
 
+.brand{
+    padding: 2rem 3rem;
+    border-left: 3px solid blue;
+    border-top: 3px solid blue;
+    border-right: 3px solid red;
+    border-bottom: 3px solid red;
+    border-radius: 50px;
+    box-shadow: 3px 4px rgb(116, 116, 121);
+}
+
+.brand:hover{
+    background: linear-gradient(to right, blue, red);
+    color: #fff !important;
+    
+}
+
+
+
 .nav-container ul li a:hover{
     color: #dd2c00;
 }
