@@ -46,6 +46,7 @@
     "rebuild": "^0.1.2",
     "request": "^2.88.2",
     "socket.io": "^2.3.0",
+    "tail.select": "^0.5.15",
     "validator": "^13.1.17"
   }
 }

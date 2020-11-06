@@ -50,3 +50,16 @@ exports.payments = function(req, res) {
 exports.myaccount = function(req, res) {
     res.render('client/myaccount')
 }
+
+//verification email
+
+exports.isVerified = async function(req, res) {
+    try{
+        let email = req.body.email
+        const client = await Client.findOneAndUpdate({email}, {confirmation: true})
+        console.log(client.confirmation)
+    }
+    catch(err) {
+        console.log(err)
+    }
+}

@@ -13,9 +13,15 @@ router.post('/registerclient', authController.signup)
 router.post('/myaccount', authController.login)
 router.post('/logout', authController.logout)
 
-router.post('/doesNameExist', clientsController.doesNameExist)
+
 
 //auth
+
+// verfication email
+
+router.put('/isverified', clientsController.isVerified)
+
+// verification email
 
 //router.post('/client-register', campaignController.createCampaign)
 

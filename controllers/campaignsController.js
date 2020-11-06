@@ -1,5 +1,21 @@
 const Campaign = require('../models/campaignModel')
 
+// states and cities
+
+const area = {
+    country: "India",
+    zone: ["East", "West", "North", "South"],
+    states: {
+      East:["Chattisgarh", "Jharkhand", "Odisha", "Sikkim", "West Bengal"],
+      West:["Goa", "Gujrat", "Maharashtra", "Rajasthan"],
+      North:["Delhi", "HAryana", "Jammu & Kashmir", "Himachal Pradesh", "Uttar Pradesh", "Punjab", "Uttarakhand"],
+      South:["Andhra Pardesh", "Karnataka", "Kerala", "Lakshadweep", "Tamil Nadu", "Telangana"]
+    }
+}
+  
+
+  // area ends
+
 exports.createCampaign = async (req, res) => {
     try{
 
@@ -54,7 +70,9 @@ exports.createCampaign = async (req, res) => {
 exports.getCampaign = async(req, res) => {
     try{
         const campaigns = await Campaign.find()
-        res.render('campaign-register')
+        res.render('campaign-register', {
+            area: area
+        })
     }
     
 

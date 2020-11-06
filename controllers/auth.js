@@ -48,6 +48,8 @@ exports.signup = async (req, res) => {
             console.log("Success")
         }
 
+        // isVerified()
+
         //  -----------postmark ----------------
         // client.sendEmail({
         //     "From": "info@websitemela.com", 
@@ -83,6 +85,18 @@ exports.signup = async (req, res) => {
     
 }
 
+
+// const isVerified = async function(req, res) {
+//     try{
+//         let _id = ObjectId("5f97b8eeab7c1371542d50be")
+//         const client = await Client.findOneAndUpdate({_id}, {confirmation: true})
+//         console.log(client.confirmation)
+//     }
+//     catch(err) {
+//         console.log(err)
+//     }
+// }
+
 exports.login = async (req, res, next) => {
 
     try{
@@ -108,9 +122,9 @@ exports.login = async (req, res, next) => {
             return res.status(400).send("Please provide valid email and password")
         }
         
-        if(client.confirmation === false) {
-            return res.status(400).send("Please verify your email first before first login")
-        }   
+        // if(client.confirmation === false) {
+        //     return res.status(400).send("Please verify your email first before first login")
+        // }   
         
         // sessions starts
 
