@@ -1,101 +1,99 @@
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
 
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-body{
-    font-family: Century Gothic, sans-serif;
-    line-height: 1.7;
-    color: #000;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    position: relative;
-    
-}
 
 .container-one{
     width: 100vw;
-    height: 80vh;
-    
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    padding-top: 5rem;
     -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
 
-.container-one .img-container{
-    padding: 10px;
-    width: 90%;
-    height: 80vh;
+.container-one .tag-line{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(15rem);
 }
 
-.button-container{
-    width: 100vw;
-    height: 20vh;
+.container-one .tag-line h1{
+    font-size: 8rem;
+    line-height: 9.5rem;
+
+}
+
+.tag-line div span::after{
+    content: '';
+    animation: wordsChanger infinite 6s;
+
+}
+
+.container-one .data-main-data .img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.container-one .data-main-data .img-container img{
+    width: 35rem;
+    
+}
+
+
+
+.container-one .data-main{
+    padding: 5rem 3rem;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     
 }
 
-#btn-1{
-
-    
-}
-
-#btn-2{
-
-}
-
-#btn-3{
-    
-}
-
-.btn-top{
- 
-    width: 33%;
+.container-one .data-main .data-main-data {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.container-one .data-main .data-main-data .img-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40rem;
+}
+
+.container-one .data-main .data-main-data .btn-container {
+    padding-top: 10rem;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -100px;
 }
 
-    .btn-main{
+.container-one .data-main .data-main-data .btn-container a{
+    font-size: 2.2rem;
     text-decoration: none;
     color: #000;
-    font-size: 2rem;
-    font-weight: bold;
-    border-left: blue 4px solid;
-    border-right: 4px solid red;
-    border-top: 4px solid blue;
-    border-bottom: 4px solid red;
-    padding: 15px 42px;
-    border-radius: 40px;
-    box-shadow: 2px 2px #0000006b;
-    
+    padding: 1rem 4rem;
+    border-left: 3px solid blue;
+    border-top: 3px solid blue;
+    border-right: 3px solid red;
+    border-bottom: 3px solid red;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.btn-main:hover{
-    transform: translateY(-10px);
-    transition: 300ms;
-    text-decoration: none;
-    color: white;
-    font-size: 2rem;
+.container-one .data-main .data-main-data .btn-container a:hover{
     background: linear-gradient(to right, blue, red);
-    padding: 15px 42px;
-    border-radius: 40px;
+    transform: translateY(-3px);
     box-shadow:
     0 2.8px 2.2px rgb(236, 9, 9),
     0 6.7px 5.3px rgb(50, 5, 255),
@@ -103,14 +101,28 @@ body{
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
-    
-   
 }
 
-.btn-main:active{
-    transform: translateY(1px);
-    transition: 50ms;
+.container-one .data-main .data-main-data .btn-container a:active{
+    transform: translate(1px);
 }
+
+#data-main-1{
+    
+    flex: 1;
+}
+#data-main-2{
+    
+    flex: 1;
+}
+#data-main-3{
+    
+    flex: 1;
+}
+
+
+
+ /*------------------------------- mission vison ----------------------------------*/
 
 
 .mission-vision{
@@ -118,7 +130,7 @@ body{
     height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     
     
@@ -177,11 +189,13 @@ body{
     font-weight: 600;
 }
 
+/* --------------------our services --------------------------- */
 
-.our-services{
+
+.two-column-container{
     
     width: 100vw;
-    height: 3000px;
+    height: 300rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -189,7 +203,7 @@ body{
 }
 
 #how-different{
-    height: 2600px;
+    height: 260rem;
     margin-top: 10rem;
 
 }
@@ -199,7 +213,7 @@ body{
     margin-bottom: 8rem;
 }
 
-.our-services .heading-container{
+.two-column-container .heading-container{
     width: 100%;
     height: 300px;
     display: flex;
@@ -207,22 +221,23 @@ body{
     align-items: center;
 }
 
-.our-services .heading-container h1{
+.two-column-container .heading-container h1{
     font-size: 70px;
     color: rgb(255, 66, 66);
 }
 
-.our-services .services-container {
+.two-column-container .two-column-container_container {
     width: 100%;
     height: 2700px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 120px;
+    
+    
 }
 
-/* .our-services .services-container .service-conatiners{
+/* .two-column-container .two-column-container_container .data-conatainers{
     width: 100%;
     height: 90%;
     background-color: green;
@@ -232,26 +247,28 @@ body{
 
 #services-container-1{
     width: 100%;
-    height: 900px;
+    height: 90rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 80px;
+
 }
 #services-container-2{
     width: 100%;
-    height: 900px;
+    height: 90rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    
     
 }
 
 #services-container-3{
     width: 100%;
-    height: 900px;
+    height: 90rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -260,31 +277,33 @@ body{
     
 }
 
-.our-services .services-container .service-conatiners .all-services{
+.two-column-container .two-column-container_container .data-containers .all-data{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 20px 30px;
+    padding: 10px 0;
+    
+    
 }
-.our-services .services-container .service-conatiners .all-services .img-container{
+.two-column-container .two-column-container_container .data-containers .all-data .img-container{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.our-services .services-container .service-conatiners .all-services .img-container img{
+.two-column-container .two-column-container_container .data-containers .all-data .img-container img{
     width: 450px;
     height: 330px;
 }
 
-.our-services .services-container .service-conatiners .all-services .heading-container{
+.two-column-container .two-column-container_container .data-containers .all-data .heading-container{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.our-services .services-container .service-conatiners .all-services .heading-container h1{
+.two-column-container .two-column-container_container .data-containers .all-data .heading-container h1{
     font-size: 3.8rem;
     font-weight: 500;
     color: #000;
@@ -399,11 +418,14 @@ body{
 
 .class-opinion .img-container{
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .class-opinion .img-container img{
-    width: 380px;
-    height: 330px;
+    width: 38rem;
+    height: 33rem;
     margin-top: 20px;
 }
 
@@ -414,22 +436,27 @@ body{
     align-items: center;
     margin-top: 10rem;
     margin-bottom: 5rem;
+
 }
 
 #class-opinion-1{
-    width: 30%;
+    flex: 1;
     height: 100%;
+
 
 }
 #class-opinion-2{
-    width: 30%;
+    flex: 1;
     height: 100%;
-    margin-left: 5%;
+    
+
 }
 #class-opinion-3{
-    width: 30%;
+    flex: 1;
+
     height: 100%;
-    margin-left: 5%;
+    
+    
 }
 
 .join-newsletter{
@@ -466,32 +493,42 @@ body{
     
 }
 
+.join-newsletter .search-container form{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+ 
+}
+
 .join-newsletter .search-container form input[type=text]{
-    width: 600px;
-    height: 55px;
+    width: 70rem;
+    height: 7rem;
     border-left: blue 3px solid;
     border-top: blue 3px solid;
     border-bottom: red 3px solid;
     border-right: 3px solid red;
     border-radius: 15px;
+    font-size: 2.5rem;
+    padding-left: 1rem;
 }
 .join-newsletter .search-container form input[type=text]:focus{
     outline: none;
 }
 
 .join-newsletter .search-container form input[type=submit] {
-    width: 220px;
-    height: 50px;
-    background: linear-gradient(to right, blue, red);
-    border-right: 5px solid red;
-    border-top: 2px solid blue;
-    border-bottom: 2px solid red;
+    width: 22rem;
+    height: 7rem;
+    background: white;
+    border-right: 3px solid red;
+    border-top: 3px solid blue;
+    border-bottom: 3px solid red;
     border-radius: 15px;
+    margin-left: -22rem;
     cursor: pointer;
-    margin-left: -218px;
     color: #fff;
-    font-size: 1.5rem;
-    
+    font-size: 3.5rem;
+    background: linear-gradient(to right, blue, red);
 }
 
 .join-newsletter .search-container form input[type=submit]:active{
@@ -536,7 +573,7 @@ body{
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     
 }
@@ -552,23 +589,24 @@ body{
 }
 
 #step-1{
-    width: 30vw;
-    height: 100%;
     
-    margin-right: 5%;
+    height: 100%;
+    flex: 1;
+    
+    
 }
 
 
 #step-2{
-    width: 30vw;
+
     height: 100%;
-    
-    margin-right: 5%;
+    flex: 1;
+
 }
 
 #step-3{
-    width: 30vw;
     height: 100%;
+    flex: 1;
     
 }
 
@@ -663,40 +701,45 @@ body{
 
 
 
-
-
-
 @keyframes wordsChanger{
     0% {
-        content: 'leads';
-        color: crimson;
+        content: 'Facebook';
+        color: blue;
         
     }
 
     20% {
-        content: 'users';
-        color: crimson;
+        content: 'Instagram';
+        color: red;
     }
 
     40% {
-        content: 'revenue';
-        color: crimson;
+        content: 'Google';
+        color: green;
     }
 
     60% {
-        content: 'sales';
+        content: 'Linkedin';
         color: crimson;
     }
     
     80% {
-        content: 'conversions';
-        color: crimson;
+        content: 'Youtube';
+        color: orangered;
     }
 
     100% {
-        content: 'leads';
-        color: crimson;
+        content: 'Facebook';
+        color: blue;
         
+    }
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .button-container {
+        margin-top: -10rem;
     }
 }
 
@@ -748,340 +791,289 @@ body{
 
 @media only screen and (max-width: 1150px) {
 
-    .container-one{
-        width: 100%;
-        flex-direction: column;
-        margin-top: 16rem;
-        height: 100%;
-
-    }
-    
-    .main-heading{
-        width: 100% !important;
-    }
-
-    .header-main{
-        width: 100% !important;
-        position: absolute;
-        right: 30px;
-    }
-    .heading-main h1{
-        font-size: 7rem !important;
-        line-height: 11rem !important;
-        
-    }
-
-    .service-btns{
-        width: 100%;
-        margin-top: -5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-right: 13rem;
-    }
-    
-    .services-btn a{
-        font-size: 3rem;
-        margin-top: 18rem;
-    }
-    .image-container{
-        display: none !important;
-    
-    }
-
-    .container-2{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .h1-heading{
-        font-size: 22rem !important;
-    }
-
-    .container-2{
-        height: 120%;
-    }
-
-    .paragraph-container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: -5rem;
-        
-    }
-
-    .paragraph-container p {
-        font-size: 3rem;
-        margin-left: 3rem;
-    }
-
-    .paragraph-container p span{
-        font-size: 3rem;
-    }
-
-    .triangle{
-        height: 30rem;
-    }
-
-    .container-3{
-        height: 100%;
-    }
-
-    .container-3 h1{
-        font-size: 9rem;
-    }
-    .container-3 h2{
-        font-size: 4rem;
-    }
-    .container-3 h3{
-        font-size: 4rem;
-    }
-    .awareness{
-        width: 80%;
-        height: 70px !important;
-        font-size: 9rem;
-    }
-    .aquisition{
-        width: 70%;
-        height: 70px !important;
-        font-size: 9rem;
-    }
-    .activation{
-        width: 60%;
-        height: 70px !important;
-        font-size: 9rem;
-    }
-
-    .retention{
-        width: 50%;
-        height: 70px !important;
-        font-size: 9rem;
-    }
-    .revenue{
-        width: 40%;
-        height: 70px !important;
-        font-size: 9rem;
-    }
-    .referral{
-        width: 30%;
-        height: 70px !important;
-        font-size: 9rem;
-    }
-
-    .container-4{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 120%;
-    }
-
-    .container-4 p{
-        width: 100%;
-        font-size: 3rem;
-        line-height: 30pt !important;
-        margin-right: 0rem;
-        
-    }
-
-    .side-container h1{
-        transform: none !important;
-    }
-
-    .connect-with-us{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .connect-with-us a{
-        margin-top: 5rem;
-        font-size: 2rem;
-    }
-
-    .container-5{
-        width: 100%;
-        height: 120%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-    }
-
-    .container-5 .data-container{
-        width: 100%;
-        margin-left: 12rem;
-    } 
-    
-    .container-5 .data-container h1{
-
-    font-size: 6rem !important;
-    margin-top: 5rem !important;
-    
-    }
-
-    .data-container .items{
-        transform: translateX(0) !important;
-    }
-
-    .contact-us h1{
-        margin-top:10rem;
-    }
-    
-
-    .contact-us .form-container{
-        margin-top: -5rem;
-        width: 100%;
-        height: 80%;
-        border: none;
-    }
-
-    form{
-        width: 60%;
-    }
-
-    form input[type=text] {
-        height: 6rem;
-        font-size: 3rem;
-    }
-
-    form input[type=email] {
-        height: 6rem;
-        font-size: 3rem;
-    }
-
-    form textarea{
-    font-size: 3rem;
-    height: 12rem !important;
-    }
-    form input[type=submit]{
-        height: 6rem !important;
-        font-size: 3rem;
-    }
-
-
 
 
 }
-@media only screen and (max-width: 750px){
-    .container-one{
+@media only screen and (max-width: 850px){
+
+.mission-vision .heading-container h1{
+    font-size: 5rem;
+}
+
+.mission-vision .content-container{
+
+    margin-top: 0;
+    padding: 0 3rem;
+}
+
+.mission-vision .content-container p{
+    margin-top: 0;
+}
+
+.two-column-container{
+
+    height: 580rem;
+}
+
+.all-data {
+    width: 100% !important;
+    margin-bottom: 10rem !important;
+}
+
+.all-data .heading-container{
+    width: 100vh;
+}
+
+.all-data .heading-container h1{
+    font-size: 3.5rem;
+}
+
+    #services-container-1{
+        height: 120%;
+        flex-direction: column;
+    }
+    #services-container-2{
+        height: 120%;
+        flex-direction: column;
+        
+    }
+    #services-container-3{
+        height: 180rem;
+        flex-direction: column;
+    }
+
+    #how-different{
+        height: 480rem;
+    }
+
+    #how-different-header h1{
+        font-size: 6rem;
+    }
+
+    #personal-ad-manager{
+        margin-top: 15rem;
+    }
+
+    .our-opinion {
+        height: 300vh;
+    }
+
+    .our-opinion .heading-container h1{
+        font-size: 6rem;
+    }
+
+    .our-opinion .data-container {
+        flex-direction: column;
+    }
+
+    .our-opinion .data-container .class-opinion{
         width: 100%;
-        margin: 15rem 3rem 1rem 1rem;
-        
-
-    }
-    .main-heading{
-        width: 100% !important;
-        margin-top: 10rem;
-        margin-left: em !important;
-        
     }
 
-    .heading-main{
-        width: 100% !important;
-        margin: 0 8rem 0 -5rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    .heading-main h1{
-        width: 100% !important;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        font-size: 2.1rem !important;
-        line-height: 3rem !important;
-        margin-right: 1rem !important;
-        
-        
+    .join-newsletter .heading-container h1{
+        font-size: 6rem;
     }
 
-    .heading-main span{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+    .join-newsletter .search-container form input[type=text] {
+        width: 55rem;
+        height: 5rem;
     }
 
-    .service-btns .services-btn{
-        margin-top: 5rem;
+    .join-newsletter .search-container form input[type=submit] {
+        width: 15rem;
+        height: 5rem;
+        font-size: 1.5rem;
+        margin-left: -5rem;
     }
 
-    .service-btns .services-btn a {
-        font-size: 1.8rem;
-        
+    .customize-plan .heading-container {
+        width: 100%;
+        padding: 0 5rem;
     }
 
-    .h1-heading{
-        font-size: 15rem !important;
+    .customize-plan{
+        height: 300%;
+        width: 100%;
     }
-
-    .paragraph-container p{
-        font-size: 1.8rem !important;
-        text-align: center;
-    }
-    .triangle{
-        height: 12rem;
-    }
-
-    .container-3 h1{
-        font-size: 4rem;
-    }
-    .container-3 h2{
-        font-size: 2.8rem;
-        
-        text-align: center;
-    }
-
-    .container-3 h3{
-        height: 60px !important;
+    .customize-plan .heading-container h1{
         font-size: 3rem;
     }
-    .referral{
-        width: 33%;
+
+    
+    .customize-plan .steps-container{
+        flex-direction: column;
     }
 
-    .para-container{
-        width: 100% !important;
-    }
-
-    .para-container p {
-        font-size: 1.7rem !important;
-        text-align: center;
-        margin: 0 1.2rem !important;
-    }
-
-    .connect-with-us a{
-        margin-top: 2.9rem;
-        font-size: 1.3rem;
-    }
-
-    .container-5{
-        display: none;
-    }
-
-    .contact-us h1{
+    #step-1{
+        margin-bottom: 3rem;
         margin-top: 2rem;
     }
 
-    form input[type=text]   {
-        height: 3.5rem;
-        font-size: 2rem;
+    #step-2{
+        margin-bottom: 3rem;
+        margin-top: 2rem;
     }
 
-    form input[type=email]   {
-        height: 3.5rem;
-        font-size: 2rem;
+    #step-3{
+        margin-bottom: 3rem;
+        margin-top: 2rem;
     }
+
+    .website-health {
+        width: 100%;
+        height: 100vh;
+       
+    }
+
+    .website-health .heading-container h1 {
+        font-size: 4rem;
+    }
+
+    .website-health .form-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .website-health .form-container form .line{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
 
 }
 
+@media only screen and (max-width: 450px) {
+    .mission-vision {
+        height: 100vh;
+    }
 
+    .mission-vision .img-container {
+        height: 20vh;
+        
+    }
 
+    .mission-vision .img-container img{
+        width: 12rem;
+    }
+
+    .mission-vision .heading-container h1{
+        font-size: 3rem;
+    }
+
+    .mission-vision .content-container p {
+        font-size: 2.5rem;
+    }
+
+    .mission-vision .content-container ul li {
+        line-height: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .two-column-container{
+        height: 475rem;
+    }
+
+    .two-column-container .heading-container {
+        height: 20rem;
+    }
+
+    .two-column-container .heading-container h1{
+        font-size: 4rem;
+        
+    }
+
+    .two-column-container_container .data-containers {
+        padding: 0 0rem;
+    }
+
+    .two-column-container_container .data-containers .all-data .img-container{
+
+    }
+
+    .two-column-container .two-column-container_container .data-containers .all-data .img-container img{
+        width: 35rem;
+        height: 25rem;
+    }
+
+    .two-column-container .two-column-container_container .data-containers .all-data .heading-container{
+        height: 10rem;
+        
+    }
+
+    .two-column-container .two-column-container_container .data-containers .all-data .heading-container h1{
+        margin-top: 0;
+        font-size: 2.7rem;
+    }
+
+    .underline-container .underline{
+        margin-top: 0;
+    }
+
+    .two-column-container .two-column-container_container .data-containers .all-data .content-container{
+        margin-top: 0;
+        padding: 0 3rem;
+        line-height: 2.5rem;
+        height: 22rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .two-column-container .two-column-container_container .data-containers .all-data .content-container p {
+        font-size: 1.7rem;
+    }
+
+    .btn-read-more {
+        margin-top: 0;
+    }
+    #web-designing-services{
+        margin-top: -20rem;
+    }
+
+    #application-development{
+        margin-top: -8rem;
+    }
+
+    #how-different{
+        margin-top: 0;
+    }
+
+    .two-column-container .heading-container {
+        
+    }
+
+    #how-different{
+        height: 400rem;
+    }
+
+    #how-different-header{
+        margin-bottom: 0;
+    }
+
+    #how-different-header h1{
+        font-size: 3rem;
+    }
+
+    .our-opinion{
+        height: 320vh;
+    }
+
+    .our-opinion .heading-container{
+        margin-bottom: 3rem;
+    }
+
+    .our-opinion .heading-container h1{
+        font-size: 3rem;
+    }
+
+    .join-newsletter .heading-container h1{
+        font-size: 3rem;
+    }
+
+    
+}

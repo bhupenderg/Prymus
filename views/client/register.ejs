@@ -3,110 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Prymus- Technical Blogs">
-    <meta name="author" content="Prymus">
-    <link rel="icon" href="/images/prymus.png" type="image/gif" sizes="16x16">
-
-    <link rel="stylesheet" href="/css/header_updated_n.css">
+    <title>PRYMUS</title>
     <link rel="stylesheet" href="/css/header_updated_s.css">
     <link rel="stylesheet" href="/css/client-register.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/footer.css">
-
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
-  
-
-    <title>PRYMUS</title>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180719275-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-180719275-1');
-</script>
-
-<style>
-
-
-.liveValidateMessage {
-  transition: all .5s ease-out;
-  
-  position: absolute;
-  z-index: 1;
-  padding-top: 6px;
-  padding-bottom: 16px;
-  opacity: 0;
-  transform: translateY(100%);
-  width: 420px;
-  color: red;
-  font-size: 2rem;
-  
-}
-
-.liveValidateMessage--visible {
-  opacity: 1;
-  transform: translateY(-3rem)
-}
-
-
-</style>
 </head>
 <body>
 
-    <% if (user) { %>
-        <%- include ('../includes/header_updated_s.ejs') %>     
-    <% } else { %>
-        <%- include ('../includes/header_updated_n.ejs') %>
-    <% } %>
-    <!-- container-1 register/login -->
-    <div class="container-1">
-        <div class="sign-up">
-            <h1>Register Here!</h1>
-            <div class="form-container-register">
-                <form action="/registerclient" method="POST" class="client-register" id="client-register">
-                    <input type="text" name="name" id="register-name" class="registerField" placeholder="Name">
-                    <input type="text" name="email" id="register-email" class="registerField" placeholder="Email">
-                    <input type="password" name="password" id="register-password" class="registerField" placeholder="Password">
-                    <input type="password" name="passwordConfirm" id="register-password-confirm" class="registerField" placeholder="Password-confirm">
-                    <input type="tel" name="phone" id="register-phone" class="registerField" placeholder="Phone No.">
-                    <input type="text" name="city" id="register-city" class="registerField" placeholder="City">
-                    <input type="text" name="state" id="register-state" class="registerField" placeholder="state">
-                    <input type="number" name="pincode" id="register-pincode" class="registerField" placeholder="Pin">
-                    <input type="text" name="country" id="register-country" class="registerField" placeholder="Country">
-                    <input type="submit" name="register" value="Register">
-                </form>
-            </div>
+    <%- include ('../includes/header_updated_n.ejs') %>
 
-            
-        </div>
-        <div class="sign-in">
-            <h1>Login Here!</h1>
-            <div class="form-container-login">
-                <form action="myaccount" method="POST" class="client-login">
-                    <input type="text" name="email" class="register-email" placeholder="Email">
-                    <input type="password" name="password" class="register-password" placeholder="Password">
-                    <input type="submit" name="login" value="Login">
-                    
-                </form>
-            </div>
 
-           
-        </div>
+    <!-- Register Form -->
+
+    <div class="user-manager">
+    <h1 id="user"> User| </h1><h1 id="manager">Manager</h1>
+     
+    
     </div>
-    <!-- footer starts -->
-    <%- include('../footer.ejs') %>
+    
+    <div class="forms-container" id="user-forms-container">
+        <div class="register-form-container" id="user-register-form-container">
+            <h3>Already Registered? <span>Login Here!</span></h3>
+            <h1> User Register Here!</h1>
+            <form action="#" method="POST">
+                <input type="text" name="name" id="user-register-name" placeholder="Enter Name">
+                <small id="small-register-userName">Error Message</small>
+
+                <input type="email" name="email" id="user-register-email" placeholder="Eneter Email">
+                <small id="small-register-userEmail">Error Message</small>
+
+                <input type="password" name="password" id="user-register-password" placeholder="Enter Password">
+                <small id="small-register-userPassword">Error Message</small>
+
+                <input type="password" name="password-confirm" id="user-register-password-confirm" placeholder="Password Confirm">
+                <small id="small-register-userPasswordConfirm">Error Message</small>
+
+                <input type="number" name="phone" id="user-register-phone" placeholder="Enter Phone No.">
+                <small id="small-register-userPhone">Error Message</small>
+
+                <input type="text" name="city" id="user-register-city" placeholder="Enter City">
+                <small id="small-register-userCity">Error Message</small>
+
+                <input type="text" name="state" id="user-register-state" placeholder="Enter State">
+                <small id="small-register-userState">Error Message</small>
+
+                <input type="number" name="pin" id="user-register-pin" placeholder="Enter Pin Code">
+                <small id="small-register-userPin">Error Message</small>
+
+                <input type="text" name="country" id="user-register-country" placeholder="Country">
+                <small id="small-register-userCountry">Error Message</small>
+
+                <input type="submit" name="register-user" value="Register">
+            </form>
+        </div>
 
 
-    <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <!-- Login Form -->
+
+        <div class="login-form-container" id="user-login-form-container">
+            <h3>Not Registered? <span>Register Here!</span></h3>
+            <h1>User Login Here!</h1>
+            <form action="#" method="POST">
+                
+                <input type="email" name="email" id="user-login-email" placeholder="Eneter Email">
+                <small id="small-login-userEmail">Error Message</small>
+
+                <input type="password" name="password" id="user-login-password" placeholder="Enter Password">
+                <small id="small-login-userPassword">Error Message</small>
+
+                
+                <input type="submit" name="login-user" value="Login">
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <!-- Manager Form -->
+
+
+    <div class="forms-container" id="manager-forms-container">
+        <div class="register-form-container" id="manager-register-form-container">
+            <h3>Already Registered? <span>Login Here!</span></h3>
+            <h1>Manager Register Here!</h1>
+            <form action="#" method="POST">
+                <input type="text" name="name" id="manager-register-name" placeholder="Enter Name">
+                <small id="small-register-managerName">Error Message</small>
+
+                <input type="email" name="email" id="manager-register-email" placeholder="Eneter Email">
+                <small id="small-register-managerEmail">Error Message</small>
+
+                <input type="password" name="password" id="manager-register-password" placeholder="Enter Password">
+                <small id="small-register-managerPassword">Error Message</small>
+
+                <input type="password" name="password-confirm" id="manager-register-password-confirm" placeholder="Password Confirm">
+                <small id="small-register-managerPasswordConfirm">Error Message</small>
+
+                <input type="number" name="phone" id="manager-register-phone" placeholder="Enter Phone No.">
+                <small id="small-register-managerPhone">Error Message</small>
+
+                <input type="text" name="city" id="manager-register-city" placeholder="Enter City">
+                <small id="small-register-managerCity">Error Message</small>
+
+                <input type="text" name="state" id="manager-register-state" placeholder="Enter State">
+                <small id="small-register-managerState">Error Message</small>
+
+                <input type="number" name="pin" id="manager-register-pin" placeholder="Enter Pin Code">
+                <small id="small-register-managerPin">Error Message</small>
+
+                <input type="text" name="country" id="manager-register-country" placeholder="Country">
+                <small id="small-register-managerCountry">Error Message</small>
+
+                <input type="submit" name="register-manager" value="Register">
+            </form>
+        </div>
+
+
+
+        <!-- Login Form -->
+
+        <div class="login-form-container" id="manager-login-form-container">
+            <h3>Not Registered? <span>Register Here!</span></h3>
+            <h1>Manager Login Here!</h1>
+            <form action="#" method="POST">
+                
+                <input type="email" name="email" id="manager-login-name" placeholder="Eneter Email">
+                <small id="small-login-managerEmail">Error Message</small>
+
+                <input type="password" name="password" id="manager-login-password" placeholder="Enter Password">
+                <small id="small-login-managerPassword">Error Message</small>
+
+                
+                <input type="submit" name="login-manager" value="Login">
+            </form>
+        </div>
+
+    </div>
+
+
+    <script src="/js/client-register.js"></script>
+    <script src="/js/validateforms/validateUserForms.js"></script>
     
-    <script src="/js/header_updated_n.js"></script>
-    <script src="/js/validateRegisterForm.js"></script>
-    
-    
-     </body>
-     </html>
+</body>
+</html>

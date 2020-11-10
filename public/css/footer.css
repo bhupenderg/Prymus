@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    bottom: 0;
+    bottom:0;
     background: rgb(255, 66, 66);;
     color: #fff;
     padding: 0 50px;
@@ -33,42 +33,7 @@
 }
 
 @media (max-width: 1350px){
-    .footer-container{
-        width: 100%;
-        flex-direction: column;
-        height: 25vh;
-        justify-content: center;
-        align-items: center;
-        
-    }
-
-    .footer-part-one{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-part-one p{
-        font-size: 1.6rem;
-        color: white;
-    }
-
-    .footer-part-two{
-        flex-direction: column;
-        width: 100%;
-        margin-top: 2rem;
-    }
-
-    .footer-part-two li a{
-        font-size: 1.6rem;
-    }
-
     
-
-
 }
 
 @media (max-width: 750px){
