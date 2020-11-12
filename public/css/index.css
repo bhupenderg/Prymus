@@ -472,6 +472,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
 
 }
 
@@ -497,15 +498,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     
 }
 
 .join-newsletter .search-container form{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
- 
+    position: absolute;
 }
 
 .join-newsletter .search-container form input[type=text]{
