@@ -1169,6 +1169,7 @@
 
     .join-newsletter .search-container form{
         flex-direction: column !important;
+        display: inline-block;
     }
 
     .join-newsletter .search-container form input{
