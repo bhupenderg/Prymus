@@ -1137,6 +1137,7 @@
 
     .our-opinion{
         height: 320vh;
+        z-index: -10;
     }
 
     .our-opinion .heading-container{
@@ -1169,7 +1170,6 @@
 
     .join-newsletter .search-container form{
         flex-direction: column !important;
-        display: inline-block;
     }
 
     .join-newsletter .search-container form input{
