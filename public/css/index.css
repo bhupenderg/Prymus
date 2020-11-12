@@ -472,6 +472,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
 }
 
 .join-newsletter .heading-container{
@@ -491,7 +492,7 @@
 
 .join-newsletter .search-container{
     width: 100%;
-    height: 30vh;
+    min-height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1145,6 +1146,45 @@
 
     .join-newsletter .heading-container h1{
         font-size: 3rem;
+    }
+
+    .mission-vision {
+        margin-top: -10rem;
+    }
+
+    .two-column-container .heading-container h1{
+        font-size: 3rem !important;
+    }
+
+    .all-data .heading-container h1{
+        font-size: 2.2rem !important;
+    }
+
+    .class-opinion .content-container {
+        padding: 0 1rem;
+    }
+
+    .join-newsletter .search-container form{
+        flex-direction: column !important;
+    }
+
+    .join-newsletter .search-container form input{
+        width: 35rem !important;
+    }
+
+    .join-newsletter .search-container form input[type=submit]{
+        width: 20rem !important;
+        align-self: center;
+        margin-left: 0 !important;
+        margin-top: 2rem !important;
+    }
+
+    .customize-plan .heading-container h1{
+        font-size: 2.5rem !important;
+    }
+
+    .website-health .heading-container h1{
+        font-size: 2.2rem !important;
     }
 
     
