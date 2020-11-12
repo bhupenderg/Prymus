@@ -510,7 +510,7 @@
 
 .join-newsletter .search-container form input[type=text]{
     width: 70rem;
-    height: 7rem;
+    min-height: 7rem;
     border-left: blue 3px solid;
     border-top: blue 3px solid;
     border-bottom: red 3px solid;
@@ -521,6 +521,7 @@
 }
 .join-newsletter .search-container form input[type=text]:focus{
     outline: none;
+    background-position-y: 0em;
 }
 
 .join-newsletter .search-container form input[type=submit] {
