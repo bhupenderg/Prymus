@@ -2,12 +2,13 @@
 
 .container-one{
     width: 100vw;
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 5rem;
+    margin-top: 5rem;
     -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -20,6 +21,7 @@
     justify-content: center;
     align-items: center;
     transform: translateY(15rem);
+    z-index: -1;
 }
 
 .container-one .tag-line h1{
@@ -94,6 +96,7 @@
 .container-one .data-main .data-main-data .btn-container a:hover{
     background: linear-gradient(to right, blue, red);
     transform: translateY(-3px);
+    color: #fff;
     box-shadow:
     0 2.8px 2.2px rgb(236, 9, 9),
     0 6.7px 5.3px rgb(50, 5, 255),
@@ -127,7 +130,7 @@
 
 .mission-vision{
     width: 100vw;
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -138,7 +141,6 @@
     
 .mission-vision .img-container{
     width: 100vw;
-    height: 10vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -146,7 +148,7 @@
 }
 
 .mission-vision .img-container img{
-    width: 180px;
+    width: 18rem;
 }
 
 .mission-vision .heading-container{
@@ -159,7 +161,7 @@
 }
 
 .mission-vision .heading-container h1{
-    font-size: 70px;
+    font-size: 7rem;
     color: rgb(255, 66, 66);
 }
 
@@ -195,7 +197,7 @@
 .two-column-container{
     
     width: 100vw;
-    height: 300rem;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -203,7 +205,7 @@
 }
 
 #how-different{
-    height: 260rem;
+    
     margin-top: 10rem;
 
 }
@@ -215,20 +217,20 @@
 
 .two-column-container .heading-container{
     width: 100%;
-    height: 300px;
+    height: 30rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .two-column-container .heading-container h1{
-    font-size: 70px;
+    font-size: 6rem;
     color: rgb(255, 66, 66);
 }
 
 .two-column-container .two-column-container_container {
     width: 100%;
-    height: 2700px;
+    height: 270rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -252,7 +254,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 80px;
+    margin-bottom: 8rem;
 
 }
 #services-container-2{
@@ -282,7 +284,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px 0;
+    padding: 1rem 0;
     
     
 }
@@ -293,8 +295,8 @@
 }
 
 .two-column-container .two-column-container_container .data-containers .all-data .img-container img{
-    width: 450px;
-    height: 330px;
+    width: 45rem;
+    height: 33rem;
 }
 
 .two-column-container .two-column-container_container .data-containers .all-data .heading-container{
@@ -304,26 +306,30 @@
 }
 
 .two-column-container .two-column-container_container .data-containers .all-data .heading-container h1{
-    font-size: 3.8rem;
+    font-size: 3.2rem;
     font-weight: 500;
     color: #000;
-    margin-top: -120px;
+    margin-top: -12rem;
 }
 
 .underline-container .underline{
-    width: 300px;
+    width: 30rem;
     height: 4px;
     background: linear-gradient(to right, blue, red);
-    margin-top: -160px;
+    margin-top: -16rem;
 
 }
 .content-container{
-    width: 400px;
-    margin-top: -80px;
+    width: 40rem;
+    margin-top: -8rem;
+}
+
+.all-data .content-container p{
+    font-size: 1.7rem;
 }
 
 .btn-read-more {
-    margin-top: 50px;
+    margin-top: 5rem;
     cursor: pointer;
 }
 
@@ -396,7 +402,7 @@
 }
 
 .our-opinion .heading-container h1{
-    font-size: 70px;
+    font-size: 7rem;
     color: rgb(255, 66, 66);
 }
 
@@ -796,6 +802,46 @@
 }
 @media only screen and (max-width: 850px){
 
+.container-one {
+    margin-bottom: 10rem;
+}
+
+.container-one .tag-line h1{
+    font-size: 6rem;
+}
+
+.container-one .data-main{
+    flex-direction: column;
+}
+
+.container-one .data-main-data {
+    margin-top: 20rem;
+}
+
+.container-one .data-main-data:nth-child(2) {
+    margin-top: -4rem;
+}
+
+.container-one .data-main-data:last-child {
+    margin-top: 10rem;
+}
+
+.container-one .data-main-data .img-container {
+    width: 100vh;
+}
+
+.container-one .data-main-data .img-container img{
+    width: 50%;
+}
+
+.container-one .data-main-data .btn-container{
+    width: 100vw;
+}
+
+.container-one .data-main-data .btn-container a{
+    font-size: 3.5rem !important;
+}
+
 .mission-vision .heading-container h1{
     font-size: 5rem;
 }
@@ -948,6 +994,32 @@
 }
 
 @media only screen and (max-width: 450px) {
+
+    .container-one {
+        margin-top: -2rem;
+    }
+
+    .container-one .tag-line h1{
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+
+    .container-one .img-container {
+        margin-top: -10rem;
+    }
+
+    .container-one .btn-container {
+        
+    }
+
+    .container-one .data-main-data .btn-container a {
+        font-size: 1.8rem !important;
+    }
+
+    #data-main-3 .img-container {
+        margin-top: 1px;
+        padding-top: 0;
+    }
     .mission-vision {
         height: 100vh;
     }

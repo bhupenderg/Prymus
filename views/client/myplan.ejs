@@ -36,61 +36,7 @@
     
     <!-- container-1 -->
 
-    <div class="container-1">
-        <div class="headings-container">
-            <h1>Congratulations, you have successfully created your plan.</h1>
-            <h2>Your plans includes:</h2>
-        </div>
-
-    <% myplan.forEach(plan => { %>
     
-    <div class="data-container">
-        <div class="data-name">
-            <h3>Facebook Marketing:</h3>
-            <h3>Linkedin Marketing:</h3>
-            <h3>Instagrm Marketing:</h3>
-            <h3>Email Marketing:</h3>
-            <h3>SEO:</h3>
-            <h3>SMO:</h3>
-        </div>
-        <div class="data-value">
-            <h3 class="fb_value"><%= plan.facebook_marketing %></h3>
-            <h3 class="lnk_value"><%= plan.linkedin_marketing %></h3>
-            <h3 class="insta_value"><%= plan.instagram_marketing %></h3>
-            <h3 class="email_value"><%= plan.email_marketing %></h3>
-            <h3 class="seo_value"><%= plan.seo %></h3>
-            <h3 class="smo_value"><%= plan.smo %></h3>
-
-        </div>
-    </div> 
-
-    <div class="total-amount">
-        <h2 style="color: #000; font-size: 2vw;">The total sum of your plan is Rs <%= plan.total %> </h2>
-    </div>
-
-    <div class="payment">
-        <form action="/meTrnPay" method="post">
-            <input type="hidden" value="WL0000000027698" id="mid" name="mid">
-            <input type="hidden" value="6375b97b954b37f956966977e5753ee6" id="encKey" name="encKey">
-            <input type="hidden" value="" id="hdnOrderID" name="hdnOrderID">
-            <input type="hidden" value="100" id="trnAmt" name="trnAmt">
-            <input type="hidden" value="INR" id="currency" name="currency">
-            <input type="hidden" value="S" id="meTransReqType" name="meTransReqType">
-            <input type="hidden" value="http://localhost:8000/meTrnSuccess" id="resUrl" name="resUrl">
-
-            <input type="submit" name="CHECKOUT" value="CHECKOUT" style="width: 100%;" />
-
-        </form>
-        
-    </div>
-
-
-    <% }) %>   
-
-
-        
-    </div>
-
     <!-- footer starts -->
 
     <%- include('../footer.ejs') %>

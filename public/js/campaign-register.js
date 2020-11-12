@@ -2,6 +2,104 @@
 
         // facebook starts
 
+
+function totalFb() {
+  let fb_days = document.getElementById('fb-days').value
+  let fb_price = document.getElementById('fb-price-per-day').value
+  let fb_total = document.getElementById('total-fb')
+  fb_total.value = parseInt(fb_days) * parseInt(fb_price)
+}
+
+// Instagram starts
+
+function totalInsta() {
+  let fb_days = document.getElementById('insta-days').value
+  let fb_price = document.getElementById('insta-price-per-day').value
+  let fb_total = document.getElementById('total-insta')
+  fb_total.value = parseInt(fb_days) * parseInt(fb_price)
+}
+
+
+// Linkedin starts
+
+function totalLink() {
+  let fb_days = document.getElementById('link-days').value
+  let fb_price = document.getElementById('link-price-per-day').value
+  let fb_total = document.getElementById('total-link')
+  fb_total.value = parseInt(fb_days) * parseInt(fb_price)
+}
+
+
+// Youtube starts
+
+function totalYoutube() {
+  let fb_days = document.getElementById('youtube-days').value
+  let fb_price = document.getElementById('youtube-price-per-day').value
+  let fb_total = document.getElementById('total-youtube')
+  fb_total.value = parseInt(fb_days) * parseInt(fb_price)
+}
+
+//  Google Starts
+
+function totalGoogle() {
+  let fb_days = document.getElementById('google-days').value
+  let fb_price = document.getElementById('google-price-per-day').value
+  let fb_total = document.getElementById('total-google')
+  fb_total.value = parseInt(fb_days) * parseInt(fb_price)
+}
+
+
+// Email starts
+
+function totalEmail() {
+  let fb_days = document.getElementById('email-days').value
+  let fb_price = document.getElementById('email-price-per-day').value
+  let fb_total = document.getElementById('total-email')
+  fb_total.value = parseInt(fb_days) * parseInt(fb_price)
+}
+
+
+// Pinterest Starts
+
+function totalPin() {
+  let fb_days = document.getElementById('pin-days').value
+  let fb_price = document.getElementById('pin-price-per-day').value
+  let fb_total = document.getElementById('total-pin')
+  fb_total.value = parseInt(fb_days) * parseInt(fb_price)
+}
+
+
+// SEO starts
+
+function totalSeo() {
+  let fb_days = document.getElementById('seo-days').value
+  let fb_price = document.getElementById('seo-price-per-day').value
+  let fb_total = document.getElementById('total-seo')
+  fb_total.value = parseInt(fb_days) * parseInt(fb_price)
+}
+
+// SMO starts
+
+function totalSmo() {
+  let fb_days = document.getElementById('smo-days').value
+  let fb_price = document.getElementById('smo-price-per-day').value
+  let fb_total = document.getElementById('total-smo')
+  fb_total.value = parseInt(fb_days) * parseInt(fb_price)
+}
+
+
+// SMS starts
+
+function totalSms() {
+  let fb_days = document.getElementById('sms-days').value
+  let fb_price = document.getElementById('sms-price-per-day').value
+  let fb_total = document.getElementById('total-sms')
+  fb_total.value = parseInt(fb_days) * parseInt(fb_price)
+}
+
+
+
+
 const facebook_price = document.getElementById('facebook_price')
 let fb_price = document.querySelector('.fb-price')
 let facebook_total = document.getElementById('facebook_total')
@@ -356,4 +454,11 @@ if(country.value === 'India'){
 
 
 // inputs
+
+
+
+// customize form
+
+
+
 

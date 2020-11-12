@@ -1,25 +1,300 @@
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+/* all data class starts here */
+.all-data{
+  width: 100vw;
+  min-height: 80vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
 }
 
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
+.all-data .heading-container {
+  width: 100%;
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
-body{
-    font-family: Century Gothic, sans-serif;
-    line-height: 1.7;
-    color: #777;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    position: relative;
+
+.all-data .heading-container div h1 {
+  font-size: 4vw;
+  cursor: pointer;
+}
+
+.all-data .heading-container div h1 a {
+  text-decoration: none;
+}
+
+#auto-heading a{
+  color: red;
+}
+
+#auto-heading a:hover{
+  color: green;
+  
+}
+
+#auto-heading:hover{
+  transform: translateY(-3px);
+  transition: transform 500ms ease-out;
+}
+
+#auto-heading:active{
+  transform: translateY(1px);
+  transition: transform 100ms ease-out;
+}
+
+#auto-heading a:active{
+  color: green;
+  transform: translateY(1px);
+}
+
+#custom-heading a{
+  color: blue;
+}
+
+#custom-heading:hover{
+  transform: translateY(-3px);
+  transition: transform 500ms ease-out;
+}
+
+  #custom-heading:active{
+    transform: translateY(1px);
+    transition: transform 100ms ease-out;
+  }
+
+#custom-heading a:hover{
+  color: green;
+  
+}
+
+#custom-heading a:active{
+  color: green;
+
+}
+
+.plan-form-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.plan-form-container form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #ff4f03; */
+}
+
+.plan-form-container form input{
+  width: 40%;
+  height: 4rem;
+  margin: 1% 0;
+  border-radius: 2px solid black;
+  border-radius: 50px;
+  padding: 0 3rem;
+  font-size: 1.2vw;
+}
+
+.plan-form-container form input:focus{
+  border: 3px solid green;
+  background-color: rgb(202, 250, 250);
+  outline: none;
+}
+
+
+.plan-btn{
+  
+  
+  width: 12% !important;
+  height: 5rem !important;
+  background: linear-gradient(to right, blue, red);
+  border-left: 2px solid blue;
+  background-origin: 2px solid blue;
+  border-right: 2px solid red;
+  border-bottom: 2px solid red;
+  border-radius: 50px;
+  margin: 2rem 0;
+  box-shadow: 2px 5px 5px 2px rgba(255, 0, 0, 0.685);
+  font-size: 2.5rem;
+
+}
+
+.plan-btn:hover{
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+.plan-btn:active{
+  transform: translateY(1px);
+  outline: none;
+}
+.plan-btn:focus{
+  outline: none;
+}
+
+#custom-plan-submit{
+  align-self: center;
+}
+
+#main-customizer{
+  width: 100%;
+  min-height: 20rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10rem;
+  
+}
+
+#main-customizer .headings-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  
+}
+
+#main-customizer .headings-container h1{
+  font-size: 3rem;
+  color: rgb(255, 66, 66);
+}
+
+#main-customizer .data-container {
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  margin-bottom: 3rem;
+}
+
+#main-customizer .data-container .fb-data{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+#main-customizer .data-container .fb-data label{
+  font-size: 2.2rem;
+}
+
+#main-customizer .data-container .fb-data select {
+  width: 80%;
+  height: 4rem;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+#main-customizer .data-container .fb-data input {
+  width: 80%;
+  height: 4rem;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+#fb-data-days{
+  flex: 1;
+}
+
+#fb-data-price{
+  flex: 1;
+}
+#fb-data-total{
+  flex: 1;
+}
+
+
+
     
+@media only screen and (max-width: 850px) {
+
+  .all-data .heading-container {
+    margin-bottom: 2rem;
+  }
+
+  .all-data .heading-container div h1 {
+    font-size: 5vw;
+  }
+
+  .plan-form-container form input{
+    width: 75%;
+    height: 5rem;
+    margin: 3% 0;
+    font-size: 2.5rem;
+  }
+
+  .plan-btn {
+    width: 28%;
+    font-size: 2.7rem;
+    color: white;
+  }
+
+  #main-customizer .data-container{
+    flex-direction: column;
+  }
+
 }
+
+
+
+
+
+@media only screen and (max-width: 450px) {
+
+  .all-data .heading-container {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+
+  .all-data .heading-container div h1 {
+    font-size: 8vw;
+  }
+
+  .plan-form-container form input{
+    width: 90%;
+    height: 4rem;
+    margin: 3% 0;
+    font-size: 2rem;
+  }
+
+  .plan-btn {
+    width: 40%;
+    font-size: 2rem;
+    color: white;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
