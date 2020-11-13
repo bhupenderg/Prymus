@@ -12,6 +12,7 @@
     color: #fff;
     padding: 0 50px;
     font-size: 2rem;
+    overflowY: hidden;
 }
 
 .footer-container .data-container {
