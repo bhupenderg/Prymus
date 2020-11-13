@@ -8,8 +8,13 @@ function totalFb() {
   let fb_price = document.getElementById('fb-price-per-day').value
   let fb_total = document.getElementById('total-fb')
   fb_total.value = parseInt(fb_days) * parseInt(fb_price)
+  return fb_total.value
 }
 
+let valu = totalFb()
+if(valu > 0) {
+  alert(valu)
+}
 // Instagram starts
 
 function totalInsta() {
