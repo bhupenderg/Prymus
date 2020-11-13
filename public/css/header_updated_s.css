@@ -73,6 +73,10 @@ header.header{
     width: 4rem;
 }
 
+.mob-nav-container:focus{
+    outline: none;
+}
+
 .nav-container{
     display: flex;
     justify-content: center;
@@ -197,6 +201,8 @@ header.header{
 
 @media only screen and (max-width: 450px) {
 
+
+
     .nav-container {
         
     }
@@ -204,6 +210,11 @@ header.header{
     .nav-container ul li a{
 
         font-size: 2rem;
+    }
+
+    .website-health .heading-container{
+        min-height: 30rem;
+        margin-top: -8rem;
     }
 
     

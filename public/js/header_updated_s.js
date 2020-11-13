@@ -1,4 +1,4 @@
-const hamburger = document.querySelector('.mob-nav-container')
+const hamburger = document.querySelector('.mob-nav-container img')
 const nav = document.querySelector('.nav-container')
 
 hamburger.addEventListener('click', () =>{
