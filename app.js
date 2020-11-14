@@ -179,9 +179,23 @@ app.get('/privacy-policy', (req, res) => {
     res.render('privacy-policy')
 })
 
+app.get('/our-services', (req, res) => {
+    res.render('our-services')
+})
+
+app.get('/app-development', (req, res) => {
+    res.render('app-development')
+})
+
+app.get('/email-marketing', (req, res) => {
+    res.render('email-marketing')
+})
+
 app.get('/', (req, res) => {
     res.render('index')
 })
+
+
 
 // app.get('/', (req, res) => {
 //     res.render('coming-soon')

@@ -13,6 +13,7 @@
     padding: 0 50px;
     font-size: 2rem;
     overflowY: hidden;
+    z-index: 100;
 }
 
 .footer-container .data-container {

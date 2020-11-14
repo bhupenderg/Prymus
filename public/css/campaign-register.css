@@ -2,7 +2,7 @@
 .all-data{
   width: 100vw;
   min-height: 80vh;
-  
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -36,7 +36,7 @@ class ValidateUserForms {
     events() {
 
         // username validation
-        this.userRegisterName.addEventListener('keyup', () =>{
+        this.userRegisterName.addEventListener('keyup', (e) =>{
             
             this.userNameValidation()
             
@@ -185,6 +185,7 @@ class ValidateUserForms {
             this.userRegisterName.classList.add('error')
             this.smallUserNameRegister.style.visibility = 'visible'
             this.smallUserNameRegister.innerText = 'Your name should contain letters only.'
+            e.preventDefault()
 
         } else if(this.userRegisterName.value.length === 0) {
             this.userRegisterName.className = ''

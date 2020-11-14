@@ -78,7 +78,6 @@ function filterTasks(e) {
 			if(text === ''){
 				task.style.display = 'none'
 			}
-			
 		}
 
 		else {
@@ -142,7 +141,6 @@ function filterTasks(e) {
 	 // stateChoosen.forEach(el => {
 	 	document.addEventListener('click', (e) => {
 
-			
 	 		
 	 		if(e.target.textContent.toLowerCase() === 'andhra pradesh'){
 	 			andhraPradeshCitiesContainer.style.display = 'block'
@@ -229,7 +227,6 @@ function filterTasks(e) {
 	 			
 	 		}
 
-			 plan-form-container
 
 	 		console.log(e.target.textContent.toLowerCase())
 	 	})
@@ -239,12 +236,8 @@ function filterTasks(e) {
 	 	el.addEventListener('click', (e) => {
 	 		if(e.target.parentElement.className = 'citiesContainer'){
 	 			citiesss.forEach(el =>{
-					 el.style.display = 'none'
-					 inputState.value = ''
-					
-				 })
-				 
-				 
+	 				el.style.display = 'none'
+	 			})
 	 		}
 	 		console.log("Goood")
 	 })

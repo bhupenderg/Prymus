@@ -1,4 +1,6 @@
-
+.customize-plan{
+    display: none;
+}
 
 .container-one{
     width: 100vw;
@@ -14,6 +16,40 @@
   user-select: none; /* Standard syntax */
 }
 
+.container-one-mob{
+    display: none;
+}
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%
+  }
+
+  .carousel{
+      min-height: 100vh;
+      min-height: 100vh;
+      
+      text-align: center;
+      
+      
+  }
+
+  .carousel-item img{
+      width: 40rem;
+      height: 70rem;
+  }
+
+  .carousel-control-next-icon{
+      padding: 2rem;
+      border: 3px solid blue;
+      
+  }
+
+  .carousel-control-prev-icon{
+    padding: 2rem;
+    border: 3px solid blue;
+  }
 .container-one .tag-line{
     width: 100%;
     display: flex;
@@ -30,16 +66,27 @@
 
 }
 
+#img-2 img{
+    width: 50rem;
+    height: 25rem;
+}
+
 .tag-line div span::after{
     content: '';
     animation: wordsChanger infinite 6s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: wordsChanger;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
 
 }
 
 .container-one .data-main-data .img-container{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    align-items: center;
+    
 }
 
 .container-one .data-main-data .img-container img{
@@ -73,6 +120,18 @@
     height: 40rem;
 }
 
+
+.container-one .data-main .data-main-data .content{
+    width: 100%;
+    
+    padding: 5rem 5rem 0 5rem;
+    margin-bottom: -5rem;
+}
+
+.container-one .data-main .data-main-data .content p{
+    font-size: 2rem;
+    text-align: justify;
+}
 .container-one .data-main .data-main-data .btn-container {
     padding-top: 10rem;
     display: flex;
@@ -173,28 +232,31 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
+    padding: 0 15rem;
 }
 
 
 
 .mission-vision .content-container p{
     
-    font-size: 3rem;
+    font-size: 3.2rem;
     color: #000;
-    font-weight: 600;
-}
-
-.mission-vision .content-container ul{
-    margin-top: 2rem;
-}
-
-.mission-vision .content-container ul li{
-    list-style-type: disc;
-    font-size: 1.8rem;
+    font-family: Helvetica, sans-serif;
     line-height: 5rem;
-    font-weight: 600;
+    margin-bottom: 3rem;
 }
+
+
+
+.mission-vision .content-container p:nth-child(2) {
+    font-size: 2rem;
+    counter-reset: #000;
+    font-weight: 100;
+    padding: 0 15rem;
+    line-height: 3.5rem;
+}
+
+
 
 /* --------------------our services --------------------------- */
 
@@ -284,12 +346,18 @@
     
 }
 
+#audio-video-editing{
+    height: 110rem;
+}
+
 .two-column-container .two-column-container_container .data-containers .all-data{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding: 1rem 0;
+    height: 90rem;
+
     
     
 }
@@ -356,9 +424,39 @@
     height: 100%;
     
 }
+
+#digital-marketing-services .img-container img{
+    width: 40rem;
+}
+
+#graphic-designing .img-container img{
+    width: 40rem;
+}
 #graphic-designing{
     width: 50%;
     height: 100%;
+}
+
+#application-development .img-container img{
+    width: 50rem;
+    height: 30rem;
+}
+
+#product-shoot .img-container img{
+    width: 50rem;
+    height: 28rem;
+}
+
+#audio-video-editing .img-container img{
+    width: 50rem;
+}
+
+#web-designing-services .img-container img{
+    width: 45rem;
+}
+
+.all-data .content-container p{
+    font-size: 2rem;
 }
 
 
@@ -693,7 +791,7 @@
     margin-top: 55px;
     width: 180px;
     height: 60px;
-    background: url("/images/Read-More.png");
+    background: url("/images/Submit.png");
     background-size: cover;
     cursor: pointer;
     border: none;
@@ -713,6 +811,7 @@
 .website-health .form-container form button:focus{
     outline: none;
 }
+
 
 
 
@@ -840,7 +939,7 @@
 }
 
 .container-one .data-main-data .img-container img{
-    width: 50%;
+    width: 30%;
 }
 
 .container-one .data-main-data .btn-container{
@@ -1004,7 +1103,7 @@
 
 @media only screen and (max-width: 450px) {
 
-    .container-one {
+    /* .container-one {
         margin-top: -2rem;
     }
 
@@ -1028,9 +1127,10 @@
     #data-main-3 .img-container {
         margin-top: 1px;
         padding-top: 0;
-    }
+    } */
     .mission-vision {
-        height: 100vh;
+        min-height: 100vh;
+        
     }
 
     .mission-vision .img-container {
@@ -1047,7 +1147,14 @@
     }
 
     .mission-vision .content-container p {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 3.8rem;
+        margin-top: 2rem;
+    }
+
+    .mission-vision .content-container p:nth-child(2) {
+        font-size: 1.8rem;
+        padding: 0 0;
     }
 
     .mission-vision .content-container ul li {
@@ -1060,7 +1167,7 @@
     }
 
     .two-column-container .heading-container {
-        height: 20rem;
+        
     }
 
     .two-column-container .heading-container h1{
@@ -1079,6 +1186,7 @@
     .two-column-container .two-column-container_container .data-containers .all-data .img-container img{
         width: 35rem;
         height: 25rem;
+        padding: 0 7rem;
     }
 
     .two-column-container .two-column-container_container .data-containers .all-data .heading-container{
@@ -1158,11 +1266,11 @@
     }
 
     .mission-vision {
-        margin-top: -10rem;
+        margin-top: 12rem;
     }
 
     .two-column-container .heading-container h1{
-        font-size: 3rem !important;
+        font-size: 2.6rem !important;
     }
 
     .all-data .heading-container h1{
@@ -1200,11 +1308,50 @@
         font-size: 2.2rem !important;
     }
 
-    .website-health .form-container form input[type=text]:last-child:focus{
-        margin-bottom: 45rem;
+    #carousel-h1{
+        font-size: 3rem !important;
+    }
+    .carousel-item img{
+        width: 32rem;
     }
 
-
-
+    .container-one{
+        display: none;
+    }
+    #demo{
+        margin-bottom: 20rem;
+    }
     
+
+    .container-one-mob{
+        display: flex;
+        margin-top: 15rem;
+        margin-bottom: -20rem;
+
+    }
+
+    .container-one-mob .carousel-inner .carousel-item {
+        margin-top: 10rem;
+    }
+
+    .container-one-mob .carousel-inner .carousel-item img:first-child{
+        height: 30rem;
+    }
+
+    .container-one-mob .carousel-inner .carousel-item img:nth-child(2){
+        height: 60rem;
+        width: 95%;
+    }
+
+    .container-one-mob .carousel-inner .carousel-item img{
+        margin-bottom: 4rem;
+    }
+
+    .carousel-control-next-icon{
+        border: none;
+    }
+
+    .carousel-control-prev-icon {
+        border: none;
+    }
 }

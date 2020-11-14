@@ -17,7 +17,7 @@ html {
     overflow-x: hidden;
 }
 body{
-    font-family: Century Gothic, sans-serif;
+    font-family: Helvetica, sans-serif;
     line-height: 1.7;
     color: #000;
     box-sizing: border-box;
@@ -43,6 +43,7 @@ header.header{
     align-items: center;
     position: fixed;
     top: 0;
+    z-index: 1000;
 }
 
 .logo-conatiner{
