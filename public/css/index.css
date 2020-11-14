@@ -1135,7 +1135,7 @@
 
     .mission-vision .img-container {
         height: 20vh;
-        
+        margin-top: -10rem;
     }
 
     .mission-vision .img-container img{
@@ -1186,7 +1186,7 @@
     .two-column-container .two-column-container_container .data-containers .all-data .img-container img{
         width: 35rem;
         height: 25rem;
-        padding: 0 7rem;
+        padding: 0 5rem;
     }
 
     .two-column-container .two-column-container_container .data-containers .all-data .heading-container{
@@ -1233,7 +1233,7 @@
     }
 
     .two-column-container .heading-container {
-        
+        height: 10rem;
     }
 
     #how-different{
@@ -1335,7 +1335,8 @@
     }
 
     .container-one-mob .carousel-inner .carousel-item img:first-child{
-        height: 30rem;
+        height: 25rem;
+        width: 40rem;
     }
 
     .container-one-mob .carousel-inner .carousel-item img:nth-child(2){

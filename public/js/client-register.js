@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 const userRegisterHere = document.querySelector('#user-register-form-container')
 const userLoginHere = document.querySelector('#user-login-form-container')
 const managerRegisterHere = document.querySelector('#manager-register-form-container')
