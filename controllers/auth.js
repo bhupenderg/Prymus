@@ -190,6 +190,6 @@ exports.mustBeLoggedIn = function(req, res, next) {
 
 exports.logout = (req, res) => {
     req.session.destroy(function() {
-        res.redirect('/connect-with-us')
+        res.redirect('/registerclient')
     })
 }
