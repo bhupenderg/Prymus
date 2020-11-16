@@ -70,7 +70,7 @@ exports.createCampaign = async (req, res) => {
 exports.getCampaign = async(req, res) => {
     try{
         const campaigns = await Campaign.find()
-        res.render('campaign-register', {
+        res.render('custom-campaign-register', {
             area: area
         })
     }

@@ -17,17 +17,37 @@ const transporter = nodemailer.createTransport(sendgridTransport({
 }))
 
 exports.signup = async (req, res) => {
+
+    const errorVal = []
     try{
+
+        // if(req.body.name === '') {
+        //     errorVal.push("Please enter your name.")
+        //     res.jason({
+        //         err
+        //     })
+            
+        // } 
+        // if(req.body.email === '') {
+        //     errorVal.push("Please enter your email.")
+            
+        // }
+        // errorVal.forEach(el => {
+        //     res.send(el)
+        // })
+
         const newClient = await Client.create(req.body)
         
         if(!newClient){
-            return res.status(400).json({
-                status: "Fail",
-                data: {
-                    msg: "You are already registered. Login to proceed!",
-                    client: newClient
-                }
-            })
+            // return res.status(400).json({
+            //     status: "Fail",
+            //     data: {
+            //         msg: "You are already registered. Login to proceed!",
+            //         client: newClient
+            //     }
+            // })
+
+            res.send("You are already registered. Login to proceed.")
         }
 
         

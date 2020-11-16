@@ -39,10 +39,9 @@
 <body>
 
     <% if (user) { %>
-        <!-- <%- include ('includes/header_updated_s.ejs') %>      -->
-        <%- include ('includes/header_updated_n.ejs') %>
+        <%- include ('./includes/header_updated_s.ejs') %>     
     <% } else { %>
-        <%- include ('includes/header_updated_n.ejs') %>
+        <%- include ('./includes/header_updated_n.ejs') %>
     <% } %>
 
     <!-- Al Starts -->
@@ -51,7 +50,7 @@
 
         <!-- Heading Starts -->
         <div class="heading-container">
-            <div><h1 id="auto-heading"><a href="#auto-plan">Automated Plan</a></h1></div>
+            <!-- <div><h1 id="auto-heading"><a href="#auto-plan">Automated Plan</a></h1></div> -->
             <div><h1 id="custom-heading"><a href="#customize-plan">Customize Your Plan</a></h1></div>
         </div>
         <!-- Heading Ends -->
@@ -59,16 +58,490 @@
         <!-- Form Container Stars -->
 
         <div class="plan-form-container" id="automatic-form-container">
-            <form action="/auto-plan" method="POST" enctype="multipart/form-data">
-                <input type="text" name="company-name" id="company-name" placeholder="Enter Your Company Name">
-                <input type="text" name="company-website" id="company-website" placeholder="Enter Your Company Website">
+            <form action="/campaignregister-custom" method="POST" enctype="multipart/form-data">
+                <input type="text" name="company_name" id="company-name" placeholder="Enter Your Company Name">
+                <input type="text" name="website" id="company-website" placeholder="Enter Your Company Website">
                 <input type="number" name="whatsapp_no" id="whatsapp_no" placeholder="Enter Your Whatsapp No">
                 <input type="text" name="position" id="position" placeholder="Enter Your Position">
-                <input type="file" name="files-auto-plan" id="files-auto-plan">
+                <input type="text" name="category" id="category" placeholder="Enter Category of your business">
+                <div class="main-customizer" id="main-customizer">
 
-                <input type="number" name="plan-amount" id="plan-amount" placeholder="Enter The Amount You Want To Purchase Plan For">
+                    <!-- facebook starts -->
+                    <div class="headings-container">
+                        <h1>Customize For Facebook</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="fb-days" id="fb-days" onchange="totalFb()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option>
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="fb-price-per-day" id="fb-price-per-day" onchange="totalFb()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="facebook_marketing" class="total-amount" id="total-fb" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- facebook ends -->
+        
+                    <!-- instagram starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For Instagram</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="insta-days" id="insta-days" class="custom-plan-select" onchange="totalInsta()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option>
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="insta-price-per-day" id="insta-price-per-day" onchange="totalInsta()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="instagram_marketing" class="total-amount" id="total-insta" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- Linkedin starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For Linkedin</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="link-days" id="link-days" onchange="totalLink()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option>
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="link-price-per-day" id="link-price-per-day" onchange="totalLink()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="linkedin_marketing" class="total-amount" id="total-link" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- Linkedin Ends -->
+        
+                    <!-- Youtube starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For Youtube</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="youtube-days" id="youtube-days" onchange="totalYoutube()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option>
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="youtube-price-per-day" id="youtube-price-per-day" onchange="totalYoutube()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="youtube_marketing" class="total-amount" id="total-youtube" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- Youtube Ends -->
+        
+                    <!-- Google starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For Google</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="google-days" id="google-days" onchange="totalGoogle()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option>
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="google-price-per-day" id="google-price-per-day" onchange="totalGoogle()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="google_marketing" class="total-amount" id="total-google" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- Google Ends -->
+        
+        
+                    <!-- Email starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For Email</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="email-days" id="email-days" onchange="totalEmail()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option>
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="email-price-per-day" id="email-price-per-day" onchange="totalEmail()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="email_marketing" class="total-amount" id="total-email" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- Email Ends -->
+        
+                    <!-- Pinterest starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For Pinterest</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="pin-days" id="pin-days" onchange="totalPin()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option>
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="pin-price-per-day" id="pin-price-per-day" onchange="totalPin()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="pin_marketing" class="total-amount" id="total-pin" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- Pinterest Ends -->
+        
+        
+                    <!-- SEO starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For SEO</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="seo-days" id="seo-days" onchange="totalSeo()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option>
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="seo-price-per-day" id="seo-price-per-day" onchange="totalSeo()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="seo" class="total-amount" id="total-seo" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- SEO Ends -->
+        
+        
+        
+                    <!-- SMO starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For SMO</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="smo-days" id="smo-days" onchange="totalSmo()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option>
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="smo-price-per-day" id="smo-price-per-day" onchange="totalSmo()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="smo" class="total-amount" id="total-smo" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- SMO Ends -->
+        
+        
+                    <!-- SMS starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For SMS</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="sms-days" id="sms-days" onchange="totalSms()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option>
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="sms-price-per-day" id="sms-price-per-day" onchange="totalSms()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="sms" class="total-amount" id="total-sms" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- SMS Ends -->
+        
+        
+        
+        
+                    </div>    
+                    
+                    <div class="showTotal">
+                        <h1>Show Total</h1>
+                        <h2></h2>
+                    </div>
+                <input type="file" name="image_url" id="files-auto-plan">
+
+                <!-- <input type="number" name="plan-amount" id="plan-amount" placeholder="Enter The Amount You Want To Purchase Plan For">
                 <input type="number" name="total-amount" id="total-amount" value="0">
-                <h2></h2>
+                <h2></h2> -->
 
                 <!-- Select Starts Here -->
 
@@ -6313,6 +6786,21 @@
                         
                     </div>
 
+
+                    <!-- select ended -->
+
+
+                    
+
+
+
+
+
+                    <!-- <div class="fb-data" id="fb-data-total">
+                        <label for="total">Total Amount</label>
+                        <input type="number" name="total-amount-insta" class="total-amount" id="total-insta" readonly="true">
+                    </div> -->
+
                     <input type="submit" name="auto-form-submit" class="plan-btn" id="auto-plan-submit">
 
 
@@ -6327,514 +6815,7 @@
                       <!-- Customize form container stars here -->
 
 
-    <div class="plan-form-container" id="automatic-form-container">
-        <form action="/auto-plan" method="POST" enctype="multipart/form-data">
-            <input type="text" name="company-name" id="company-name" placeholder="Enter Your Company Name">
-            <input type="text" name="company-website" id="company-website" placeholder="Enter Your Company Website">
-            <input type="number" name="whatsapp_no" id="whatsapp_no" placeholder="Enter Your Whatsapp No">
-            <input type="text" name="position" id="position" placeholder="Enter Your Position">
-
-            
-
-            
-        <div class="main-customizer" id="main-customizer">
-
-            <!-- facebook starts -->
-            <div class="headings-container">
-                <h1>Customize For Facebook</h1>
-            </div>
-            <div class="data-container" id="data-container-fb">
-                <div class="fb-data" id="fb-data-days">
-                <label for="Days">No. of Days</label>
-                <select name="fb-days" id="fb-days" onchange="totalFb()">
-                    <option value="0">Select Here</option>
-                    <option value="7">7 Days</option>
-                    <option value="15">15 Days</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Months</option>
-                    <option value="90">3 Months</option>
-                    <option value="180">6 Months</option>
-                    <option value="360">12 Months</option>
-                </select>
-                </div>
-
-                <div class="fb-data" id="fb-data-price">
-
-                <label for="Price Per day">Price Per Day</label>
-                <select name="fb-price-per-day" id="fb-price-per-day" onchange="totalFb()">
-                    <option value="0">Select Here</option>
-                    <option value="500">Rs 500</option>
-                    <option value="1000">Rs 1000</option>
-                    <option value="1500">Rs 1500</option>
-                    <option value="2000">Rs 2000</option>
-                    <option value="3000">Rs 3000</option>
-                    <option value="4000">Rs 4000</option>
-                    <option value="5000">Rs 5000</option>
-                </select>
-
-                </div>
-
-                <div class="fb-data" id="fb-data-total">
-                    <label for="total">Total Amount</label>
-                    <input type="number" name="total-amount-fb" class="total-amount" id="total-fb" readonly="true">
-                </div>
-                
-                
-            </div>
-
-            <!-- facebook ends -->
-
-            <!-- instagram starts -->
-
-            <div class="headings-container">
-                <h1>Customize For Instagram</h1>
-            </div>
-            <div class="data-container" id="data-container-fb">
-                <div class="fb-data" id="fb-data-days">
-                <label for="Days">No. of Days</label>
-                <select name="insta-days" id="insta-days" class="custom-plan-select" onchange="totalInsta()">
-                    <option value="0">Select Here</option>
-                    <option value="7">7 Days</option>
-                    <option value="15">15 Days</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Months</option>
-                    <option value="90">3 Months</option>
-                    <option value="180">6 Months</option>
-                    <option value="360">12 Months</option>
-                </select>
-                </div>
-
-                <div class="fb-data" id="fb-data-price">
-
-                <label for="Price Per day">Price Per Day</label>
-                <select name="insta-price-per-day" id="insta-price-per-day" onchange="totalInsta()">
-                    <option value="0">Select Here</option>
-                    <option value="500">Rs 500</option>
-                    <option value="1000">Rs 1000</option>
-                    <option value="1500">Rs 1500</option>
-                    <option value="2000">Rs 2000</option>
-                    <option value="3000">Rs 3000</option>
-                    <option value="4000">Rs 4000</option>
-                    <option value="5000">Rs 5000</option>
-                </select>
-
-                </div>
-
-                <div class="fb-data" id="fb-data-total">
-                    <label for="total">Total Amount</label>
-                    <input type="number" name="total-amount-insta" class="total-amount" id="total-insta" readonly="true">
-                </div>
-                
-                
-            </div>
-
-            <!-- Linkedin starts -->
-
-            <div class="headings-container">
-                <h1>Customize For Linkedin</h1>
-            </div>
-            <div class="data-container" id="data-container-fb">
-                <div class="fb-data" id="fb-data-days">
-                <label for="Days">No. of Days</label>
-                <select name="link-days" id="link-days" onchange="totalLink()">
-                    <option value="0">Select Here</option>
-                    <option value="7">7 Days</option>
-                    <option value="15">15 Days</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Months</option>
-                    <option value="90">3 Months</option>
-                    <option value="180">6 Months</option>
-                    <option value="360">12 Months</option>
-                </select>
-                </div>
-
-                <div class="fb-data" id="fb-data-price">
-
-                <label for="Price Per day">Price Per Day</label>
-                <select name="link-price-per-day" id="link-price-per-day" onchange="totalLink()">
-                    <option value="0">Select Here</option>
-                    <option value="500">Rs 500</option>
-                    <option value="1000">Rs 1000</option>
-                    <option value="1500">Rs 1500</option>
-                    <option value="2000">Rs 2000</option>
-                    <option value="3000">Rs 3000</option>
-                    <option value="4000">Rs 4000</option>
-                    <option value="5000">Rs 5000</option>
-                </select>
-
-                </div>
-
-                <div class="fb-data" id="fb-data-total">
-                    <label for="total">Total Amount</label>
-                    <input type="number" name="total-amount-link" class="total-amount" id="total-link" readonly="true">
-                </div>
-                
-                
-            </div>
-
-            <!-- Linkedin Ends -->
-
-            <!-- Youtube starts -->
-
-            <div class="headings-container">
-                <h1>Customize For Youtube</h1>
-            </div>
-            <div class="data-container" id="data-container-fb">
-                <div class="fb-data" id="fb-data-days">
-                <label for="Days">No. of Days</label>
-                <select name="youtube-days" id="youtube-days" onchange="totalYoutube()">
-                    <option value="0">Select Here</option>
-                    <option value="7">7 Days</option>
-                    <option value="15">15 Days</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Months</option>
-                    <option value="90">3 Months</option>
-                    <option value="180">6 Months</option>
-                    <option value="360">12 Months</option>
-                </select>
-                </div>
-
-                <div class="fb-data" id="fb-data-price">
-
-                <label for="Price Per day">Price Per Day</label>
-                <select name="youtube-price-per-day" id="youtube-price-per-day" onchange="totalYoutube()">
-                    <option value="0">Select Here</option>
-                    <option value="500">Rs 500</option>
-                    <option value="1000">Rs 1000</option>
-                    <option value="1500">Rs 1500</option>
-                    <option value="2000">Rs 2000</option>
-                    <option value="3000">Rs 3000</option>
-                    <option value="4000">Rs 4000</option>
-                    <option value="5000">Rs 5000</option>
-                </select>
-
-                </div>
-
-                <div class="fb-data" id="fb-data-total">
-                    <label for="total">Total Amount</label>
-                    <input type="number" name="total-amount-youtube" class="total-amount" id="total-youtube" readonly="true">
-                </div>
-                
-                
-            </div>
-
-            <!-- Youtube Ends -->
-
-            <!-- Google starts -->
-
-            <div class="headings-container">
-                <h1>Customize For Google</h1>
-            </div>
-            <div class="data-container" id="data-container-fb">
-                <div class="fb-data" id="fb-data-days">
-                <label for="Days">No. of Days</label>
-                <select name="google-days" id="google-days" onchange="totalGoogle()">
-                    <option value="0">Select Here</option>
-                    <option value="7">7 Days</option>
-                    <option value="15">15 Days</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Months</option>
-                    <option value="90">3 Months</option>
-                    <option value="180">6 Months</option>
-                    <option value="360">12 Months</option>
-                </select>
-                </div>
-
-                <div class="fb-data" id="fb-data-price">
-
-                <label for="Price Per day">Price Per Day</label>
-                <select name="google-price-per-day" id="google-price-per-day" onchange="totalGoogle()">
-                    <option value="0">Select Here</option>
-                    <option value="500">Rs 500</option>
-                    <option value="1000">Rs 1000</option>
-                    <option value="1500">Rs 1500</option>
-                    <option value="2000">Rs 2000</option>
-                    <option value="3000">Rs 3000</option>
-                    <option value="4000">Rs 4000</option>
-                    <option value="5000">Rs 5000</option>
-                </select>
-
-                </div>
-
-                <div class="fb-data" id="fb-data-total">
-                    <label for="total">Total Amount</label>
-                    <input type="number" name="total-amount-google" class="total-amount" id="total-google" readonly="true">
-                </div>
-                
-                
-            </div>
-
-            <!-- Google Ends -->
-
-
-            <!-- Email starts -->
-
-            <div class="headings-container">
-                <h1>Customize For Email</h1>
-            </div>
-            <div class="data-container" id="data-container-fb">
-                <div class="fb-data" id="fb-data-days">
-                <label for="Days">No. of Days</label>
-                <select name="email-days" id="email-days" onchange="totalEmail()">
-                    <option value="0">Select Here</option>
-                    <option value="7">7 Days</option>
-                    <option value="15">15 Days</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Months</option>
-                    <option value="90">3 Months</option>
-                    <option value="180">6 Months</option>
-                    <option value="360">12 Months</option>
-                </select>
-                </div>
-
-                <div class="fb-data" id="fb-data-price">
-
-                <label for="Price Per day">Price Per Day</label>
-                <select name="email-price-per-day" id="email-price-per-day" onchange="totalEmail()">
-                    <option value="0">Select Here</option>
-                    <option value="500">Rs 500</option>
-                    <option value="1000">Rs 1000</option>
-                    <option value="1500">Rs 1500</option>
-                    <option value="2000">Rs 2000</option>
-                    <option value="3000">Rs 3000</option>
-                    <option value="4000">Rs 4000</option>
-                    <option value="5000">Rs 5000</option>
-                </select>
-
-                </div>
-
-                <div class="fb-data" id="fb-data-total">
-                    <label for="total">Total Amount</label>
-                    <input type="number" name="total-amount-email" class="total-amount" id="total-email" readonly="true">
-                </div>
-                
-                
-            </div>
-
-            <!-- Email Ends -->
-
-            <!-- Pinterest starts -->
-
-            <div class="headings-container">
-                <h1>Customize For Pinterest</h1>
-            </div>
-            <div class="data-container" id="data-container-fb">
-                <div class="fb-data" id="fb-data-days">
-                <label for="Days">No. of Days</label>
-                <select name="pin-days" id="pin-days" onchange="totalPin()">
-                    <option value="0">Select Here</option>
-                    <option value="7">7 Days</option>
-                    <option value="15">15 Days</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Months</option>
-                    <option value="90">3 Months</option>
-                    <option value="180">6 Months</option>
-                    <option value="360">12 Months</option>
-                </select>
-                </div>
-
-                <div class="fb-data" id="fb-data-price">
-
-                <label for="Price Per day">Price Per Day</label>
-                <select name="pin-price-per-day" id="pin-price-per-day" onchange="totalPin()">
-                    <option value="0">Select Here</option>
-                    <option value="500">Rs 500</option>
-                    <option value="1000">Rs 1000</option>
-                    <option value="1500">Rs 1500</option>
-                    <option value="2000">Rs 2000</option>
-                    <option value="3000">Rs 3000</option>
-                    <option value="4000">Rs 4000</option>
-                    <option value="5000">Rs 5000</option>
-                </select>
-
-                </div>
-
-                <div class="fb-data" id="fb-data-total">
-                    <label for="total">Total Amount</label>
-                    <input type="number" name="total-amount-pin" class="total-amount" id="total-pin" readonly="true">
-                </div>
-                
-                
-            </div>
-
-            <!-- Pinterest Ends -->
-
-
-            <!-- SEO starts -->
-
-            <div class="headings-container">
-                <h1>Customize For SEO</h1>
-            </div>
-            <div class="data-container" id="data-container-fb">
-                <div class="fb-data" id="fb-data-days">
-                <label for="Days">No. of Days</label>
-                <select name="seo-days" id="seo-days" onchange="totalSeo()">
-                    <option value="0">Select Here</option>
-                    <option value="7">7 Days</option>
-                    <option value="15">15 Days</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Months</option>
-                    <option value="90">3 Months</option>
-                    <option value="180">6 Months</option>
-                    <option value="360">12 Months</option>
-                </select>
-                </div>
-
-                <div class="fb-data" id="fb-data-price">
-
-                <label for="Price Per day">Price Per Day</label>
-                <select name="seo-price-per-day" id="seo-price-per-day" onchange="totalSeo()">
-                    <option value="0">Select Here</option>
-                    <option value="500">Rs 500</option>
-                    <option value="1000">Rs 1000</option>
-                    <option value="1500">Rs 1500</option>
-                    <option value="2000">Rs 2000</option>
-                    <option value="3000">Rs 3000</option>
-                    <option value="4000">Rs 4000</option>
-                    <option value="5000">Rs 5000</option>
-                </select>
-
-                </div>
-
-                <div class="fb-data" id="fb-data-total">
-                    <label for="total">Total Amount</label>
-                    <input type="number" name="total-amount-seo" class="total-amount" id="total-seo" readonly="true">
-                </div>
-                
-                
-            </div>
-
-            <!-- SEO Ends -->
-
-
-
-            <!-- SMO starts -->
-
-            <div class="headings-container">
-                <h1>Customize For SMO</h1>
-            </div>
-            <div class="data-container" id="data-container-fb">
-                <div class="fb-data" id="fb-data-days">
-                <label for="Days">No. of Days</label>
-                <select name="smo-days" id="smo-days" onchange="totalSmo()">
-                    <option value="0">Select Here</option>
-                    <option value="7">7 Days</option>
-                    <option value="15">15 Days</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Months</option>
-                    <option value="90">3 Months</option>
-                    <option value="180">6 Months</option>
-                    <option value="360">12 Months</option>
-                </select>
-                </div>
-
-                <div class="fb-data" id="fb-data-price">
-
-                <label for="Price Per day">Price Per Day</label>
-                <select name="smo-price-per-day" id="smo-price-per-day" onchange="totalSmo()">
-                    <option value="0">Select Here</option>
-                    <option value="500">Rs 500</option>
-                    <option value="1000">Rs 1000</option>
-                    <option value="1500">Rs 1500</option>
-                    <option value="2000">Rs 2000</option>
-                    <option value="3000">Rs 3000</option>
-                    <option value="4000">Rs 4000</option>
-                    <option value="5000">Rs 5000</option>
-                </select>
-
-                </div>
-
-                <div class="fb-data" id="fb-data-total">
-                    <label for="total">Total Amount</label>
-                    <input type="number" name="total-amount-smo" class="total-amount" id="total-smo" readonly="true">
-                </div>
-                
-                
-            </div>
-
-            <!-- SMO Ends -->
-
-
-            <!-- SMS starts -->
-
-            <div class="headings-container">
-                <h1>Customize For SMS</h1>
-            </div>
-            <div class="data-container" id="data-container-fb">
-                <div class="fb-data" id="fb-data-days">
-                <label for="Days">No. of Days</label>
-                <select name="sms-days" id="sms-days" onchange="totalSms()">
-                    <option value="0">Select Here</option>
-                    <option value="7">7 Days</option>
-                    <option value="15">15 Days</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Months</option>
-                    <option value="90">3 Months</option>
-                    <option value="180">6 Months</option>
-                    <option value="360">12 Months</option>
-                </select>
-                </div>
-
-                <div class="fb-data" id="fb-data-price">
-
-                <label for="Price Per day">Price Per Day</label>
-                <select name="sms-price-per-day" id="sms-price-per-day" onchange="totalSms()">
-                    <option value="0">Select Here</option>
-                    <option value="500">Rs 500</option>
-                    <option value="1000">Rs 1000</option>
-                    <option value="1500">Rs 1500</option>
-                    <option value="2000">Rs 2000</option>
-                    <option value="3000">Rs 3000</option>
-                    <option value="4000">Rs 4000</option>
-                    <option value="5000">Rs 5000</option>
-                </select>
-
-                </div>
-
-                <div class="fb-data" id="fb-data-total">
-                    <label for="total">Total Amount</label>
-                    <input type="number" name="total-amount-sms" class="total-amount" id="total-sms" readonly="true">
-                </div>
-                
-                
-            </div>
-
-            <!-- SMS Ends -->
-
-
-
-
-            </div>    
-            
-            <div class="showTotal">
-                <h1>Show Total</h1>
-                <h2></h2>
-            </div>
-
-            
-            <input type="file" name="files-auto-plan" id="files-auto-plan">
-
-            <input type="number" name="plan-amount" id="plan-amount" placeholder="Enter The Amount You Want To Purchase Plan For">
-            <input type="number" name="total-amount" id="total-amount" value="0">
-            <h2></h2>
-
-
-
-
-
-            
-
-           
-                <input type="submit" name="custom-form-submit" class="plan-btn" id="custom-plan-submit">
-
-
-            <!-- Select Ends Here -->
-
-        </form>
-        </div>
-
-    </div>    
-
+    
     
 
 

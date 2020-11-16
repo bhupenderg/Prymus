@@ -15,7 +15,7 @@
     <!-- Register Form -->
 
     <div class="user-manager">
-    <h1 id="user"> User| </h1><h1 id="manager">Manager</h1>
+    <h1 id="user"> User          |    </h1><h1 id="manager">|          Manager</h1>
      
     
     </div>
@@ -24,32 +24,32 @@
         <div class="register-form-container" id="user-register-form-container">
             <h3>Already Registered? <span>Login Here!</span></h3>
             <h1> User Register Here!</h1>
-            <form action="/comingsoon" method="POST" id="userFormRegister">
-                <input type="text" name="name" id="user-register-name" placeholder="Enter Name">
+            <form action="/registerclient" method="POST" id="userFormRegister">
+                <input type="text" name="name" id="user-register-name" placeholder="Enter Name" required>
                 <small id="small-register-userName">Error Message</small>
 
-                <input type="email" name="email" id="user-register-email" placeholder="Enter Email">
+                <input type="email" name="email" id="user-register-email" placeholder="Enter Email" required>
                 <small id="small-register-userEmail">Error Message</small>
 
-                <input type="password" name="password" id="user-register-password" placeholder="Enter Password">
+                <input type="password" name="password" id="user-register-password" placeholder="Enter Password" required>
                 <small id="small-register-userPassword">Error Message</small>
 
-                <input type="password" name="password-confirm" id="user-register-password-confirm" placeholder="Password Confirm">
+                <input type="password" name="passwordConfirm" id="user-register-password-confirm" placeholder="Password Confirm" required>
                 <small id="small-register-userPasswordConfirm">Error Message</small>
 
-                <input type="number" name="phone" id="user-register-phone" placeholder="Enter Phone No.">
+                <input type="number" name="phone" id="user-register-phone" placeholder="Enter Phone No." required>
                 <small id="small-register-userPhone">Error Message</small>
 
-                <input type="text" name="city" id="user-register-city" placeholder="Enter City">
+                <input type="text" name="city" id="user-register-city" placeholder="Enter City" required>
                 <small id="small-register-userCity">Error Message</small>
 
-                <input type="text" name="state" id="user-register-state" placeholder="Enter State">
+                <input type="text" name="state" id="user-register-state" placeholder="Enter State" required>
                 <small id="small-register-userState">Error Message</small>
 
-                <input type="number" name="pin" id="user-register-pin" placeholder="Enter Pin Code">
+                <input type="number" name="pincode" id="user-register-pin" placeholder="Enter Pin Code" required>
                 <small id="small-register-userPin">Error Message</small>
 
-                <input type="text" name="country" id="user-register-country" placeholder="Country">
+                <input type="text" name="country" id="user-register-country" placeholder="Country" required>
                 <small id="small-register-userCountry">Error Message</small>
 
                 <input type="submit" name="register-user" value="Register">
@@ -88,31 +88,31 @@
             <h3>Already Registered? <span>Login Here!</span></h3>
             <h1>Manager Register Here!</h1>
             <form action="/coming-soon" method="POST">
-                <input type="text" name="name" id="manager-register-name" placeholder="Enter Name">
+                <input type="text" name="name" id="manager-register-name" placeholder="Enter Name" required>
                 <small id="small-register-managerName">Error Message</small>
 
-                <input type="email" name="email" id="manager-register-email" placeholder="Enter Email">
+                <input type="email" name="email" id="manager-register-email" placeholder="Enter Email" required>
                 <small id="small-register-managerEmail">Error Message</small>
 
-                <input type="password" name="password" id="manager-register-password" placeholder="Enter Password">
+                <input type="password" name="password" id="manager-register-password" placeholder="Enter Password" required>
                 <small id="small-register-managerPassword">Error Message</small>
 
-                <input type="password" name="password-confirm" id="manager-register-password-confirm" placeholder="Password Confirm">
+                <input type="password" name="password-confirm" id="manager-register-password-confirm" placeholder="Password Confirm" required>
                 <small id="small-register-managerPasswordConfirm">Error Message</small>
 
-                <input type="number" name="phone" id="manager-register-phone" placeholder="Enter Phone No.">
+                <input type="number" name="phone" id="manager-register-phone" placeholder="Enter Phone No." required>
                 <small id="small-register-managerPhone">Error Message</small>
 
-                <input type="text" name="city" id="manager-register-city" placeholder="Enter City">
+                <input type="text" name="city" id="manager-register-city" placeholder="Enter City" required>
                 <small id="small-register-managerCity">Error Message</small>
 
-                <input type="text" name="state" id="manager-register-state" placeholder="Enter State">
+                <input type="text" name="state" id="manager-register-state" placeholder="Enter State" required>
                 <small id="small-register-managerState">Error Message</small>
 
-                <input type="number" name="pin" id="manager-register-pin" placeholder="Enter Pin Code">
+                <input type="number" name="pin" id="manager-register-pin" placeholder="Enter Pin Code" required>
                 <small id="small-register-managerPin">Error Message</small>
 
-                <input type="text" name="country" id="manager-register-country" placeholder="Country">
+                <input type="text" name="country" id="manager-register-country" placeholder="Country" required>
                 <small id="small-register-managerCountry">Error Message</small>
 
                 <input type="submit" name="register-manager" value="Register">

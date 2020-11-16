@@ -4,9 +4,9 @@ const router = express.Router()
 const campaignController = require('../controllers/campaignsController')
 const authController = require('../controllers/auth')
 
-router.post('/campaignregister', campaignController.createCampaign)
+router.post('/campaignregister-custom', campaignController.createCampaign)
 
-router.get('/campaignregister', authController.mustBeLoggedIn, campaignController.getCampaign)
+router.get('/campaignregister-custom', authController.mustBeLoggedIn, campaignController.getCampaign)
 
 
 router.get('/registeraffiliate', (req, res) => {
