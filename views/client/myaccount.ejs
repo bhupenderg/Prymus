@@ -2,18 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="Prymus- Technical Blogs">
     <meta name="author" content="Prymus">
     <link rel="icon" href="/images/prymus.png" type="image/gif" sizes="16x16">
-    <link rel="stylesheet" href="/css/header_updated_n.css">
+
+    
+    <!-- <link rel="stylesheet" href="/css/header.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="/css/header_updated_s.css">
+    
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/myaccount.css">
     
-    <link rel="stylesheet" href="/css/seo.css">
+    <!-- <link rel="stylesheet" href="/css/seo.css"> -->
     <link rel="stylesheet" href="/css/chat.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/footer.css">
+
+    <style>
+        
+    </style>
+    
 
     <title>PRYMUS</title>
 
@@ -26,66 +35,76 @@
 
   gtag('config', 'UA-180719275-1');
 </script>
+
 </head>
 <body>
+    
 
     <% if (user) { %>
         <%- include ('../includes/header_updated_s.ejs') %>     
     <% } else { %>
-        <div class="header-main">
-            <%- include ('../includes/header_updated_n.ejs') %>
-        </div>     
-    
+        <%- include ('../includes/header_updated_n.ejs') %>
     <% } %>
-    <div class="myaccount-dashboard">
-        <div class="welcome-note">
-            <h1 class="welcome">Welcome <%= user.username %></h1>
-            
-        </div>
-        <div class="data-container">
-            <div class="data-container_one">
-                <h2 class="choices-one createPlan"><a href="/campaignregister">Customize Your Plan</a></h2>
-                <h2 class="choices-one currentPlan"><a href="/myplan">Current Plans</a></h2>
-                <h2 class="choices-one previousOrders"><a class="previous_orders" href="#">Previous Orders</a></h2>
-                <h2 class="choices-one rewards"><a href="#">Reward Points Earned</a></h2>
-                <h2 class="choices-one complaints"><a href="#">Complaints</a></h2>
-            </div>
-            <div class="data-container_two">
-                <h2 class="choices-two newsletter"><a href="#">Subscribe For Newsletter</a></h2>
-                <h2 class="choices-two subscribeEmail"><a href="#">Email Subscribe</a></h2>
-                <h2 class="choices-two successStories"><a href="#">Our Success Stories</a></h2>
-            </div>
-        </div>
-    </div>
 
-    <div class="previous_orders_section">
-        <h1>Hello Ladies</h1>
-    </div>
 
-    <!-- footer starts -->
+
+<!-- container-one -->
+        <div class="container-one">
+            <div class="welcome-note">
+                <h1>Welcome <%= user.username %> </h1>
+            </div>
+
+            <div class="data-container">
+                <div class="plan" id="auto-plan">
+                    <a href="#">Auto Plan</a>
+                </div>
+                <div class="plan" id="custom-plan">
+                    <a href="#">Customize Plan</a>
+                </div>
+                <div class="plan" id="current-order">
+                    <a href="#">Current Orders</a>
+                </div>
+                <div class="plan" id="cart">
+                    <a href="#">Cart</a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+    
+
+
+
+    
+
+    <!-- -------footer----------- -->
 
     <%- include('../footer.ejs') %>
+
     <% if (user) { %>
         <div id="chat-wrapper" class="chat-wrapper shadow border-left border-right"></div>
         <script src="/socket.io/socket.io.js"></script>
     <% } %>
 
- 
-<script src="/js/chat.js"></script>
-
-    <!-- footer ends -->
 
 
+<script src="/js/index.js"></script>  
+<script src="/js/chat.js"></script>  
 
-        <script>
-        const previous_orders = document.querySelector('.previous_orders')
-        const previous_orders_section = document.querySelector('.previous_orders_section')
-        previous_orders.addEventListener('click', () => {
-            previous_orders_section.classList.add('.myaccount-animate')
-           
-        })
-    </script>
-    <script src="/js/header_updated_n.js"></script>
+<script src="/js/header_updated_s.js"></script>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+   
+
+    
 </body>
 </html>

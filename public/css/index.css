@@ -42,13 +42,13 @@
 
   .carousel-control-next-icon{
       padding: 2rem;
-      border: 3px solid blue;
+      background-color: rgb(14, 14, 19);
       
   }
 
   .carousel-control-prev-icon{
     padding: 2rem;
-    border: 3px solid blue;
+    background-color: rgb(14, 14, 19);
   }
 .container-one .tag-line{
     width: 100%;

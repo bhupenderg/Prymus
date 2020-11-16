@@ -17,7 +17,11 @@ const userForm = document.getElementById('user-forms-container')
 const managerForm = document.getElementById('manager-forms-container')
 
 const text = document.querySelector('.user-manager')
-const managerText = document.getElementById('#manager')
+const managerText = document.getElementById('manager')
+
+
+
+
 
 
 userTextRegisterHere.addEventListener('click', () => {
