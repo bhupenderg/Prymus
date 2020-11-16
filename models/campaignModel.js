@@ -82,7 +82,7 @@ const campaignSchema = new Schema({
     total: {
         type: Number,
         trim: true,
-        required: true
+        
     }
 }, 
 {

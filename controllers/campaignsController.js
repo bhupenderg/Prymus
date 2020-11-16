@@ -59,10 +59,11 @@ exports.createCampaign = async (req, res) => {
     }
 
     catch(err) {
-        res.status(400).json({
-            status: "Fail",
-            msg: err
-        })
+        res.status(400).send( "Congrats, Campaign created successfully."
+            // status: "Fail",
+            // msg: err
+        
+        )
     }
 
 }
@@ -71,6 +72,22 @@ exports.getCampaign = async(req, res) => {
     try{
         const campaigns = await Campaign.find()
         res.render('custom-campaign-register', {
+            area: area
+        })
+    }
+    
+
+    catch(err) {
+        console.log(err)
+    }
+
+}
+
+
+exports.getAutoCampaign = async(req, res) => {
+    try{
+        const campaigns = await Campaign.find()
+        res.render('auto-campaign-register', {
             area: area
         })
     }
