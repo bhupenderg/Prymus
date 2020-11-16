@@ -104,7 +104,9 @@ exports.login = async (req, res, next) => {
         const password = req.body.password
     
         if(!email || !password){
-            return next(new Error("Please provide email and password"))
+            // return next(new Error("Please provide email and password"))
+
+            return res.send("Please provide valid email and password to login.")
         }
     
         const client = await Client.findOne({email: email}).select('+password')
