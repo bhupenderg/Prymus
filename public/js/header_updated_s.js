@@ -12,3 +12,35 @@ hamburger.addEventListener('click', () =>{
     }
 
 })
+
+
+// header shrink
+
+const headerMain = document.querySelector('header.header')
+            const headerNavLogo = document.querySelector('header.header .logo-conatiner img')
+            const headerNavMenu = document.querySelectorAll('header.header .nav-container ul li a')
+
+            window.onscroll = function() {
+                    scrollFunction()
+            // console.log(headerNavLogo.children)
+            // headerNavLogo.style.transform = 'scale(.5)'
+                    //console.log(headerNavMenu.innerText)
+                    //headerNavMenu.style.fontSize = '1.2rem'
+                    //headerMain.style.height = '8vh'
+            }
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    headerMain.style.height = "8vh";
+                    headerNavLogo.style.transform = 'scale(.5)'
+                    headerNavMenu.forEach(el => {
+                        el.style.fontSize = '1.2rem'
+                    })
+                } else {
+                    headerMain.style.height = "15vh";
+                    headerNavLogo.style.transform = 'scale(1)'
+                    headerNavMenu.forEach(el => {
+                        el.style.fontSize = '1.8rem'
+                    })
+                }
+            }
