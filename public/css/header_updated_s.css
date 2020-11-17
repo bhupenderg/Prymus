@@ -25,9 +25,9 @@ body{
     overflow-y: hidden;
     position: relative;
     min-height: 100vh;
-    -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+    /* -webkit-user-select: initial; Safari
+    -ms-user-select: initial; IE 10 and IE 11
+    user-select: initial; Standard syntax */
     
 }
 
@@ -51,6 +51,9 @@ header.header{
     justify-content: center;
     align-items: center;
     flex: 0 0 30%; 
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
 
 .logo-conatiner img{
@@ -165,7 +168,7 @@ header.header{
 
     .mob-nav-container{
         display: flex;
-        
+        display: -webkit-flex;
     }
 
     .logo-conatiner img{

@@ -74,10 +74,8 @@
 .tag-line div span::after{
     content: '';
     animation: wordsChanger infinite 6s;
-    animation-iteration-count: infinite;
-    -webkit-animation-name: wordsChanger;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation: wordsChanger infinite 6s;
+    -moz-animation: wordsChanger infinite 6s;;
 
 }
 
@@ -776,6 +774,8 @@
     margin-left: 20px;
     margin-right: 20px;
     box-shadow: 3px 3px rgb(98, 98, 240);
+    font-size: 2.2rem;
+    padding: 2rem;
 }
 
 .website-health .form-container form input:focus{
@@ -784,7 +784,7 @@
 
 .website-health .form-container form input::placeholder{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
 }
 
 .website-health .form-container form button{
@@ -814,32 +814,34 @@
 
 @-webkit-keyframes wordsChanger {
     0% { 
+        
         content: 'Facebook';
-        -webkit-text-decoration-color: blue
+        -webkit-text-decoration-color: blue;
+        -webkit-text-fill-color: blue;
         }
     20% {
             content: 'Instagram';
-            -webkit-text-decoration-color: red;
+            -webkit-text-fill-color: red;
         }
     
     40% {
             content: 'Google';
-            -webkit-text-decoration-color: green;
+            -webkit-text-fill-color: green;
         }
     
     60% {
             content: 'Linkedin';
-            -webkit-text-decoration-color: crimson;
+            -webkit-text-fill-color: crimson;
         }
         
     80% {
             content: 'Youtube';
-            -webkit-text-decoration-color: orangered;
+            -webkit-text-fill-color: orangered;
         }
     
     100% {
             content: 'Facebook';
-            -webkit-text-decoration-color: blue;
+            -webkit-text-fill-color: blue;
             
         }
 }

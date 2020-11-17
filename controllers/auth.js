@@ -23,31 +23,30 @@ exports.signup = async (req, res) => {
 
         // if(req.body.name === '') {
         //     errorVal.push("Please enter your name.")
-        //     res.jason({
-        //         err
-        //     })
             
         // } 
         // if(req.body.email === '') {
         //     errorVal.push("Please enter your email.")
             
         // }
-        // errorVal.forEach(el => {
-        //     res.send(el)
-        // })
+        // if(errorVal.length) {
+        //     return console.log(errorVal)
+        // }
 
         const newClient = await Client.create(req.body)
+
+        
         
         if(!newClient){
-            // return res.status(400).json({
-            //     status: "Fail",
-            //     data: {
-            //         msg: "You are already registered. Login to proceed!",
-            //         client: newClient
-            //     }
-            // })
-
-            res.send("You are already registered. Login to proceed.")
+            return console.log(res.status(400).json({
+                status: "Fail",
+                data: {
+                    msg: "You are already registered. Login to proceed!",
+                    client: newClient
+                }
+            }))
+            // console.log("Hello")
+            // return res.send("You are already registered. Login to proceed.")
         }
 
         
@@ -97,6 +96,8 @@ exports.signup = async (req, res) => {
     catch(err){
         res.send(err)
     }
+
+    
 
 
     // send email

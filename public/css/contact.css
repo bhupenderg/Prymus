@@ -22,7 +22,7 @@ body{
 }
 
 
-@media only screen and (min-width: 916px){
+
 
 .form-contact{
     width: 100vw;
@@ -39,7 +39,7 @@ body{
 }
 
 .form-contact .form-contact-heading h1{
-    color: #ff4f03;
+    color: rgb(255, 66, 66);
     font-size: 5vw;
     text-transform: capitalize;
 }
@@ -226,4 +226,3 @@ body{
     font-weight: 600;
 }
 
-}
