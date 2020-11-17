@@ -150,6 +150,10 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
+.container-one .data-main .data-main-data .btn-container:nth-child(2) {
+    margin-top: 6rem;
+}
+
 .container-one .data-main .data-main-data .btn-container a:hover{
     background: linear-gradient(to right, blue, red);
     transform: translateY(-3px);
