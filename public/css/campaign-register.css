@@ -249,6 +249,9 @@
   #main-customizer .data-container{
     flex-direction: column;
   }
+  .plan-form-container form input[type=submit]{
+    width: 18rem !important;
+  }
 
 }
 
