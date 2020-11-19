@@ -1,14 +1,13 @@
 // inputs start
 
 document.querySelector('.showTotal h1').addEventListener('click', () => {
-  let complete = parseInt(totalInsta()) + parseInt(totalFb()) + parseInt(totalLink()) + parseInt(totalPin()) + parseInt(totalGoogle()) + parseInt(totalEmail()) + parseInt(totalYoutube()) + parseInt(totalSeo()) + parseInt(totalSmo()) + parseInt(totalSms())
+  let complete_initial = parseInt(totalInsta()) + parseInt(totalFb()) + parseInt(totalLink()) + parseInt(totalPin()) + parseInt(totalGoogle()) + parseInt(totalEmail()) + parseInt(totalYoutube()) + parseInt(totalSeo()) + parseInt(totalSmo()) + parseInt(totalSms())
+  let serviceCharge = complete_initial * 10/100
+  let complete = parseInt(complete_initial) + parseInt(serviceCharge)
+
   let gst = complete * 18/100
-  
-  let serviceCharge = complete * 10/100
 
-  
-
-  let withCharges = complete + parseInt(serviceCharge) + parseInt(gst)
+  let withCharges = complete + parseInt(gst)
   document.querySelector('.showTotal h2').innerHTML = `Your total amount for your customized plan is Rs ${withCharges} including 18% G.S.T and 10% Service Charges.`
   document.getElementById('totalAmount').value = withCharges
 })
