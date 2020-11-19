@@ -511,7 +511,7 @@
 
 .customize-plan{
     width: 100vw;
-    height: 120vh;
+    min-height: 110vh;
     
     display: flex;
     flex-direction: column;
@@ -1018,6 +1018,11 @@
         margin-top: 1px;
         padding-top: 0;
     } */
+
+    .webHealth{
+        min-height: 120vh;
+        
+    }
     .mission-vision {
         min-height: 100vh;
         
@@ -1209,7 +1214,12 @@
         display: none;
     }
     #demo{
-        margin-bottom: 20rem;
+        /* margin-bottom: 20rem; */
+        margin-bottom: 5rem;
+    }
+
+    .heading-health h1{
+        font-size: 3rem;
     }
     
 
