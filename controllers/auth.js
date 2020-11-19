@@ -20,18 +20,7 @@ exports.signup = async (req, res) => {
 
     const errorVal = []
     try{
-
-        // if(req.body.name === '') {
-        //     errorVal.push("Please enter your name.")
-            
-        // } 
-        // if(req.body.email === '') {
-        //     errorVal.push("Please enter your email.")
-            
-        // }
-        // if(errorVal.length) {
-        //     return console.log(errorVal)
-        // }
+        
 
         const newClient = await Client.create(req.body)
 
@@ -94,7 +83,13 @@ exports.signup = async (req, res) => {
 
     }
     catch(err){
-        res.send(err)
+
+        console.log(err)
+        
+        res.send("You are already registered with us. Try login")
+    }
+        
+
     }
 
     
@@ -104,7 +99,7 @@ exports.signup = async (req, res) => {
 
     
     
-}
+
 
 
 // const isVerified = async function(req, res) {
@@ -205,7 +200,7 @@ exports.mustBeLoggedIn = function(req, res, next) {
     }
 
     else{
-        res.redirect('/connect-with-us')
+        res.redirect('/registerclient')
     }
 }
 
