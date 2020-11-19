@@ -14,7 +14,16 @@
 
     <!-- Register Form -->
 
+    <!-- <div style="margin-top: 20rem; text-align: center;">
+        <% errors.forEach(function(el) { %>
+            <%= el %>
+        <% }) %>
+        
+    </div> -->
+
     <div class="user-manager">
+
+
     <h1 id="user"> User          |    </h1><h1 id="manager">|          Manager</h1>
      
     
@@ -25,31 +34,31 @@
             <h3>Already Registered? <span>Login Here!</span></h3>
             <h1> User Register Here!</h1>
             <form action="/registerclient" method="POST" id="userFormRegister">
-                <input type="text" name="name" id="user-register-name" placeholder="Enter Name">
+                <input type="text" name="name" id="user-register-name" placeholder="Enter Name" required>
                 <small id="small-register-userName">Error Message</small>
 
-                <input type="email" name="email" id="user-register-email" placeholder="Enter Email">
+                <input type="email" name="email" id="user-register-email" placeholder="Enter Email" required>
                 <small id="small-register-userEmail">Error Message</small>
 
-                <input type="password" name="password" id="user-register-password" placeholder="Enter Password">
+                <input type="password" name="password" id="user-register-password" placeholder="Enter Password" required>
                 <small id="small-register-userPassword">Error Message</small>
 
-                <input type="password" name="passwordConfirm" id="user-register-password-confirm" placeholder="Password Confirm">
+                <input type="password" name="passwordConfirm" id="user-register-password-confirm" placeholder="Password Confirm" required>
                 <small id="small-register-userPasswordConfirm">Error Message</small>
 
-                <input type="number" name="phone" id="user-register-phone" placeholder="Enter Phone No.">
+                <input type="number" name="phone" id="user-register-phone" placeholder="Enter Phone No." required>
                 <small id="small-register-userPhone">Error Message</small>
 
-                <input type="text" name="city" id="user-register-city" placeholder="Enter City">
+                <input type="text" name="city" id="user-register-city" placeholder="Enter City" required>
                 <small id="small-register-userCity">Error Message</small>
 
-                <input type="text" name="state" id="user-register-state" placeholder="Enter State">
+                <input type="text" name="state" id="user-register-state" placeholder="Enter State" required>
                 <small id="small-register-userState">Error Message</small>
 
-                <input type="number" name="pincode" id="user-register-pin" placeholder="Enter Pin Code">
+                <input type="number" name="pincode" id="user-register-pin" placeholder="Enter Pin Code" required>
                 <small id="small-register-userPin">Error Message</small>
 
-                <input type="text" name="country" id="user-register-country" placeholder="Country">
+                <input type="text" name="country" id="user-register-country" placeholder="Country" required>
                 <small id="small-register-userCountry">Error Message</small>
 
                 <input type="submit" name="register-user" value="Register">
@@ -65,10 +74,10 @@
             <h1>User Login Here!</h1>
             <form action="myaccount" method="POST">
                 
-                <input type="email" name="email" id="user-login-email" placeholder="Enter Email">
+                <input type="email" name="email" id="user-login-email" placeholder="Enter Email" required>
                 <small id="small-login-userEmail">Error Message</small>
 
-                <input type="password" name="password" id="user-login-password" placeholder="Enter Password">
+                <input type="password" name="password" id="user-login-password" placeholder="Enter Password" required>
                 <small id="small-login-userPassword">Error Message</small>
 
                 
@@ -128,10 +137,10 @@
             <h1>Manager Login Here!</h1>
             <form action="/comingsoon" method="POST">
                 
-                <input type="email" name="email" id="manager-login-name" placeholder="Enter Email">
+                <input type="email" name="email" id="manager-login-name" placeholder="Enter Email" required>
                 <small id="small-login-managerEmail">Error Message</small>
 
-                <input type="password" name="password" id="manager-login-password" placeholder="Enter Password">
+                <input type="password" name="password" id="manager-login-password" placeholder="Enter Password" required>
                 <small id="small-login-managerPassword">Error Message</small>
 
                 
