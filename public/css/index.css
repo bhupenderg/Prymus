@@ -20,6 +20,12 @@
     display: none;
 }
 
+input{ 
+    -webkit-user-select:text;
+}
+
+
+
 
 .carousel-inner img {
     width: 100%;
@@ -300,7 +306,10 @@
 
 }
 
-
+h1.display-3{
+    color: rgb(255,66,66);
+    padding-bottom: 3rem;
+}
 .card img{
     width: 393px;
     height: 300px;
