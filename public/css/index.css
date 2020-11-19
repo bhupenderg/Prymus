@@ -1,3 +1,119 @@
+.word{
+    display: inline-block;
+    color: red;
+}
+
+.word span{
+    position: absolute;
+    left: 10;
+    top: 50 !important;
+    font-size: larger;
+
+    /* top: 30; */
+    overflow: hidden;
+    animation: animate 10s linear infinite;
+    -webkit-animation: animate 10s linear infinite;;
+    opacity: 0;
+}
+
+@keyframes animate{
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+        color: red;
+
+    }
+
+    2% {
+        opacity: 1;
+        transform: translateY(0px);
+        color: green;
+    }
+
+    18% {
+        opacity: 1;
+        transform: translateY(0px);
+        color: blue;
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateY(50px);
+        color: pink;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(50px);
+        color: aqua;
+    }
+}
+
+
+@-webkit-keyframes animate{
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+        color: red;
+        -webkit-transform: translateY(-100px);
+
+    }
+
+    2% {
+        opacity: 1;
+        transform: translateY(0px);
+        color: green;
+        -webkit-transform: translateY(0px);
+    }
+
+    18% {
+        opacity: 1;
+        transform: translateY(0px);
+        color: blue;
+        -webkit-transform: translateY(0px);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateY(50px);
+        color: pink;
+        -webkit-transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(50px);
+        color: aqua;
+        -webkit-transform: translateY(50px);
+    }
+}
+
+.word span:nth-child(1) {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+}
+
+.word span:nth-child(2) {
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+}
+
+.word span:nth-child(3) {
+    animation-delay: 4s;
+    -webkit-animation-delay: 4s;
+}
+
+.word span:nth-child(4) {
+    animation-delay: 6s;
+    -webkit-animation-delay: 6s;
+}
+
+.word span:nth-child(5) {
+    animation-delay: 8s;
+    -webkit-animation-delay: 8s;
+}
+
+
 .customize-plan{
     display: none;
 }
@@ -64,6 +180,8 @@ input{
     align-items: center;
     transform: translateY(15rem);
     z-index: -1;
+    height: 30vh;
+    
 }
 
 .container-one .tag-line h1{
