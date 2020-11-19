@@ -203,6 +203,10 @@ input{
 
 }
 
+.data-main{
+    margin-top: 10vh;
+}
+
 .container-one .data-main-data .img-container{
     display: flex;
     flex-direction: column;
