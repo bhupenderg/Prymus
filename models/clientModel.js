@@ -7,12 +7,12 @@ const Schema = mongoose.Schema
 const clientSchema = new Schema({
      name: {
          type: String,
-         required: [true, 'Fill in your name'],
+         required: [true, 'Name is missing'],
          trim: true
      },
      email: {
         type: String,
-        required: [true, 'Please provide an email address'],
+        required: [true, 'Email address is missing'],
         trim: true,
         unique: true,
         lowercase: true,
@@ -20,13 +20,13 @@ const clientSchema = new Schema({
      },
      password: {
         type: String,
-        required: [true, 'Please provide a password'],
+        required: [true, 'Password is missing'],
         minlength: 8,
         select: false
     },
     passwordConfirm: {
         type: String,
-        required: true,
+        required: [true, 'Confirm Password is missing'],
         validate : {
             validator: function(el) {
               return el === this.password
@@ -37,28 +37,28 @@ const clientSchema = new Schema({
 
     phone:{
         type: Number,
-        required: true,
+        required: [true, "Phone No. is missing"],
         trim: true,
         minlength: 10,
         maxlength: 10
     },
     city:{
         type: String,
-        required: true,
+        required: [true, "City is missing"],
         trim: true
     },
     state:{
         type: String,
-        required: true,
+        required: [true, "State is missing"],
         trim: true
     },
     pincode:{
         type: Number,
-        required: true,
+        required: [true, "Pincode is missing."],
         trim: true
     },
     country:{type: String,
-        required: true,
+        required: [true, "Country is missing"],
         trim: true},
     confirmation:{
         type: Boolean,

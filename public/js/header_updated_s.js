@@ -34,7 +34,7 @@ const headerMain = document.querySelector('header.header')
                     headerMain.style.height = "8vh";
                     headerNavLogo.style.transform = 'scale(.5)'
                     headerNavMenu.forEach(el => {
-                        el.style.fontSize = '1.2rem'
+                        el.style.fontSize = '1.6rem'
                     })
                 } else {
                     headerMain.style.height = "15vh";

@@ -14,7 +14,9 @@ exports.doesNameExist = function(req, res) {
 }
 
 exports.getRegisterClient = async(req, res) => {
-    res.render('client/register')
+    res.render('client/register', {
+        errors: req.flash('errors')
+    })
 }
 
 exports.getMyPlan = async (req, res) => {
@@ -29,7 +31,7 @@ exports.getMyPlan = async (req, res) => {
     }
     
     res.render('client/myplan', {
-        myplan: myplan
+    
     })
     }
     catch(err) {

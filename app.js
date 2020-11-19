@@ -5,6 +5,7 @@ const session = require('express-session')
 const MongoStore = require('connect-mongodb-session')(session)
 const csrf = require('csurf')
 const multer = require('multer')
+const flash = require('connect-flash')
 
 // Payment Gateway 
 
@@ -69,6 +70,7 @@ const store = new MongoStore({
 
 
 app.use(multer({storage: fileStorage, fileFilter: fileFilter}).single('image'))
+app.use(flash())
 
 let sessionOptions = session({
     secret: 'prymussiacompanyandjohn-f-kennedyis-notawwestar-likekanetheundertaker',
@@ -156,9 +158,9 @@ app.get('/contact', (req, res) => {
     res.render('contact')
 })
 
-app.get('/campaign-register.ejs', (req, res) => {
-    res.render('campaign-register')
-})
+// app.get('/campaign-register.ejs', (req, res) => {
+//     res.render('campaign-register')
+// })
 
 app.get('/connect-with-us', (req, res) => {
     res.render('connect-with-us')
@@ -192,7 +194,7 @@ app.get('/email-marketing', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index1')
 })
 
 

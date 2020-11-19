@@ -267,7 +267,7 @@
 
 .ourServices{
     min-height: 90vh;
-    
+
 }
 
 .servicesBtn {
@@ -284,60 +284,230 @@
     box-shadow: 3px 3px 3px rgba(255, 0, 0, .6);
 }
 
-/* How different */
-
-.differentWe{
+.two-column-container{
     
-    min-height: 60vh;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.one-card{
-    border: none;
-}
+#how-different{
+    
+    margin-top: 10rem;
 
-.paraDiffer{
-    font-size: 2rem;
-
-}
-
-
-.card img{
-    width: 393px;
-    height: 300px;
 }
 
 
-.webHealth{
-    min-height: 70vh;
+#how-different-header{
+    margin-bottom: 8rem;
+}
+
+.two-column-container .heading-container{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two-column-container .heading-container h1{
+    font-size: 6rem;
+    color: rgb(255, 66, 66);
+}
+
+.two-column-container .two-column-container_container {
+    width: 100%;
+    height: 270rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
     
 }
 
-.whInput{
-    height: 5rem;
-    font-size: 2rem;
-    border-radius: 30px;
-    padding-left: 2rem;
-    border-left: 3px solid blue;
-    border-top: 3px solid blue;
-    border-right: 3px solid red;
-    border-bottom: 3px solid red;
+/* .two-column-container .two-column-container_container .data-conatainers{
+    width: 100%;
+    height: 90%;
+    background-color: green;
+    margin-bottom: 130px;
+} */
+
+
+#services-container-1{
+    width: 100%;
+    height: 90rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 8rem;
+
+}
+#services-container-2{
+    width: 100%;
+    height: 90rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+    
 }
 
-.whInput::placeholder{
-    text-align: center;
+#services-container-3{
+    width: 100%;
+    height: 90rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+    
 }
-.btn.btn-success.whSubmit{
-    font-size: 2.5rem;
-    padding: 1rem 5rem;
-    border-radius: 30px;
+
+#audio-video-editing{
+    height: 110rem;
+}
+
+.two-column-container .two-column-container_container .data-containers .all-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0;
+    height: 90rem;
+
+    
+    
+}
+.two-column-container .two-column-container_container .data-containers .all-data .img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.two-column-container .two-column-container_container .data-containers .all-data .img-container img{
+    width: 45rem;
+    height: 33rem;
+}
+
+.two-column-container .two-column-container_container .data-containers .all-data .heading-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.two-column-container .two-column-container_container .data-containers .all-data .heading-container h1{
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: #000;
+    margin-top: -12rem;
+}
+
+.underline-container .underline{
+    width: 30rem;
+    height: 4px;
     background: linear-gradient(to right, blue, red);
-    border-left: 3px solid blue;
-    border-top: 3px solid blue;
-    border-right: 3px solid red;
-    border-bottom: 3 px solid red;
-    box-shadow: 3px 3px 3px red;
+    margin-top: -16rem;
+
+}
+.content-container{
+    width: 40rem;
+    margin-top: -8rem;
+}
+
+.all-data .content-container p{
+    font-size: 1.7rem;
+}
+
+.btn-read-more {
+    margin-top: 5rem;
+    cursor: pointer;
+}
+
+.btn-read-more:hover{
+    transform: translateY(-5px);
+}
+
+.btn-read-more:active{
+    transform: translateY(1px);
+}
+
+.content-container p {
+    font-size: 2rem;
+    text-align: justify;
+}
+
+#digital-marketing-services{
+    width: 50%;
+    height: 100%;
     
 }
+
+#digital-marketing-services .img-container img{
+    width: 40rem;
+}
+
+#graphic-designing .img-container img{
+    width: 40rem;
+}
+#graphic-designing{
+    width: 50%;
+    height: 100%;
+}
+
+#application-development .img-container img{
+    width: 50rem;
+    height: 30rem;
+}
+
+#product-shoot .img-container img{
+    width: 50rem;
+    height: 28rem;
+}
+
+#audio-video-editing .img-container img{
+    width: 50rem;
+}
+
+#web-designing-services .img-container img{
+    width: 45rem;
+}
+
+.all-data .content-container p{
+    font-size: 2rem;
+}
+
+
+#application-development{
+    width: 50%;
+    height: 100%;
+    
+}
+#product-shoot{
+    width: 50%;
+    height: 100%;
+}
+
+
+#audio-video-editing{
+    width: 50%;
+    height: 100%;
+    
+}
+#web-designing-services{
+    width: 50%;
+    height: 100%;
+}
+
+ .digital-marketing{
+     margin-top: -150px;
+ }
+
 
 .our-opinion{
     width: 100vw;
@@ -745,7 +915,6 @@
         margin-top: -10rem;
     }
 }
-
 
 @keyframes comeDown{
     0%{

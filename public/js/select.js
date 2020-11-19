@@ -145,7 +145,8 @@ function filterTasks(e) {
 
 	 		
 	 		if(e.target.textContent.toLowerCase() === 'andhra pradesh'){
-	 			andhraPradeshCitiesContainer.style.display = 'block'
+				 andhraPradeshCitiesContainer.style.display = 'block'
+				 
 
 
 	 		

@@ -44,7 +44,7 @@ header.header{
     position: fixed;
     top: 0;
     z-index: 1000;
-    transition: all 1s ease-out;
+    transition: all 600ms ease-out;
 }
 
 .logo-conatiner{
@@ -59,6 +59,7 @@ header.header{
 
 .logo-conatiner img{
     width: 28rem;
+    transition: transform 600ms ease-out;
 }
 
 .mob-nav-container{
@@ -110,6 +111,7 @@ header.header{
     text-decoration: none;
     color: #000;
     font-weight: 600;
+    transition: all 600ms;
 }
 
 .nav-container ul li a:hover{
