@@ -1,12 +1,25 @@
-.word{
-    display: inline-block;
-    color: red;
+.heading-health.text-center h1{
+    color: rgb(255, 66, 66);
 }
 
+.anime{
+    position: relative;
+}
+
+.word{
+    display: inline-block;
+
+}
+
+.anm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .word span{
     position: absolute;
-    left: 10;
-    top: 50 !important;
+    
+    top: 0 !important;
     font-size: larger;
 
     /* top: 30; */
@@ -283,7 +296,7 @@ input{
 }
 
 .container-one .data-main .data-main-data .btn-container a:hover{
-    background: linear-gradient(to right, blue, red);
+    background: linear-gradient(to right, rgb(255, 0, 170), red);
     transform: translateY(-3px);
     color: #fff;
     box-shadow:
@@ -397,6 +410,8 @@ input{
     min-height: 90vh;
     
 }
+
+
 
 .servicesBtn {
     /* width: 20rem;
@@ -1154,6 +1169,8 @@ h1.display-3{
         min-height: 120vh;
         
     }
+
+    
     .mission-vision {
         min-height: 100vh;
         
