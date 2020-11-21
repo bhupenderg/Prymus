@@ -1,5 +1,15 @@
+.btns-mob{
+    display: none;
+    
+}
+
+.subHeadFont{
+    font-size: 3rem;
+    color: red;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 .heading-health.text-center h1{
-    color: rgb(255, 66, 66);
 }
 
 .anime{
@@ -154,6 +164,9 @@ input{
 }
 
 
+.carousel-inner{
+    padding: 0 5rem;
+}
 
 
 .carousel-inner img {
@@ -162,8 +175,8 @@ input{
   }
 
   .carousel{
-      min-height: 100vh;
-      min-height: 100vh;
+      
+      min-height: 81vh;
       
       text-align: center;
       
@@ -171,8 +184,8 @@ input{
   }
 
   .carousel-item img{
-      width: 40rem;
-      height: 70rem;
+      width: 60%;
+      height: 55rem;
   }
 
   .carousel-control-next-icon{
@@ -195,6 +208,13 @@ input{
     z-index: -1;
     height: 30vh;
     
+}
+
+h1.headFont{
+    font-size: 7rem;
+    /* font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; */
+    font-family: 'Roboto Condensed', sans-serif;
+    color: red;
 }
 
 .container-one .tag-line h1{
@@ -365,10 +385,11 @@ input{
     
 }
 
-.mission-vision .heading-container h1{
-    font-size: 7rem;
-    color: rgb(255, 66, 66);
-}
+/* .mission-vision .heading-container h1{
+    font-size: 10rem;
+    color: rgb(255, 0, 0);
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+} */
 
 .mission-vision .content-container{
     margin-top: 3rem;
@@ -410,6 +431,8 @@ input{
     min-height: 90vh;
     
 }
+
+
 
 
 
@@ -455,7 +478,7 @@ h1.display-3{
 
 .webHealth{
     min-height: 80vh;
-    
+    padding-bottom: 10rem;
 }
 
 .whInput{
@@ -941,10 +964,30 @@ h1.display-3{
 
 @media only screen and (max-width: 1150px) {
 
-
+    h1.ourServicess{
+        font-size: 5rem !important;
+        color: red;
+        font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    }
 
 }
 @media only screen and (max-width: 850px){
+
+   
+
+    
+
+    .topBtn{
+        height: 2rem;
+    }
+
+    h1.headFont{
+        font-size: 5rem;
+    }
+
+    .subHeadFont{
+        font-size: 3.5rem;
+    }
 
 .container-one {
     margin-bottom: 10rem;
@@ -1131,7 +1174,26 @@ h1.display-3{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
 
+    .topBtn{
+        height: 6rem;
+        background: transparent;
+        color: #000;
+        font-size: 2.2rem;
+        border-radius: 30px;
+        padding: 1rem 0 0 0;
+        border-left: 3px solid blue;
+        border-top: 3px solid blue;
+        border-right: 3px solid red;
+        border-bottom: 3px solid red;
+        box-shadow: 5px 5px 5px rgba(255, 0, 0, .7);
+    }
+
+    .topBtn:hover{
+        background: linear-gradient(to right, blue, red);
+        color: #fff;
+        box-shadow: 5px 5px 5px rgba(0, 0, 255, .7);
     }
 
 
@@ -1164,6 +1226,40 @@ h1.display-3{
         margin-top: 1px;
         padding-top: 0;
     } */
+
+    .btns-mob{
+        display: block;
+        margin-top: 13rem !important;
+    }
+
+    .topBtn{
+        height: 6rem;
+        background: transparent;
+        color: #000;
+        font-size: 2.2rem;
+        border-radius: 30px;
+        padding: 1rem 0 0 0;
+        border-left: 3px solid blue;
+        border-top: 3px solid blue;
+        border-right: 3px solid red;
+        border-bottom: 3px solid red;
+        box-shadow: 5px 5px 5px rgba(255, 0, 0, .7);
+    }
+
+    .topBtn:hover{
+        background: linear-gradient(to right, blue, red);
+        color: #fff;
+        box-shadow: 5px 5px 5px rgba(0, 0, 255, .7);
+    }
+
+
+    h1.headFont{
+        font-size: 3.5rem;
+    }
+
+    .subHeadFont{
+        font-size: 2.5rem;
+    }
 
     .webHealth{
         min-height: 120vh;

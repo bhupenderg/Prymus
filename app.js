@@ -37,7 +37,7 @@ const ini_array = ini.parse(fs.readFileSync('./ClientAPI.ini', 'utf-8'));
 
 // // Payment Gateway ends
 
-const port = process.env.PORT || 5500
+const port = process.env.PORT || 5800
 
 let path = require('path')
 
@@ -92,6 +92,7 @@ const campaignRoutes = require('./routes/campaignRoute')
 const clientRoutes = require('./routes/users/clients/clientRoutes')
 const paymentRoutes = require('./routes/paymentsRoute')
 const blogsRoutes = require('./routes/blogRoutes')
+const mailRoutes = require('./routes/mailRoutes')
 //all routes end
 
 
@@ -111,6 +112,7 @@ app.use(campaignRoutes)
 app.use(clientRoutes)
 app.use(paymentRoutes)
 app.use(blogsRoutes)
+app.use(mailRoutes)
 
 // chat system starts
 
@@ -155,7 +157,7 @@ app.get('/services/smo', (req, res) => {
 })
 
 app.get('/contact', (req, res) => {
-    res.render('contact')
+    res.render('contact1')
 })
 
 // app.get('/campaign-register.ejs', (req, res) => {

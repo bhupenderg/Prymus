@@ -1,9 +1,6 @@
 //const jwt = require('jsonwebtoken')
 const Client = require('../models/clientModel')
 const bcrypt = require('bcryptjs');
-var postmark = require("postmark");
-//var client = new postmark.Client("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");
-var client = new postmark.Client("8ad78ad2-5fdb-457f-b1d9-6bd2d2ba3c85");
 const nodemailer = require('nodemailer')
 const sendgridTransport = require('nodemailer-sendgrid-transport')
 //const key = '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'
@@ -11,50 +8,48 @@ const sendgridTransport = require('nodemailer-sendgrid-transport')
 const transporter = nodemailer.createTransport(sendgridTransport({
     
     auth: {
-        //api_key: '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',
-        api_key: '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'
+            api_key: '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',
+        //api_key: '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'
     }
 }))
 
 exports.signup = async (req, res) => {
-
-    const errorVal = []
     try{
-        
-
         const newClient = await Client.create(req.body)
-
-        
+        console.log("Hello")
         
         if(!newClient){
-            return console.log(res.status(400).json({
+            return res.status(400).json({
                 status: "Fail",
                 data: {
                     msg: "You are already registered. Login to proceed!",
                     client: newClient
                 }
-            }))
-            // console.log("Hello")
-            // return res.send("You are already registered. Login to proceed.")
+            })
         }
+            console.log("Good")
 
+            // 34-53
         
-            const mailed = await transporter.sendMail({
-    
+        //     const mailed = await transporter.sendMail({
+                
+                
 
-            to: req.body.email,
-            from: 'info@prymus.co.in',
-            subject: 'Signed up succeeded',
-            html: '<h1 style = "color: green;"> You have successfully signed up! Now you can create your own marketing plan by signing in to your account.</h1>'
-        })
+        //     to: req.body.email,
+        //     from: 'i.bhupendr@gmail.com',
+        //     subject: 'Signed up succeeded',
+        //     html: '<h1 style = "color: green;"> You have successfully signed up! Now you can create your own marketing plan by signing in to your account.</h1>'
+        // })
 
-        if(!mailed){
-            console.log("Fail")
-        }
+        // console.log("Problem is here")
 
-        else{
-            console.log("Success")
-        }
+        // if(!mailed){
+        //     console.log("Fail")
+        // }
+
+        // else{
+        //     console.log("Success")
+        // }
 
         // isVerified()
 
@@ -83,14 +78,15 @@ exports.signup = async (req, res) => {
 
     }
     catch(err){
-
-        console.log(err)
-        
-        res.send("You are already registered with us. Try login")
+        res.send("Server Down!")
     }
-        
 
-    }
+
+    // send email
+
+    
+    
+}
 
     
 
