@@ -14,7 +14,8 @@ const autoPlanSchema = new Schema({
     },
     website: {
         type: String,
-        trim: true
+        trim: true,
+        required: true
     },
     position: {
         type: String,
@@ -26,7 +27,12 @@ const autoPlanSchema = new Schema({
         required: true,
         trim: true
     },
-    
+    amount: {
+        type: Number,
+        required: true,
+        trim:true
+    }, 
+
     image_url: {
         type: String,
         trim: true
@@ -42,10 +48,11 @@ const autoPlanSchema = new Schema({
         default: 'no',
         required: true
     },
-    total: {
+    totalAmount: {
         type: Number,
         trim: true,
         required: true
+
     }
 }, 
 {
@@ -53,7 +60,7 @@ const autoPlanSchema = new Schema({
 }
 )
 
-const Campaign = mongoose.model('Campaign', campaignSchema);
+const Campaign = mongoose.model('AutoCampaign', autoPlanSchema);
 
 module.exports = Campaign
 

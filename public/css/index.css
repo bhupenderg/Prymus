@@ -1,3 +1,68 @@
+.word-change{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+
+}
+
+
+.box{
+    position: absolute;
+    
+    top: 2%;
+    transform: translateY(-50%);
+    font-size: 7rem;
+    width: 100vw;
+    margin: 0 5rem;
+    color: #000;
+    
+    transform: translateX(15%);
+    
+}
+
+.word{
+    display: inline-block;
+
+}
+
+.word span{
+    position: absolute;
+    top: -20%;
+    
+    overflow: hidden;
+    font-size: 8rem !important;
+    
+}
+
+.word span:nth-child(1){
+    font-size: 10rem !important;
+}
+
+.word span:nth-child(2){
+    font-size: 10rem !important;
+}
+
+.word span:nth-child(3){
+    font-size: 10rem !important;
+}
+
+.word span:nth-child(4){
+    font-size: 10rem !important;
+}
+
+.word span:nth-child(5){
+    font-size: 10rem !important;
+}
+
+
+.slider-mob{
+    display: none;
+}
+
 .btns-mob{
     display: none;
     
@@ -29,7 +94,7 @@
 .word span{
     position: absolute;
     
-    top: 0 !important;
+    /* top: 0 !important; */
     font-size: larger;
 
     /* top: 30; */
@@ -176,7 +241,7 @@ input{
 
   .carousel{
       
-      min-height: 81vh;
+      min-height: 68vh;
       
       text-align: center;
       
@@ -191,12 +256,14 @@ input{
   .carousel-control-next-icon{
       padding: 2rem;
       background-color: rgb(14, 14, 19);
+    
       
   }
 
   .carousel-control-prev-icon{
     padding: 2rem;
     background-color: rgb(14, 14, 19);
+    
   }
 .container-one .tag-line{
     width: 100%;
@@ -970,10 +1037,28 @@ h1.display-3{
         font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
     }
 
+
 }
 @media only screen and (max-width: 850px){
 
-   
+    .word-change{
+        display: none;
+    }
+
+   .slider-mob{
+    display: block;
+}
+
+
+
+.slider-large{
+    display: none;
+}
+
+.carousel-item img{
+    width: 70%;
+    height: 68rem;
+}
 
     
 
@@ -987,6 +1072,10 @@ h1.display-3{
 
     .subHeadFont{
         font-size: 3.5rem;
+    }
+
+    .carousel-control-next-icon{
+        width: 70%;
     }
 
 .container-one {
@@ -1451,7 +1540,8 @@ h1.display-3{
         font-size: 3rem !important;
     }
     .carousel-item img{
-        width: 32rem;
+        width: 90%;
+        height: 40rem;
     }
 
     .container-one{
@@ -1459,11 +1549,15 @@ h1.display-3{
     }
     #demo{
         /* margin-bottom: 20rem; */
-        margin-bottom: 5rem;
+        /* margin-bottom: 5rem; */
     }
 
     .heading-health h1{
         font-size: 3rem;
+    }
+
+    .container-one-mob-1{
+        margin-top: 50%;
     }
     
 
@@ -1480,7 +1574,7 @@ h1.display-3{
 
     .container-one-mob .carousel-inner .carousel-item img:first-child{
         height: 25rem;
-        width: 40rem;
+        /* width: 40rem; */
     }
 
     .container-one-mob .carousel-inner .carousel-item img:nth-child(2){

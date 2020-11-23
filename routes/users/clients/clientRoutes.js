@@ -31,7 +31,11 @@ router.put('/isverified', clientsController.isVerified)
 //     res.send("client registered")
 // })
 
-router.get('/myplan', authController.mustBeLoggedIn, clientsController.getMyPlan)
+// router.get('/getcustomplan', clientsController.getCustomPlan)
+
+router.get('/myplan', authController.mustBeLoggedIn, clientsController.getMyAutoPlan)
+router.get('/mycustomplan', authController.mustBeLoggedIn, clientsController.getMyCustomPlan)
+// router.get('/mycustomplan', authController.mustBeLoggedIn, clientsController.getMyCustomPlan)
 
 // Payments
 

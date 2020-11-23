@@ -231,7 +231,12 @@ function filterTasks(e) {
 	 		}
 
 
-	 		console.log(e.target.textContent.toLowerCase())
+			 console.log(e.target.textContent.toLowerCase())
+			 
+			 let nval = document.querySelector('.select-label.tail-select-container')
+			 let arr1 = []
+			 arr1.push(nval.value)
+			 console.log(arr1)
 	 	})
 	 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="Prymus- Technical Blogs">
     <meta name="author" content="Prymus">
@@ -12,9 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="/css/header_updated_s.css">
-    
+    <link rel="stylesheet" href="/css/myplan.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/myaccount.css">
     
     <!-- <link rel="stylesheet" href="/css/seo.css"> -->
     <link rel="stylesheet" href="/css/chat.css">
@@ -43,49 +42,16 @@
     <% if (user) { %>
         <%- include ('../includes/header_updated_s.ejs') %>     
     <% } else { %>
-        <%- include ('../includes/header_updated_n.ejs') %>
+        <%- include ('includes/header_updated_n.ejs') %>
     <% } %>
 
+    
 
-
-<!-- container-one -->
-        <div class="container-one">
-            <div class="welcome-note">
-                <h1>Welcome <%= user.username %> </h1>
-            </div>
-
-            <div class="data-container">
-                <div class="plan" id="auto-plan">
-                    <a href="/campaignregister-auto">Auto Plan</a>
-                </div>
-                <div class="plan" id="custom-plan">
-                    <a href="/campaignregister-custom">Customize Plan</a>
-                </div>
-                <!-- <div class="plan" id="current-order">
-                    <a href="#">Current Orders</a>
-                </div> -->
-                <div class="plan" id="cart">
-                    <a href="/myplan">Unpaid Auto Plans</a>
-                </div>
-                <div class="plan" id="cart">
-                    <a href="/mycustomplan">Unpaid Custom Plans</a>
-                </div>
-            </div>
-
-
-        </div>
-
-
-
+        
 
 
     
-
-
-
-    
-
-    <!-- -------footer----------- -->
+    <!-- footer starts -->
 
     <%- include('../footer.ejs') %>
 
@@ -100,14 +66,12 @@
 <script src="/js/chat.js"></script>  
 
 <script src="/js/header_updated_s.js"></script>
+<script src="/js/header_updated_n.js"></script>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-   
-
-    
 </body>
 </html>

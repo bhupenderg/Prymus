@@ -208,22 +208,35 @@ const campaignSchema = new Schema({
         default:0
     },
 
+    amount:{
+        type: Number,
+        trim: true,
+    
+    },
+
     totalAmount:{
         type: Number,
         trim: true,
         required: true
     
         
-    }
+    },
+
     // image_url: {
     //     type: String,
     //     trim: true
     // },
-    // clientId: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'Client',
-    //     required: true
-    // },
+    clientId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Client',
+        required: true
+    },
+    payment_done: {
+        type: String,
+        enum: ['no', 'yes'],
+        default: 'no',
+        required: true
+    }
     // payment_done: {
     //     type: String,
     //     enum: ['no', 'yes'],

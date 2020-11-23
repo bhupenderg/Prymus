@@ -51,23 +51,27 @@
         <!-- Heading Starts -->
         <div class="heading-container">
             <!-- <div><h1 id="auto-heading"><a href="#auto-plan">Automated Plan</a></h1></div> -->
-            <div><h1 id="custom-heading"><a href="#customize-plan">Customize Your Plan</a></h1></div>
+            <div><h1 id="custom-heading"><a href="#customize-plan">Pay Here & We Will Design Plan For You.</a></h1></div>
         </div>
         <!-- Heading Ends -->
 
         <!-- Form Container Stars -->
 
         <div class="plan-form-container" id="automatic-form-container">
-            <form action="/auto-plan" method="POST" enctype="multipart/form-data">
-                <input type="text" name="company_name" id="company-name" placeholder="Enter Your Company Name">
-                <input type="text" name="website" id="company-website" placeholder="Enter Your Company Website">
-                <input type="number" name="whatsapp_no" id="whatsapp_no" placeholder="Enter Your Whatsapp No">
-                <input type="text" name="position" id="position" placeholder="Enter Your Position">
-                <input type="text" name="category" id="category" placeholder="Enter Category of your business">
-                
-                <input type="file" name="image_url" id="files-auto-plan">
-
-                <input type="number" name="total_price" id="total_price" placeholder="Enter the amount you want to purchase plan for">
+            <form action="/campaignregister-auto" method="POST" enctype="multipart/form-data">
+                <input type="text" name="company_name" id="company-name" placeholder="Company Name" required>
+                <input type="text" name="website" id="company-website" placeholder="Company Website" required>
+                <input type="number" name="whatsapp_no" id="whatsapp_no" placeholder="Whatsapp No" required>
+                <input type="text" name="position" id="position" placeholder="Position" required>
+                <input type="text" name="category" id="category" placeholder="Business Category" required>
+                <input type="number" name="amount" id="amount" placeholder="amount" required>
+                    
+                    <div class="showTotal">
+                        <input type="number" name="totalAmount" class="total-amount" id="totalAmount" readonly>
+                        <h1>Show Total</h1>
+                        <h2></h2>
+                    </div>
+                <!-- <input type="file" name="image_url" id="files-auto-plan" multiple> -->
 
                 <!-- <input type="number" name="plan-amount" id="plan-amount" placeholder="Enter The Amount You Want To Purchase Plan For">
                 <input type="number" name="total-amount" id="total-amount" value="0">
@@ -117,7 +121,7 @@
                     <div class="container" id="selectId">
                         <div class="row">
                             <!-- <div class="col-md-8"> -->
-                                <select multiple id="select" name="andhraPradesh">
+                                <select multiple id="select" name="andhraPradesh" class="andhraPradeshVal">
                                     <optgroup label="Andhra Pradesh">
                                             
                                             <option value="All Cities (Andhra Pradesh)">All Cities</option>
@@ -6319,8 +6323,13 @@
 
                     <!-- select ended -->
 
-
-                    
+<!-- 
+                    <div class="showTotal">
+                        <h1 class="cities-selected">Selected Cities</h1>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div> -->
 
 
 
@@ -6349,7 +6358,7 @@
     
 
 
-
+        
 
 
     <!-- All Ends Here -->
@@ -6360,7 +6369,7 @@
 
     
 </script> -->
-                <script src="/js/campaign-register.js"></script> 
+                <script src="/js/auto-campaign-register.js"></script> 
                 <script src="/js/select.js"></script>
 
                 <script src="/js/header_updated_s.js"></script>

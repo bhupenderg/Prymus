@@ -45,8 +45,8 @@
         <%- include ('includes/header_updated_n.ejs') %>
     <% } %>
 
-    
-    <!-- container-1 -->
+
+<!-- container-2 -->
 
     <% myplan.forEach(plan => { %>
         <div class="container-fluid" style="margin-top: 15rem !important; margin-bottom: 15rem;">
@@ -66,16 +66,54 @@
 
 
             <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >The amount you have chosen for Facebook Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.facebook_marketing %></span></h2>    
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >The amount you have chosen for Instagram Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.instagram_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >The amount you have chosen for Linkedin Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.linkedin_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >The amount you have chosen for Youtube Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.youtube_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >The amount you have chosen for Google Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.google_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >The amount you have chosen for Email Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.email_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >The amount you have chosen for Pinterest Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.pin_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >The amount you have chosen for SEO Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.seo_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >The amount you have chosen for SMO Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.smo_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >The amount you have chosen for SMS Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.sms_marketing %></span></h2>
+                </div>
+
                 
-                    
+                <!-- <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >The amount you have chosen is Rs <span style="color: green; font-weight: bold;"><%= plan.amount %></span> </h2>
+                </div> -->
 
-                        <div class="col-lg-12 text-center">
-                            <h2 class="display-4 p-5" >The amount you have chosen is Rs <span style="color: green; font-weight: bold;"><%= plan.amount %></span> </h2>
-                        </div>
-
-                        <div class="col-lg-12 text-center">
-                            <h2 class="display-4 p-5" >Amount to be paid(including 10% Service Tax and 18% G.S.T) of your plan is Rs <span style="color: green; font-weight: bold;"><%= plan.totalAmount %></span> </h2>
-                        </div>
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >Amount to be paid(including 10% Service Tax and 18% G.S.T) of your plan is Rs <span style="color: green; font-weight: bold;"><%= plan.totalAmount %></span> </h2>
+                </div>
                         
             </div>
         
@@ -103,15 +141,7 @@
         <% }) %>   
 
 
-
-
-        
-
-        
-
-
-    
-    <!-- footer starts -->
+        <!-- footer starts -->
 
     <%- include('../footer.ejs') %>
 

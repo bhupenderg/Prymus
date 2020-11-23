@@ -24,7 +24,7 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
     position: relative;
-    min-height: 100vh;
+    min-height: 100%;
     /* -webkit-user-select: initial; Safari
     -ms-user-select: initial; IE 10 and IE 11
     user-select: initial; Standard syntax */
