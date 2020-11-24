@@ -6,7 +6,7 @@ document.querySelector('.showTotal h1').addEventListener('click', () => {
     let gst = complete * 18/100
   
     let withCharges = complete + parseInt(gst)
-    document.querySelector('.showTotal h2').innerHTML = `Your total amount for your customized plan is Rs ${withCharges} including 18% G.S.T and 10% Service Charges.`
+    document.querySelector('.showTotal h2').innerHTML = `Your total amount for your customized plan is Rs ${withCharges} 10% Agency commision and 18% G.S.T.`
     document.getElementById('totalAmount').value = withCharges
 
   })
