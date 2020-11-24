@@ -1,4 +1,16 @@
 /* all data class starts here */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
 .all-data{
   width: 100vw;
   min-height: 80vh;
