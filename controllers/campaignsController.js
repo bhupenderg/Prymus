@@ -35,6 +35,7 @@ exports.createAutoCampaign = async (req, res) => {
         // const image = req.file
         // const image_url = image.path
         const clientId = req.session.user.id
+        const selectDays = req.session.select_days
         const amount = req.body.amount
         const totalAmount = req.body.totalAmount
         // let total = parseInt(facebook_marketing)  + parseInt(linkedin_marketing)  + parseInt(instagram_marketing)  + parseInt(email_marketing)  + parseInt(seo)  + parseInt(smo) 
@@ -47,6 +48,7 @@ exports.createAutoCampaign = async (req, res) => {
             category,
             gst,
             amount,
+            selectDays,
             clientId,
             totalAmount
         })

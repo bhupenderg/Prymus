@@ -39,6 +39,12 @@ const autoPlanSchema = new Schema({
         trim:true
     }, 
 
+    select_days: {
+        type: Number,
+        required: true,
+        trim: true
+    },
+
     image_url: {
         type: String,
         trim: true

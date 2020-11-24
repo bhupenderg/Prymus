@@ -109,6 +109,29 @@
   outline: none;
 }
 
+label#label-select-days{
+  font-size: 2rem;
+}
+
+select#select-days{
+    width: 42rem;
+    height: 5rem;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+    outline: none;
+
+}
+
+select#select-days:active,
+select#select-days:link{
+  outline: none;
+}
+
+
+
+
 
 .plan-btn{
   
@@ -303,6 +326,10 @@
     width: 40%;
     font-size: 2rem;
     color: white;
+  }
+
+  select#select-days{
+    width: 30rem;
   }
 
 }
