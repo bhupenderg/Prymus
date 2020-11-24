@@ -1,0 +1,17 @@
+#terms{
+    padding: 20rem 10rem;
+}
+
+#terms h1{
+    font-size: 5rem;
+    color: #000;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+}
+
+#terms h3{
+    font-size: 2.2rem;
+    line-height: 3rem;
+    color: #000;
+    text-align: justify;
+}

@@ -142,7 +142,14 @@ app.get('/affiliate-register', (req, res) => {
 
 
 
+app.get('/manager-terms-and-conditions', (req, res) => {
+    res.render('termsandconditionsmanager.ejs')
+})
 
+
+app.get('/retailer-terms-and-conditions', (req, res) => {
+    res.render('termsandconditionsretailer.ejs')
+})
 
 app.get('/services/seo', (req, res) => {
     res.render('seo')

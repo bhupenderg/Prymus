@@ -12,7 +12,7 @@
     color: #fff;
     padding: 0 50px;
     font-size: 2rem;
-    overflowY: hidden;
+    overflow-y: hidden;
     z-index: 100;
 }
 
@@ -35,6 +35,10 @@
     list-style-type: none;
 }
 
+#mob-screen{
+    display: none;
+}
+
 @media (max-width: 850px){
     .footer-container{
         flex-direction: column;
@@ -52,11 +56,27 @@
 }
 
 @media (max-width: 450px){
+
+    
     .footer-container .data-container ul li{
         font-size: 1.6rem;
     }
     .footer-container .policy-container ul li{
         font-size: 1.7rem;
     }
+    .terms-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #big-screen {
+        display: none;
+    }
+
+
+
+    
 }
 
