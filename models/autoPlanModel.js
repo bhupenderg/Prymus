@@ -27,6 +27,12 @@ const autoPlanSchema = new Schema({
         required: true,
         trim: true
     },
+    
+    gst: {
+        type: String,
+        required: true,
+        trim: true
+    },
     amount: {
         type: Number,
         required: true,

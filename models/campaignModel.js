@@ -25,6 +25,12 @@ const campaignSchema = new Schema({
         required: true,
         trim: true
     },
+
+    gst: {
+        type: String,
+        required: true,
+        trim: true
+    },
     fb_days: {
         type: Number,
         trim: true,

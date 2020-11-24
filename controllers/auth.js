@@ -74,7 +74,7 @@ exports.signup = async (req, res) => {
 
        // -----------------postmark----------------
 
-            return res.status(200).send("<h1 style = 'color: green;'>You are successfully registered with us. Please <a href = '/registerclient#user-login-form-container'>login</a> to proceed.</h1>")
+            return res.status(200).send("<h1 style = 'color: green;'>You are successfully registered with us. Please <a href = '/registerclient'>login</a> to proceed.</h1>")
     //         req.session.user = {username: client.name, email: client.email, id: client._id}
 
     //         req.session.save(function() {

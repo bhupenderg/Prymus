@@ -63,7 +63,12 @@ const clientSchema = new Schema({
     confirmation:{
         type: Boolean,
         default: false
-    }    
+    },
+    
+    termsandconditionsRetailer: {
+        type: String,
+        required: [true, 'Must check terms and condition Box']
+    }
 
 },
 {

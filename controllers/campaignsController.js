@@ -25,12 +25,13 @@ exports.createAutoCampaign = async (req, res) => {
         const website = req.body.website
         const position = req.body.position
         const category = req.body.category
-        const facebook_marketing = req.body.facebook_marketing
-        const linkedin_marketing = req.body.linkedin_marketing
-        const instagram_marketing = req.body.instagram_marketing
-        const email_marketing = req.body.email_marketing
-        const seo = req.body.seo
-        const smo = req.body.smo
+        const gst = req.body.gst
+        // const facebook_marketing = req.body.facebook_marketing
+        // const linkedin_marketing = req.body.linkedin_marketing
+        // const instagram_marketing = req.body.instagram_marketing
+        // const email_marketing = req.body.email_marketing
+        // const seo = req.body.seo
+        // const smo = req.body.smo
         // const image = req.file
         // const image_url = image.path
         const clientId = req.session.user.id
@@ -44,6 +45,7 @@ exports.createAutoCampaign = async (req, res) => {
             website,
             position,
             category,
+            gst,
             amount,
             clientId,
             totalAmount
@@ -78,6 +80,7 @@ exports.createCustomCampaign = async (req, res) => {
         const email_marketing = req.body.email_marketing
         const seo = req.body.seo
         const smo = req.body.smo
+        const gst = req.body.gst
         // const image = req.file
         // const image_url = image.path
         const clientId = req.session.user.id
@@ -91,6 +94,7 @@ exports.createCustomCampaign = async (req, res) => {
         website,
         position,
         category,
+        gst,
         facebook_marketing,
         linkedin_marketing,
         instagram_marketing,
