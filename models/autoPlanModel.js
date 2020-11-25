@@ -15,7 +15,7 @@ const autoPlanSchema = new Schema({
     website: {
         type: String,
         trim: true,
-        required: true
+        
     },
     position: {
         type: String,
