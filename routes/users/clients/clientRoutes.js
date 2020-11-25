@@ -6,10 +6,12 @@ const router = express.Router()
 //const campaignController = require('../controllers/campaignsController')
 
 router.get('/registerclient', clientsController.getRegisterClient)
+router.get('/registermanager', clientsController.getRegisterManager)
 
 //auth
 
 router.post('/registerclient', authController.signup)
+
 router.post('/myaccount', authController.login)
 router.post('/logout', authController.logout)
 

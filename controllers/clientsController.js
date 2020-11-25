@@ -21,6 +21,15 @@ exports.getRegisterClient = async(req, res) => {
     })
 }
 
+
+// getRegisterManager
+
+exports.getRegisterManager = async(req, res) => {
+    res.render('registermanager', {
+        errors: req.flash('errors')
+    })
+}
+
 exports.getMyAutoPlan = async (req, res) => {
     try{
         const clientId = req.session.user.id
