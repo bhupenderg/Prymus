@@ -61,6 +61,7 @@ h1#user.u-m{
 h1#user.u-m:hover{
     background: linear-gradient(to right, blue, red);
     transform: translateY(-3px);
+    color: #fff;
 }
 
 h1#user.u-m:active{
@@ -83,6 +84,7 @@ h1#manager.u-m{
 h1#manager.u-m:hover{
     background: linear-gradient(to right, blue, red);
     transform: translateY(-3px);
+    color: #fff;
 }
 
 h1#manager.u-m:active{
