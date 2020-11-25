@@ -133,6 +133,7 @@ form textarea{
 
     .container-fluid-1{
         flex-direction: column;
+        padding-bottom: 10rem;
     }
 
     .boxes{
