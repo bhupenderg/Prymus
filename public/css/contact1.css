@@ -168,9 +168,14 @@ form textarea{
 
 @media only screen and (max-width: 450px) {
 
-    .webHealth{
-        height: 195vh;
+    #website-health{
+        background-color: green;
+        min-height: 190vh;
+        height: 230vh;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
     }
+
 
     .boxes{
         width: 95%;
