@@ -25,14 +25,14 @@
     <div class="user-manager">
 
 
-    <h1 id="user"> Retailer|</h1><h1 id="manager">|Manager</h1>
+    <h1 id="user" class="u-m"> Retailer</h1><h1 id="manager" class="u-m">Manager</h1>
      
     
     </div>
     
     <div class="forms-container" id="user-forms-container">
         <div class="register-form-container" id="user-register-form-container">
-            <h3>Already Registered? <span>Login Here!</span></h3>
+            <h3>Already Registered? <span class="login-n">Login Here!</span></h3>
             <h1> Retailer Register Here!</h1>
             <form action="/registerclient" method="POST" id="userFormRegister">
                 <input type="text" name="name" id="user-register-name" placeholder="Enter Name" required>
@@ -451,7 +451,7 @@
         <!-- Login Form -->
 
         <div class="login-form-container" id="user-login-form-container">
-            <h3>Not Registered? <span>Register Here!</span></h3>
+            <h3>Not Registered? <span class="login-n">Register Here!</span></h3>
             <h1>Retailer Login Here!</h1>
             <form action="myaccount" method="POST">
                 
@@ -475,7 +475,7 @@
 
     <div class="forms-container" id="manager-forms-container">
         <div class="register-form-container" id="manager-register-form-container">
-            <h3>Already Registered? <span>Login Here!</span></h3>
+            <h3>Already Registered? <span class="login-n">Login Here!</span></h3>
             <h1>Manager Register Here!</h1>
             <form action="/coming-soon" method="POST">
                 <input type="text" name="name" id="manager-register-name" placeholder="Enter Name" required>
@@ -878,14 +878,14 @@
                     </h3>
 
                     <div id="terms-box">
-                        <input type="checkbox" id="check-item" name="termsandconditionsManager" required style="border:none !important; margin-top: 3rem; background: none !important; box-shadow: none; transform: translateY(-3rem);">
+                        <input type="checkbox" id="check-item-manager" name="termsandconditionsManager" required style="border:none !important; margin-top: 3rem; background: none !important; box-shadow: none; transform: translateY(-3rem);">
                         <p class="agree">I agree all the terms and agreements</p>
                     </div>
 
                 </div>
 
 
-                <input type="submit" name="register-manager" value="Register">
+                <input type="submit" name="register-manager" id="register-manager" value="Register" disabled>
             </form>
         </div>
 
@@ -894,7 +894,7 @@
         <!-- Login Form -->
 
         <div class="login-form-container" id="manager-login-form-container">
-            <h3>Not Registered? <span>Register Here!</span></h3>
+            <h3>Not Registered? <span class="login-n">Register Here!</span></h3>
             <h1>Manager Login Here!</h1>
             <form action="/comingsoon" method="POST">
                 
@@ -919,6 +919,15 @@
             if(checkBox.checked == true) {
                 document.getElementById('register-user').removeAttribute('disabled')
             }
+
+
+        //     let checkBox2 = document.getElementById('check-item-manager')
+        // document.getElementById('check-item-manager').addEventListener('click', () => {
+        //     // document.querySelector('#check-item-user').style.display = 'none'
+        //     if(checkBox2.checked == true) {
+        //         // document.getElementById('register-manager').removeAttribute('disabled')
+        //         document.getElementById('register-manager').style.display = 'none'
+        //     }    
         })
 
         

@@ -1,3 +1,10 @@
+span.login-n{
+    padding: 1rem 3rem;
+    border: 3px solid blue;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 255, .6);
+}
+
 #labelTerms {
     font-size: 2rem;
 }
@@ -37,43 +44,79 @@ p {
     font-size: 5rem;
 }
 
-#user{
+h1#user.u-m{
+    font-size: 2.5rem;
+    padding: 1rem 4rem;
+    border-left: 3px solid blue;
+    border-top: 3px solid blue;
+    border-right: 3px solid red;
+    border-bottom: 3px solid red;
+    box-shadow: 5px 5px 5px rgba(255, 0, 0, .6);
+    margin: 3rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+h1#user.u-m:hover{
+    background: linear-gradient(to right, blue, red);
+    transform: translateY(-3px);
+}
+
+h1#user.u-m:active{
+    transform: translateY(1px);
+}
+h1#manager.u-m{
+    font-size: 2.5rem;
+    padding: 1rem 4rem;
+    border-left: 3px solid blue;
+    border-top: 3px solid blue;
+    border-right: 3px solid red;
+    border-bottom: 3px solid red;
+    box-shadow: 5px 5px 5px rgba(255, 0, 0, .6);
+    margin: 3rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+h1#manager.u-m:hover{
+    background: linear-gradient(to right, blue, red);
+    transform: translateY(-3px);
+}
+
+h1#manager.u-m:active{
+    transform: translateY(1px);
+}
+
+/* #user{
     color: var(--primary-heading-color);
     text-transform: uppercase;
     cursor: pointer;
-    -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-}
+    -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+} */
 
-#user:hover{
-    color: green;
-    transform: translateY(-3px);
-    
-}
 
 #user:active{
     transform: translateY(1px);
 }
 
-#manager:hover{
-    color: green;
-    transform: translateY(-3px);
-}
 
 #manager:active{
     transform: translateY(1px);
 }
 
 
-#manager{
+/* #manager{
     color: blue;
     text-transform: uppercase;
     cursor: pointer;
-    -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-}
+    -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+} */
 
 .forms-container{
     padding: 10rem 2rem;
