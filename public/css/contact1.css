@@ -169,6 +169,10 @@ form textarea{
 
 @media only screen and (max-width: 450px) {
 
+    #visit-us{
+        font-size: 2rem !important;
+    }
+
     #website-health{
         background-color: green;
         min-height: 190vh;
