@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" oncontextmenu="return false">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/header_updated_s.css">
     <link rel="stylesheet" href="/css/client-register.css">
 </head>
-<body>
+<body oncontextmenu="return false">
 
     <%- include ('../includes/header_updated_n.ejs') %>
 
@@ -938,6 +938,19 @@
     <script src="/js/validateforms/validateUserForms.js"></script>
     <script src="/js/header_updated_s.js"></script>
     <script src="/js/termsandcondition.js"></script>
+
+
+    <script>
+        $(document).keydown(function(e){ 
+    if(e.which === 123){ 
+ 
+       return false; 
+ 
+    } 
+ 
+}); 
+    
+    </script>
     
 </body>
 </html>
