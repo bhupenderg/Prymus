@@ -528,4 +528,20 @@ input[type=submit]:active {
     
         margin-bottom: 1rem;
     }
+
+    h1#user.u-m{
+        font-size: 2rem;
+        padding: 1rem 3rem;
+        margin: 2rem;
+    }
+
+    h1#manager.u-m{
+        font-size: 2rem;
+        padding: 1rem 3rem;
+        margin: 2rem;
+    } 
+
+    span.login-n{
+        font-size: 1.5rem !important;
+    }
 }
