@@ -63,7 +63,7 @@
                 <small id="small-register-userCountry">Error Message</small>
 
                 <label for="Terms and Conditions" class="labelTerms" id="labelTerms">Retailer Terms And Conditions, Cancellation, Refund Policy Agreement</label>
-                <p>Scroll to bottom to accept terms and conditions</p>
+                <p id="p-1">Scroll to bottom to accept terms and conditions</p>
                 <div class="termsConditions" id="termsConditions">
 
                     <h1 class="terms">
@@ -435,14 +435,14 @@
 
                     <div id="terms-box">
                         <input type="checkbox" id="check-item-user" name="termsandconditionsRetailer" required style="border:none !important; margin-top: 3rem; background: none !important; box-shadow: none; transform: translateY(-3rem);">
-                        <p>I agree all the terms and agreements</p>
+                        <p id="p-1_1">I agree all the terms and agreements</p>
                     </div>
 
                 </div>
 
                 
 
-                <input type="submit" name="register-user" value="Register" disabled>
+                <input type="submit" id="register-user" name="register-user" value="Register" disabled>
             </form>
         </div>
 
@@ -912,9 +912,16 @@
     </div>
 
     <script>
-        document.getElementById('user-register-name').addEventListener('click', () => {
-            document.querySelector('.scroll').style.color = 'green'
+
+        let checkBox = document.getElementById('check-item-user')
+        document.getElementById('check-item-user').addEventListener('click', () => {
+            // document.querySelector('#check-item-user').style.display = 'none'
+            if(checkBox.checked == true) {
+                document.getElementById('register-user').removeAttribute('disabled')
+            }
         })
+
+        
         
             
 
