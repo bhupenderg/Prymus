@@ -1,3 +1,23 @@
+.visit-us-container{
+    display: flex;
+    justify-content: center;
+    padding:0 10rem;
+    align-items: center;
+    padding-top: 20rem;
+    padding-bottom: 5rem;
+}
+
+h1#visit-us{
+    font-size: 7rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: red;
+}
+
+.container-fluid.pt-5.pb-5{
+    margin-bottom: 10rem;
+}
+ 
+
 .container-fluid-1{
     width: 100%;
     min-height: 80vh;
@@ -8,6 +28,7 @@
     align-items: center;
     padding: 5rem;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 5rem;
 }
 
 .boxes{
@@ -28,6 +49,8 @@
 
 .boxes h1{
     font-size: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+
     color: red;
 }
 
@@ -159,7 +182,7 @@ form textarea{
     }
 
     .boxes h2{
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .headFont{
