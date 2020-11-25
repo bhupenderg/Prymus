@@ -1,4 +1,4 @@
-
+/* 
 #creative-img{
     width: 50rem !important;
     height: 40rem !important;
@@ -7,13 +7,20 @@
 #manual-img{
     width: 50rem !important;
     height: 40rem !important;
+} */
+
+
+
+#main-heading{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 10rem;
 }
 
 
-
-
-
-
+h1.sub-heading{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 7rem;
+}
 
 
 
@@ -435,11 +442,14 @@
     height: 100%;
 }
 
+#services-10{
+    padding-bottom: 10rem;
+}
+
 
 #audio-video-editing{
     width: 50%;
     height: 100%;
-    
 }
 #web-designing-services{
     width: 50%;
@@ -1357,7 +1367,7 @@ margin-top: 20rem;
 
 .container-one .heading-container h1{
     font-size: 7rem;
-    color: rgb(255, 66, 66);
+    color: rgb(255, 0, 0);
 }
 
 .container-one .sub-heading-container{
@@ -1375,13 +1385,16 @@ margin-top: 20rem;
     
     min-height: 80vh;
     
-    padding: 10rem 0rem;
+    padding: 3rem 0rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     
 }
+
+
+
 
 .container-one .services-container:nth-child(2){
     margin-top: 10rem;
@@ -1404,7 +1417,7 @@ margin-top: 20rem;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 110rem;
+    /* height: 110rem; */
     
 
     /* height: 40rem; */
@@ -1422,12 +1435,13 @@ margin-top: 20rem;
 }
 
 .container-one .services-container .all-services .inner-service .head-container h1{
-    font-size: 3.3rem;
-    color: rgb(255, 66, 66);
+    font-size: 4rem;
+    color: rgb(255, 0, 0);
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .container-one .services-container .all-services .inner-service .img-container img{
-    width: 50rem;
-    height: 40rem;
+    /* width: 50rem;
+    height: 40rem; */
 
 }
 
