@@ -34,11 +34,61 @@ div.card.text-center.one-card.desktop {
 }
 
 img.card-img-top.align-self-center.mb-3.pl-4.pr-4.address.desk {
-    margin-top: 16rem;
+    margin-top: 17rem;
 }
 
 .card.text-center.one-card {
     margin-bottom: 3rem;
+}
+
+input.form-control.whInput{
+    border-left: 3px solid blue;
+    border-top: 3px solid blue;
+    border-right: 3px solid red;
+    border-bottom: 3px solid red;
+    border-radius: 30px;
+    height: 4.5rem;
+    font-size: 2rem;
+}
+
+textarea.form-control.whInput{
+    border-left: 3px solid blue;
+    border-top: 3px solid blue;
+    border-right: 3px solid red;
+    border-bottom: 3px solid red;
+    border-radius: 30px;
+    
+    font-size: 2rem;
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.btn.btn-success.whSubmit {
+    background: #fff;
+    color: #000;
+    outline: none;
+}
+
+.btn.btn-success.whSubmit:hover{
+    transform: translateY(-3px);
+    background: linear-gradient(to right, blue, red);
+    color: #fff;
+}
+
+.btn.btn-success.whSubmit:active{
+    transform: translateY(1px);
+    outline: none;
 }
 
 @media only screen and (max-width: 1200px) {

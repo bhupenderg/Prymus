@@ -169,7 +169,7 @@ app.get('/contact-us', (req, res) => {
 })
 
 app.get('/contact', (req, res) => {
-    res.render('contact1')
+    res.render('contact2')
 })
 
 // app.get('/campaign-register.ejs', (req, res) => {
