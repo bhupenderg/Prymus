@@ -142,12 +142,17 @@ app.get('/affiliate-register', (req, res) => {
 
 
 
-app.get('/manager-terms-and-conditions', (req, res) => {
-    res.render('termsandconditionsmanager.ejs')
-})
+// app.get('/manager-terms-and-conditions', (req, res) => {
+//     res.render('termsandconditionsmanager.ejs')
+// })
 
 
-app.get('/retailer-terms-and-conditions', (req, res) => {
+// app.get('/retailer-terms-and-conditions', (req, res) => {
+//     res.render('termsandconditionsretailer.ejs')
+// })
+
+
+app.get('/terms-and-conditions', (req, res) => {
     res.render('termsandconditionsretailer.ejs')
 })
 
