@@ -56,20 +56,20 @@ img.card-img-top.align-self-center.mb-3.pl-4.pr-4.address {
 }
 
 input.form-control.whInput{
-    border-left: 3px solid blue;
+    /* border-left: 3px solid blue;
     border-top: 3px solid blue;
     border-right: 3px solid red;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid red; */
     border-radius: 30px;
     height: 4.5rem;
     font-size: 2rem;
 }
 
 textarea.form-control.whInput{
-    border-left: 3px solid blue;
+    /* border-left: 3px solid blue;
     border-top: 3px solid blue;
     border-right: 3px solid red;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid red; */
     border-radius: 30px;
     
     font-size: 2rem;
@@ -105,12 +105,15 @@ input[type=number] {
     outline: none;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 850px) {
     #mobile{
         display: inline-block;
     }
 
     #desktop{
         display: none;
+    }
+    .card-title.mb-4.subHeadFont:nth-child(2) {
+        margin-top: 0;
     }
 }
