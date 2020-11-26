@@ -3,6 +3,10 @@
     
 }
 
+h1 a{
+    color: red;
+}
+
 .btn.btn-primary.mb-2.servicesBtn {
     padding: 2rem 5rem;
     font-size: 2rem;
@@ -541,6 +545,7 @@ h1.headFont{
 
 p.card-text.mb-5.mt-5.h2.text-justify.pl-2.pr-2{
     font-size: 2rem !important;
+    font-family: Helvetica, sans-serif;
 }
 
 .ourServices{

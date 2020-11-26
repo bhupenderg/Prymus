@@ -2,6 +2,14 @@
     padding-top: 20rem !important;
 }
 
+.card-title.mb-4.subHeadFont:nth-child(2) {
+    margin-top: 5rem;
+}
+
+.card-img-top.align-self-center.mb-3.pl-4.pr-4.address.email{
+    width: 10rem;
+}
+
 #visit-text {
     font-size: 7rem;
     color: red;
@@ -14,11 +22,12 @@
     background: rgb(255, 255, 255);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
     border-radius: 15px;
+    font-family: Helvetica, sans-serif;
 }
 
 .card-img-top.align-self-center.mb-3.pl-4.pr-4.address {
-    width: 10rem;
-    height: 8rem;
+    width: 8rem;
+    height: 5rem;
 }
 
 .container-fluid.ourServices.pt-5.mt-5.mb-5.mt-5 {
@@ -33,8 +42,13 @@ div.card.text-center.one-card.desktop {
     height: 90vh;
 }
 
-img.card-img-top.align-self-center.mb-3.pl-4.pr-4.address.desk {
-    margin-top: 17rem;
+img.card-img-top.align-self-center.mb-3.pl-4.pr-4.address {
+    margin-top: 3rem;
+}
+
+#com-logo{
+    width: 30rem;
+    height: 15rem;
 }
 
 .card.text-center.one-card {

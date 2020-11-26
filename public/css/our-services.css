@@ -1090,11 +1090,11 @@ margin-top: 20rem;
     }
 
     #para-manual {
-        padding: 0 10rem !important;
+        /* padding: 0 10rem !important; */
     }
     
     #para-creative {
-        padding: 0 10rem !important;
+        /* padding: 0 10rem !important; */
     }
 
     /* .container-one {
@@ -1439,7 +1439,7 @@ margin-top: 20rem;
 }
 
 .container-one .services-container .all-services .inner-service .head-container h1{
-    font-size: 4rem;
+    font-size: 3rem;
     color: rgb(255, 0, 0);
     font-family: 'Roboto Condensed', sans-serif;
 }
