@@ -163,6 +163,11 @@ app.get('/services/smo', (req, res) => {
     res.render('smo')
 })
 
+
+app.get('/contact-us', (req, res) => {
+    res.render('contact2')
+})
+
 app.get('/contact', (req, res) => {
     res.render('contact1')
 })
