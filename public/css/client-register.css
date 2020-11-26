@@ -388,12 +388,18 @@ input[type=submit]:active {
 
 #termsConditions{
     width: 60rem;
-    height: 40rem;
+    height: 55rem;
     /* background-color: aquamarine; */
     overflow: scroll;
     padding: 5rem;
     border: 2px solid;
     margin-bottom: 3rem;
+}
+
+input[type=checkbox]{
+    
+    -webkit-transform: scale(3,3);
+    transform: scale(1, 1);
 }
 
 #termsConditions h1{
