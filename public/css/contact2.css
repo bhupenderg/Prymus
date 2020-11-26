@@ -1,0 +1,26 @@
+#visit {
+    padding-top: 20rem !important;
+}
+
+#visit-text {
+    font-size: 7rem;
+    color: red;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.card.text-center.one-card{
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    background: rgb(233, 228, 228);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+    border-radius: 15px;
+}
+
+.card-img-top.align-self-center.mb-3.pl-4.pr-4.address {
+    width: 10rem;
+    height: 8rem;
+}
+
+.container-fluid.ourServices.pt-5.mt-5.mb-5.mt-5 {
+    background-color: blue;
+}
