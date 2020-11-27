@@ -30,21 +30,20 @@
 </script>
 
 </head>
-<body style="font-size: 2rem; padding-top: 15rem; padding-left: 5rem; padding-right: 5rem;">
+<body>
 
     <% if (user) { %>
         <%- include ('includes/header_updated_s.ejs') %>     
     <% } else { %>
-        <div class="header-main">
-            <%- include ('includes/header_updated_n.ejs') %>
-        </div>     
-    
+        <%- include ('includes/header_updated_n.ejs') %>
     <% } %>
 
     <!-- Policy -->
 
+    <div style="padding: 0 10rem; margin-bottom: 15rem;">
+
     <p>
-        <p><strong>Commitment</strong></p>
+        <h1 style="margin-top: 15rem; text-align: center;"><strong>Commitment</strong></h1>
 <p>Prymus Brandcom India Private Limited intends to protect the privacy of its users (whether registered with Prymus Brandcom India Private Limited) on its website being&nbsp;<a href="www.prymus.co.in%20">www.prymus.co.in</a> (&ldquo;our Website&rdquo;) and the privacy of their data provided by them to Prymus Brandcom India Private Limited from time to time. The privacy of our website users, whether you are our former or existing registered user or merely a visitor to our Website, is important to us and we are strongly committed to your right to privacy and to keeping your personal and other information secure. We encourage you to read our privacy statement to understand what types of personally identifiable information we collect and how we use this information.</p>
 <p><br /> For providing you with quality services, we require you to enroll yourself on our Website and get yourself registered. If you choose to become a registered member of our Website, you must provide your name, e-mail address, a unique login name, password, and password validation (&ldquo;Personal Information&rdquo;). Some of our services may direct you to web domains of third parties. Personal Information (if any) provided by you on such web domains shall be dealt with them in the manner provided by the Privacy Policy of such third-party web domains. It is hereby expressly stated that Prymus Brandcom India Private Limited has no control whatsoever over information of its users posted on other websites. This Privacy Policy only deals with your Personal Information shared with us and we shall in no manner be liable/bound for protection of Personal Information (if any), which may be shared by you on such third-party web domains. We encourage you to ask questions and to be very cautious before you disclose your Personal Information to others.</p>
 <p><strong>What type of information does&nbsp;</strong><strong><u><a href="http://www.lootlo.co/">www.prymus.co.in&nbsp;</a></u></strong><strong>collect from you?</strong></p>
@@ -117,5 +116,11 @@
 
     </p>
 
+    </div>
+
     <%- include('footer.ejs') %>    
+
+
+</body>
+</html> 
 
