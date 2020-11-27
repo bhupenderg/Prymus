@@ -6,7 +6,7 @@ const MongoStore = require('connect-mongodb-session')(session)
 const csrf = require('csurf')
 const multer = require('multer')
 const flash = require('connect-flash')
-var enforce = require('express-sslify');
+// var enforce = require('express-sslify');
 
 // Payment Gateway 
 
@@ -19,7 +19,7 @@ var AWLMEAPI = require('./AWLMEAPI.js');
 
 const app = express()
 
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+// app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 var bodyParser = require('body-parser')
 
