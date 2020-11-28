@@ -2,6 +2,10 @@
     padding-top: 20rem !important;
 }
 
+#address-logo{
+    margin-top: 5rem;
+}
+
 .card-title.mb-4.subHeadFont:nth-child(2) {
     margin-top: 5rem;
 }
