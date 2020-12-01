@@ -30,7 +30,6 @@ const autoPlanSchema = new Schema({
     
     gst: {
         type: String,
-        required: true,
         trim: true
     },
     amount: {
