@@ -41,11 +41,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .all-rights h1{
     color: #fff;
     font-size: 3rem;
+    text-align: center;
 }
 
 p a{

@@ -215,6 +215,34 @@ app.get('/email-marketing', (req, res) => {
     res.render('email-marketing')
 })
 
+app.get('/career', (req, res) => {
+    res.render('career')
+})
+
+app.get('/career/digital-marketer', (req, res) => {
+    res.render('career/digital-marketer')
+})
+
+app.get('/career/content-writer', (req, res) => {
+    res.render('career')
+})
+
+app.get('/career/animation-maker', (req, res) => {
+    res.render('career')
+})
+
+app.get('/career/video-editor', (req, res) => {
+    res.render('career')
+})
+
+app.get('/career/business-development', (req, res) => {
+    res.render('career')
+})
+
+app.get('/career/telecommunication', (req, res) => {
+    res.render('career')
+})
+
 app.get('/', (req, res) => {
     res.render('index1')
 })
