@@ -19,7 +19,7 @@ var AWLMEAPI = require('./AWLMEAPI.js');
 
 const app = express()
 
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+app.use(enforce.HTTPS({ trustProtoHeader: false }));
 
 var bodyParser = require('body-parser')
 
