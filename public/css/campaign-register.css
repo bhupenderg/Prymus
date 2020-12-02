@@ -1,3 +1,18 @@
+/* selected cities starts */
+
+.showSelctedCities{
+  width: 100vw;
+  min-height: 140%;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* selected cities ends */
+
+
 /* all data class starts here */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

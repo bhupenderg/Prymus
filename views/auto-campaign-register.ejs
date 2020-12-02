@@ -6343,6 +6343,20 @@
 
                     <!-- select ended -->
 
+
+                    <h1>Show Selected Cities</h1>
+
+                    <div class="showSelctedCities">
+                        <div class="selectedState">
+                            <h1>Uttarakhanddd</h1>
+                        </div>
+                        <div class="selectedCities">
+                            <h2></h2>
+                            
+                        </div>
+
+                    </div>
+
 <!-- 
                     <div class="showTotal">
                         <h1 class="cities-selected">Selected Cities</h1>
@@ -6845,18 +6859,24 @@
                     // });
 
 
-                        let arr1 = []
+                        let arrUttarakhand = []
                         function func123() {
-                            let sel = document.getElementById('selectuttarakhand')
-                        for (let i = 0; i < sel.options.length; i++) {
-                            if(sel.options[i].selected === true) {
+                            let seluttarakhand = document.getElementById('selectuttarakhand')
+                        for (let i = 0; i < seluttarakhand.options.length; i++) {
+                            if(seluttarakhand.options[i].selected === true) {
                                 let x = ""
-                                x += sel.options[i].value + " "
+                                x += seluttarakhand.options[i].text + " "
 
-                                arr1.push(x)
-                                console.log(arr1)
+                                arrUttarakhand.push(x)
+                                
                             }
                         }
+
+                        arrUttarakhand.forEach(el => {
+                            document.querySelector('.selectedCities h2').innerHTML += el + "<br>"
+                        })
+
+                        
                         }
 
                         
