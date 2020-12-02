@@ -6344,19 +6344,6 @@
                     <!-- select ended -->
 
 
-                    <h1>Show Selected Cities</h1>
-
-                    <div class="showSelctedCities">
-                        <div class="selectedState">
-                            <h1>Uttarakhanddd</h1>
-                        </div>
-                        <div class="selectedCities">
-                            <h2></h2>
-                            
-                        </div>
-
-                    </div>
-
 <!-- 
                     <div class="showTotal">
                         <h1 class="cities-selected">Selected Cities</h1>
@@ -6374,7 +6361,7 @@
                         <input type="number" name="total-amount-insta" class="total-amount" id="total-insta" readonly="true">
                     </div> -->
 
-                    <input type="submit" name="auto-form-submit" class="plan-btn" id="auto-plan-submit" onclick="func123()">
+                    <input type="submit" name="auto-form-submit" class="plan-btn" id="auto-plan-submit">
 
 
                 <!-- Select Ends Here -->
@@ -6859,6 +6846,12 @@
                     // });
 
 
+                        const showCitiesBtn = document.querySelector('.showing-cities')
+                        showCitiesBtn.addEventListener('click', () => {
+                            document.querySelector('.showSelctedCities').classList.toggle('hideClass')
+                        })
+
+
                         let arrUttarakhand = []
                         function func123() {
                             let seluttarakhand = document.getElementById('selectuttarakhand')
@@ -6872,9 +6865,13 @@
                             }
                         }
 
-                        arrUttarakhand.forEach(el => {
+                        
+                            arrUttarakhand.forEach(el => {
                             document.querySelector('.selectedCities h2').innerHTML += el + "<br>"
                         })
+                        
+                        
+                        
 
                         
                         }
@@ -6883,9 +6880,7 @@
 
                 </script>
                 
-                <script type="text/javascript">
-                    console.log(andhraPradeshCitiesContainer.className)
-                </script>
+                
 
 </body>
 

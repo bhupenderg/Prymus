@@ -1,4 +1,48 @@
+.hideClass{
+  display: none !important;
+}
+
+
 /* selected cities starts */
+.showing-cities{
+  width: 100vw;
+  padding: 3rem 10rem;
+  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.showing-cities h1{
+  width: 40vw;
+  height: 10vh;
+  /* border: 3px solid red; */
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  background: linear-gradient(to right, blue, red);
+  color: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+}
+
+.showing-cities h1:hover{
+  transform: translateY(-3px);
+  transition: all 200ms;
+}
+
+.showing-cities h1:active{
+  box-shadow: 5px 5px 5px rgba(255, 0, 0, .5);
+  transform: translateY(1px);
+  transform: all 300ms;
+}
+
 
 .showSelctedCities{
   width: 100vw;
@@ -8,6 +52,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.showSelctedCities .selectedCities h2{
+  text-align: center;
 }
 
 /* selected cities ends */
