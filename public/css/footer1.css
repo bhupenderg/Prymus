@@ -7,6 +7,8 @@
     align-items: center;
     background-color: red;
     margin-top: 5rem;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5rem !important;
 }
 
 .footer .data-container{

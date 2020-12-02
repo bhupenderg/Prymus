@@ -1,3 +1,19 @@
+/* carousel indicators */
+
+
+.carousel-indicators li::before{
+    display: none;
+}
+.carousel-indicators li::after{
+    display: none;
+}
+
+.carousel-indicators li{
+    display: none;
+}
+
+/* ends */
+
 .mob-container{
     display: none;
     
