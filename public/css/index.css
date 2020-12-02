@@ -2,14 +2,18 @@
 
 
 .carousel-indicators li::before{
-    display: none;
+    display: none !important;
 }
 .carousel-indicators li::after{
-    display: none;
+    display: none !important;
 }
 
 .carousel-indicators li{
-    display: none;
+    display: none !important;
+}
+
+.carousel-indicators .active{
+    display: none !important;
 }
 
 /* ends */
