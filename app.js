@@ -270,6 +270,10 @@ app.get('/career/graphic-designer', (req, res) => {
     res.render('career/graphic-designer')
 })
 
+app.get('/sitemap.xml', (req, res) => {
+    res.sendFile('/views/sitemap.xml')
+})
+
 
 app.get('/', (req, res) => {
     res.render('index1')
