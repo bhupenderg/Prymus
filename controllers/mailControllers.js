@@ -60,6 +60,10 @@ exports.getHealth = (req, res) => {
     res.send(`<h1>Your query is submitted successfully. We will get back to you shortly.</h1>`)
 }
 
+exports.careers = (req, res) => {
+    res.send(`<h1>Your query is submitted successfully. We will get back to you shortly.</h1>`)
+}
+
 exports.getContact = (req, res) => {
     res.send(`<h1>Your query is submitted successfully. One of our representative will get back to you shortly.</h1>`)
 }

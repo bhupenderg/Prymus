@@ -241,15 +241,15 @@ app.get('/career/digital-marketing-manager', (req, res) => {
 })
 
 app.get('/career/photographer', (req, res) => {
-    res.render('career')
+    res.render('career/photographer')
 })
 
 app.get('/career/telemarketing-representative', (req, res) => {
-    res.render('career')
+    res.render('career/photographer')
 })
 
 app.get('/career/graphic-designer', (req, res) => {
-    res.render('career')
+    res.render('career/photographer')
 })
 
 
