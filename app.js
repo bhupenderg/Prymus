@@ -245,7 +245,7 @@ app.get('/career/photographer', (req, res) => {
 })
 
 app.get('/career/telemarketing-representative', (req, res) => {
-    res.render('career/photographer')
+    res.render('career/telemarketing-representative')
 })
 
 app.get('/career/graphic-designer', (req, res) => {
