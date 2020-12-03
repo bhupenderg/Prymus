@@ -240,6 +240,16 @@ app.get('/our-services/wordpress-websites', (req, res) => {
     res.render('wordpress-websites')
 })
 
+app.get('/our-services/serveranddomain', (req, res) => {
+    res.render('server-domain')
+})
+
+
+app.get('/our-services/website-redesign', (req, res) => {
+    res.render('redesign-website')
+})
+
+
 app.get('/career', (req, res) => {
     res.render('career')
 })
