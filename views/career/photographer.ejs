@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- <html lang="en" oncontextmenu="return false"> -->
-<html lang="en">
+<html lang="en" oncontextmenu="return false">
+<!-- <html lang="en"> -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -35,7 +35,13 @@
 	<script src="/animated/js/modernizr.js"></script>
 
     <style>
-        
+        input[type=file] {
+            border-left: 3px solid blue;
+            border-top: 3px solid blue;
+            border-right: 3px solid red;
+            border-bottom: 3px solid red;
+            border-radius: 30px;
+        }
     </style>
     
 
@@ -77,7 +83,7 @@
                             <img class="card-img-top mb-5 align-self-center mb-3 pl-4 pr-4" id="mission-vision-image" src="/images/Our-Mission-&-Vision.png" width="328">
                         
                             <div class="card-body">
-                                <h1 class="card-title mb-4 subHeadFont">We are looking for a Photographer who can understand the clients’ requirements and create the personality of any brand with eye-catching pictures. If you are someone who believes that he/she can deliver please submit your resume here. 
+                                <h1 class="card-title mb-4 subHeadFont" style="line-height: 3rem;">We are looking for a Photographer who can understand the clients’ requirements and create the personality of any brand with eye-catching pictures. If you are someone who believes that he/she can deliver please submit your resume here. 
                                 </h1>
                                 <p class="card-text mb-5 mt-5 h2 text-center pl-2 pr-2" id="mv" style="line-height: 3.5rem;">Photographer Job Responsibilities:
                                     <br></p>
@@ -139,7 +145,7 @@
                                     <li class="h4 p-3 m-3 text-justify">
                                         The firm handle on a photography studio, its environment, and its processes
                                     </li>
-                                    <li ="h4 p-3 m-3 text-justify">
+                                    <li class="h4 p-3 m-3 text-justify">
                                         Strong communication skills
                                     </li>
                                     <li class="h4 p-3 m-3 text-justify">
@@ -238,7 +244,8 @@
 
                 <div class="col-lg-4 offset-lg-2 pt-5">
                     <div class="form-group">
-                        <input type="text" name="wlink" class="form-control whInput" placeholder="Enter Your Choice" required>
+                        <label for="file" style="font-size: 2rem;">Upload your resume here:</label>
+                        <input type="file" name="wlink" class="form-control whInput" placeholder="Enter Your Choice" required>
                     </div>
                 </div>    
             </div>

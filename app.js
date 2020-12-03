@@ -249,7 +249,7 @@ app.get('/career/telemarketing-representative', (req, res) => {
 })
 
 app.get('/career/graphic-designer', (req, res) => {
-    res.render('career/photographer')
+    res.render('career/graphic-designer')
 })
 
 
