@@ -59,7 +59,7 @@
 
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1 class="display-4 p-5">Your Plan includes:</h1>
+                    <h1 class="display-4 p-5">Your Plan id: <%= plan._id %></h1>
                 </div>
             </div>
 
@@ -112,7 +112,14 @@
                 </div> -->
 
                 <div class="col-lg-12 text-center">
-                    <h2 class="display-4 p-5" >Amount to be paid(including 10% Agecy Commision and 18% G.S.T) of your plan is Rs <span style="color: green; font-weight: bold;"><%= plan.totalAmount %></span> </h2>
+                    <h2 class="display-4 p-5" >Amount to be paid(including 10% Agency Commision and 18% G.S.T) of your plan is Rs <span style="color: green; font-weight: bold;"><%= plan.totalAmount %></span> </h2>
+                </div>
+
+                <div class="col-lg-12 text-center m-5 p-5">
+                    <form action="/delete-custom-plan" method="POST">
+                        <input type="hidden" name="delete" value="<%= plan._id %>">
+                        <input type="submit" value="Delete" name="delete-btn" id="delete-plan">
+                    </form>
                 </div>
                         
             </div>

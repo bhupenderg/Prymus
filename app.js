@@ -159,17 +159,17 @@ app.get('/terms-and-conditions', (req, res) => {
     res.render('termsandconditionsretailer.ejs')
 })
 
-app.get('/services/seo', (req, res) => {
-    res.render('seo')
-})
+// app.get('/services/seo', (req, res) => {
+//     res.render('seo')
+// })
 
-app.get('/services/webdesignanddevelopment', (req, res) => {
-    res.render('webdesignanddevelopment')
-})
+// app.get('/services/webdesignanddevelopment', (req, res) => {
+//     res.render('webdesignanddevelopment')
+// })
 
-app.get('/services/smo', (req, res) => {
-    res.render('smo')
-})
+// app.get('/services/smo', (req, res) => {
+//     res.render('smo')
+// })
 
 
 app.get('/contact-us', (req, res) => {
@@ -187,17 +187,17 @@ app.get('/contact', (req, res) => {
 app.get('/connect-with-us', (req, res) => {
     res.render('connect-with-us')
 })
-app.get('/webdesignanddevelopment', (req, res) => {
-    res.render('webdesignanddevelopment')
-})
+// app.get('/webdesignanddevelopment', (req, res) => {
+//     res.render('webdesignanddevelopment')
+// })
 
-app.get('/seo', (req, res) => {
-    res.render('seo')
-})
+// app.get('/seo', (req, res) => {
+//     res.render('seo')
+// })
 
-app.get('/smo', (req, res) => {
-    res.render('smo')
-})
+// app.get('/smo', (req, res) => {
+//     res.render('smo')
+// })
 
 app.get('/privacy-policy', (req, res) => {
     res.render('privacy-policy')
@@ -207,11 +207,28 @@ app.get('/our-services', (req, res) => {
     res.render('our-services')
 })
 
-app.get('/app-development', (req, res) => {
+app.get('/our-services/ecommerce-website', (req, res) => {
+    res.render('ecommerce-website')
+})
+
+app.get('/our-services/portfolio-website', (req, res) => {
+    res.render('portfolio-website')
+})
+
+
+app.get('/our-services/content-marketing', (req, res) => {
+    res.render('content-marketing')
+})
+
+app.get('/our-services/social-media-optimization', (req, res) => {
+    res.render('social-media-optimization')
+})
+
+app.get('/our-services/app-development', (req, res) => {
     res.render('app-development')
 })
 
-app.get('/email-marketing', (req, res) => {
+app.get('/our-services/email-marketing', (req, res) => {
     res.render('email-marketing')
 })
 
@@ -219,29 +236,22 @@ app.get('/career', (req, res) => {
     res.render('career')
 })
 
-app.get('/career/digital-marketer', (req, res) => {
-    res.render('career/digital-marketer')
+app.get('/career/digital-marketing-manager', (req, res) => {
+    res.render('career/digital-marketing-manager')
 })
 
-app.get('/career/content-writer', (req, res) => {
+app.get('/career/photographer', (req, res) => {
     res.render('career')
 })
 
-app.get('/career/animation-maker', (req, res) => {
+app.get('/career/telemarketing-representative', (req, res) => {
     res.render('career')
 })
 
-app.get('/career/video-editor', (req, res) => {
+app.get('/career/graphic-designer', (req, res) => {
     res.render('career')
 })
 
-app.get('/career/business-development', (req, res) => {
-    res.render('career')
-})
-
-app.get('/career/telecommunication', (req, res) => {
-    res.render('career')
-})
 
 app.get('/', (req, res) => {
     res.render('index1')

@@ -18,4 +18,9 @@ router.get('/registeraffiliate', (req, res) => {
 })
 
 
+// delete and update plans
+
+router.post('/delete-plan', campaignController.deleteAutoPlan)
+router.post('/delete-custom-plan', campaignController.deleteCustomPlan)
+
 module.exports = router;

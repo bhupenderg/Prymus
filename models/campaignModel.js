@@ -9,7 +9,7 @@ const campaignSchema = new Schema({
         type: String,
         required: true,
         trim: true,
-        unique: true
+        
     },
     website: {
         type: String,

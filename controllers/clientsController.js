@@ -33,7 +33,7 @@ exports.getRegisterManager = async(req, res) => {
 exports.getMyAutoPlan = async (req, res) => {
     try{
         const clientId = req.session.user.id
-    const myplan = await AutoCampaign.find({clientId, payment_done: "no"})
+    const myplan = await AutoCampaign.find({clientId, payment_done: "no"}).sort([['_id', -1]])
     
     //console.log(myplan)
 
@@ -55,7 +55,7 @@ exports.getMyAutoPlan = async (req, res) => {
 exports.getMyCustomPlan = async (req, res) => {
     try{
         const clientId = req.session.user.id
-    const myplan = await Campaign.find({clientId, payment_done: "no"})
+    const myplan = await Campaign.find({clientId, payment_done: "no"}).sort([['_id', -1]])
     
     //console.log(myplan)
 

@@ -16,9 +16,10 @@
    <link type="text/css" rel="stylesheet" href="/css/css-select/tail.select-default.css" />
     
     <link rel="stylesheet" href="/css/header_updated_s.css">
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/campaign-register.css">
     <link rel="stylesheet" href="/css/select.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/footer1.css">
 
     <link type="text/css" rel="stylesheet" href="css/tail.select-default.css" />
     
@@ -81,11 +82,11 @@
                     </select>
                  
                     
-                    <div class="showTotal">
+                    <!-- <div class="showTotal">
                         <input type="number" name="totalAmount" class="total-amount" id="totalAmount" readonly>
                         <h1>Show Total</h1>
                         <h2></h2>
-                    </div>
+                    </div> -->
                 <!-- <input type="file" name="image_url" id="files-auto-plan" multiple> -->
 
                 <!-- <input type="number" name="plan-amount" id="plan-amount" placeholder="Enter The Amount You Want To Purchase Plan For">
@@ -6344,6 +6345,21 @@
                     <!-- select ended -->
 
 
+                    <div class="showing-cities">
+                        <h1 onclick="func123()">Show Cities Selected</h1>
+                    </div>      
+
+                    <div class="showSelctedCities hideClass">
+                        <div class="selectedState">
+                            <h1>Cities Selected:</h1>
+                        </div>
+                        <div class="selectedCities">
+                            <h2></h2>
+                            
+                        </div>
+
+                    </div>
+
 <!-- 
                     <div class="showTotal">
                         <h1 class="cities-selected">Selected Cities</h1>
@@ -6379,7 +6395,12 @@
     
 
 
-        
+                      <%- include('footer1.ejs') %>
+
+                      <% if (user) { %>
+                          <div id="chat-wrapper" class="chat-wrapper shadow border-left border-right"></div>
+                          <script src="/socket.io/socket.io.js"></script>
+                      <% } %>  
 
 
     <!-- All Ends Here -->
@@ -6389,7 +6410,7 @@
 
 
     
-</script> -->
+</script> 
                 <script src="/js/auto-campaign-register.js"></script> 
                 <script src="/js/select.js"></script>
 
@@ -6846,39 +6867,13 @@
                     // });
 
 
-                        const showCitiesBtn = document.querySelector('.showing-cities')
-                        showCitiesBtn.addEventListener('click', () => {
-                            document.querySelector('.showSelctedCities').classList.toggle('hideClass')
-                        })
-
-
-                        let arrUttarakhand = []
-                        function func123() {
-                            let seluttarakhand = document.getElementById('selectuttarakhand')
-                        for (let i = 0; i < seluttarakhand.options.length; i++) {
-                            if(seluttarakhand.options[i].selected === true) {
-                                let x = ""
-                                x += seluttarakhand.options[i].text + " "
-
-                                arrUttarakhand.push(x)
-                                
-                            }
-                        }
-
                         
-                            arrUttarakhand.forEach(el => {
-                            document.querySelector('.selectedCities h2').innerHTML += el + "<br>"
-                        })
-                        
-                        
-                        
-
-                        
-                        }
 
                         
 
                 </script>
+
+                <script src="/js/showcities.js"></script>
                 
                 
 
