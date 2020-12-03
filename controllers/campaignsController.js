@@ -248,7 +248,7 @@ exports.deleteAutoPlan = async(req, res) => {
     try{
         const campaigns = await AutoCampaign.findByIdAndRemove(req.body.delete)
         console.log(campaigns)
-    res.send("Plan deleted successfully")
+    res.redirect("/myplan")
     }
 
     catch(err) {
@@ -265,7 +265,7 @@ exports.deleteCustomPlan = async(req, res) => {
     try{
         const campaigns = await Campaign.findByIdAndRemove(req.body.delete)
         console.log(campaigns)
-    res.send("Plan deleted successfully")
+    res.redirect("/mycustomplan")
     }
 
     catch(err) {
