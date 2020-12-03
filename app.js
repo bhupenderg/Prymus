@@ -232,6 +232,14 @@ app.get('/our-services/email-marketing', (req, res) => {
     res.render('email-marketing')
 })
 
+app.get('/our-services/coded-websites', (req, res) => {
+    res.render('coded-websites')
+})
+
+app.get('/our-services/wordpress-websites', (req, res) => {
+    res.render('wordpress-websites')
+})
+
 app.get('/career', (req, res) => {
     res.render('career')
 })
