@@ -1,0 +1,29 @@
+.container-one{
+    width: 100vw;
+
+    background-color: red;
+
+}
+
+
+#myCarousel-desk{
+    padding-top: 15rem;
+}
+div.btn.btn-primary.item-1_btn{
+    padding: 2rem 7rem;
+    font-size: 3rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-55%);
+    border-radius: 30px;
+    background-color: white;
+    color: blue;
+    border: 2px red;
+}
+
+div.btn.btn-primary.item-1_btn:hover{
+    background-color: blue;
+    color: white;
+    
+}
