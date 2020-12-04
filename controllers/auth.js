@@ -39,6 +39,7 @@ exports.signup = async (req, res) => {
         }
 
         
+        
             const mailed = await transporter.sendMail({
     
 
@@ -55,6 +56,8 @@ exports.signup = async (req, res) => {
         else{
             console.log("Success")
         }
+
+    
 
         // isVerified()
 

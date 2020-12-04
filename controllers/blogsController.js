@@ -1,3 +1,3 @@
 exports.getBlogs = (req, res) => {
-    res.render('blogpage')
+    res.render('blogpage1')
 }
