@@ -337,6 +337,7 @@ h1.cd-headline.rotate-1{
 
 .container-one-mob{
     display: none;
+    height: 52vh;
 }
 
 input{ 
@@ -1451,7 +1452,7 @@ p.card-text.mb-5.mt-5.h2.text-justify.pl-2.pr-2{
 
     .btns-mob{
         display: block;
-        margin-top: 13rem !important;
+        /* margin-top: 13rem !important; */
     }
 
     .topBtn{
@@ -1691,7 +1692,7 @@ p.card-text.mb-5.mt-5.h2.text-justify.pl-2.pr-2{
     .container-one-mob{
         display: flex;
         margin-top: 15rem;
-        margin-bottom: -20rem;
+        
 
     }
 

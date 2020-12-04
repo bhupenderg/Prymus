@@ -111,6 +111,27 @@ header.header{
 .nav-container ul li{
     list-style: none;
     padding-left: 4rem;
+    position: relative;
+}
+
+.nav-container ul li ul{
+    position: absolute;
+    left: 0;
+    background: #fff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container ul li.active ul {
+    display: flex;
+}
+
+
+.nav-container ul li ul li {
+    padding: 1rem 0;
 }
 
 .nav-container ul li a{

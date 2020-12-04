@@ -271,7 +271,7 @@ app.get('/career/graphic-designer', (req, res) => {
 })
 
 app.get('/sitemap.xml', (req, res) => {
-    res.sendFile('/views/sitemap.xml')
+    res.sendFile(path.join(__dirname, 'views', 'sitemap.xml'))
 })
 
 

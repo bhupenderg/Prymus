@@ -44,3 +44,7 @@ const headerMain = document.querySelector('header.header')
                     })
                 }
             }
+
+            document.querySelector('li.submenu').addEventListener('click', () => {
+                document.querySelector('.nav-container ul li').classList.add('active')
+            })
