@@ -384,9 +384,9 @@ h1.cd-headline.rotate-1{
     justify-content: flex-start;
     align-items: center;
     /* margin-top: 5rem; */
-    -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+    -webkit-user-select: text; /* Safari */
+  -ms-user-select: text; /* IE 10 and IE 11 */
+  user-select: text; /* Standard syntax */
 }
 
 .container-one-mob{

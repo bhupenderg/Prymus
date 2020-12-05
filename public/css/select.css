@@ -3,9 +3,9 @@
 }
 
 *, *:before, *:after {
-    -webkit-user-select: none; /* Chrome/Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+ */
+    -webkit-user-select: text; /* Chrome/Safari */        
+    -moz-user-select: text; /* Firefox */
+    -ms-user-select: text; /* IE10+ */
 }
 
 

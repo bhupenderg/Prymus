@@ -42,7 +42,7 @@ const headerMain = document.querySelector('header.header')
                     })
                 } else {
                     headerMain.style.height = "15vh";
-                    headerNavLogo.style.transform = 'scale(.5)'
+                    headerNavLogo.style.transform = 'scale(1)'
                     headerNavMenu.forEach(el => {
                         el.style.fontSize = '1.2rem'
                     })

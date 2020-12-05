@@ -59,9 +59,9 @@ header.header{
     justify-content: center;
     align-items: center;
     flex: 0 0 30%; 
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none; 
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text; 
 }
 
 .logo-conatiner img{
