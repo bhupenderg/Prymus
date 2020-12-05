@@ -1,4 +1,8 @@
-
+input, textarea { 
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+}
 
 span.login-n{
     padding: 1rem 3rem;
@@ -17,7 +21,7 @@ span.login-n{
 
 p {
     font-size: 1.7rem;
-    color: red;
+    color: #ff0707;
 }
 
 
@@ -51,8 +55,8 @@ h1#user.u-m{
     padding: 1rem 4rem;
     border-left: 3px solid blue;
     border-top: 3px solid blue;
-    border-right: 3px solid red;
-    border-bottom: 3px solid red;
+    border-right: 3px solid #ff0707;
+    border-bottom: 3px solid #ff0707;
     box-shadow: 5px 5px 5px rgba(255, 0, 0, .6);
     margin: 3rem;
     border-radius: 30px;
@@ -61,7 +65,7 @@ h1#user.u-m{
 }
 
 h1#user.u-m:hover{
-    background: linear-gradient(to right, blue, red);
+    background: linear-gradient(to right, blue, #ff0707);
     transform: translateY(-3px);
     color: #fff;
 }
@@ -74,8 +78,8 @@ h1#manager.u-m{
     padding: 1rem 4rem;
     border-left: 3px solid blue;
     border-top: 3px solid blue;
-    border-right: 3px solid red;
-    border-bottom: 3px solid red;
+    border-right: 3px solid #ff0707;
+    border-bottom: 3px solid #ff0707;
     box-shadow: 5px 5px 5px rgba(255, 0, 0, .6);
     margin: 3rem;
     border-radius: 30px;
@@ -84,7 +88,7 @@ h1#manager.u-m{
 }
 
 h1#manager.u-m:hover{
-    background: linear-gradient(to right, blue, red);
+    background: linear-gradient(to right, blue, #ff0707);
     transform: translateY(-3px);
     color: #fff;
 }
@@ -130,6 +134,7 @@ h1#manager.u-m:active{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .register-form-container{
@@ -142,8 +147,8 @@ h1#manager.u-m:active{
     box-shadow: 1px 3px 3px 2px rgba(0, 0, 0, 0.3);
     width: 60%;
     font-family: robotic-condensed;
-    
-
+    /* background-color: green; */
+    margin-top: 10rem;
 }
 
 .login-form-container{
@@ -164,28 +169,29 @@ h1#manager.u-m:active{
     color: var(--primary-heading-color);
     font-size: 5rem;
     margin: 0 4rem;
+    padding: 2rem 0;
     margin-bottom: 1rem;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: text; /* Safari */
+    -ms-user-select: text; /* IE 10 and IE 11 */
+    user-select: text; /* Standard syntax */
 
 }
 
 .register-form-container h3{
     font-size: 2rem;
     margin-top: 5rem;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: text; /* Safari */
+    -ms-user-select: text; /* IE 10 and IE 11 */
+    user-select: text; /* Standard syntax */
 }
 
 .register-form-container h3 span{
     font-size: 2.5rem;
     color: var(--primary-heading-color);
     cursor: pointer;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: text; /* Safari */
+    -ms-user-select: text; /* IE 10 and IE 11 */
+    user-select: text; /* Standard syntax */
 }
 
 .login-form-container h1{
@@ -193,9 +199,9 @@ h1#manager.u-m:active{
     font-size: 5rem;
     margin: 4rem;
     margin-bottom: 1rem;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: text; /* Safari */
+    -ms-user-select: text; /* IE 10 and IE 11 */
+    user-select: text; /* Standard syntax */
 }
 
 .login-form-container h1{ 
@@ -207,18 +213,18 @@ h1#manager.u-m:active{
 .login-form-container h3{
     font-size: 2rem;
     margin-top: 5rem;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: text; /* Safari */
+    -ms-user-select: text; /* IE 10 and IE 11 */
+    user-select: text; /* Standard syntax */
 }
 
 .login-form-container h3 span{
     font-size: 2.5rem;
     color: var(--primary-heading-color);
     cursor: pointer;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: text; /* Safari */
+    -ms-user-select: text; /* IE 10 and IE 11 */
+    user-select: text; /* Standard syntax */
 }
 
 
@@ -265,7 +271,7 @@ small{
     margin-left: rem;
     margin-bottom: 2rem;
     font-size: 1.6rem;
-    color: red;
+    color: #ff0707;
 }
 
 
@@ -273,7 +279,7 @@ small{
 input[type=submit]{
     width: 18rem;
     height: 5rem;
-    background: linear-gradient(to right, blue, red);
+    background: linear-gradient(to right, blue, #ff0707);
     cursor: pointer;
     border-radius: 30px;
     box-shadow: 2px 5px 5px 2px rgba(255, 0, 0, 0.685);
@@ -394,7 +400,7 @@ input[type=submit]:active {
     height: 55rem;
     /* background-color: aquamarine; */
     overflow: scroll;
-    padding: 5rem;
+    padding: 2rem;
     border: 2px solid;
     margin-bottom: 3rem;
 }
@@ -413,7 +419,7 @@ input[type=checkbox]{
 
 #termsConditions h3{
     color: #000;
-    text-align: justify;
+    text-align: left;
 }
 
 #termsConditions checkbox{
