@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport(sendgridTransport({
     
     auth: {
             // api_key: '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',
-               api_key: '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'
+               api_key: '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'
     }
 }))
 
@@ -38,15 +38,28 @@ exports.signup = async (req, res) => {
             // return res.send("You are already registered. Login to proceed.")
         }
 
-        
+        console.log("test1")
         
             const mailed = await transporter.sendMail({
     
 
             to: req.body.email,
             from: 'info@prymus.co.in',
-            subject: 'Signed up succeeded',
-            html: '<h1 style = "color: green;"> You have successfully signed up! Now you can create your own marketing plan by signing in to your account.</h1>'
+            subject: 'You are Successfully Registered with Us 👏',
+            html: `<td style="font-size:6px; line-height:10px; padding:0px 0px 0px 0px;" valign="top" align="center">
+            <img class="max-width" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px; max-width:100% !important; width:100%; height:auto !important;" width="600" alt="" data-proportionally-constrained="true" data-responsive="true" src="http://cdn.mcauto-images-production.sendgrid.net/247288e1af428f2a/5947ccfd-0d26-4304-8552-4296679d01f6/4723x1740.png">
+          </td>
+          <br>
+                <div><h1style="text-align: center"><span style="font-size: 24px; font-family: &quot;arial black&quot;, helvetica, sans-serif"><strong>Dear ${req.body.name} </h1> </div>
+                </br>
+                <br><div><h2>Thank you for registering with us!!!</h2></div></br>             
+                <br><div><p>Click here to <a href = "https://www.prymus.co.in/registerclient" target="_blank">login</a> into your account.</p></div></br>
+                <div><p>You can now begin your <span style = "font-weight: 600;"> Advertising Journey </span> with <span style = "font-weight: 600; color: blue;"> PRYMUS BRANDCOM INDIA PVT LTD! </span></p></div>
+                </div>
+            `
+            
+          
+
         })
 
         if(!mailed){
@@ -56,6 +69,8 @@ exports.signup = async (req, res) => {
         else{
             console.log("Success")
         }
+
+        console.log("test2")
 
     
 

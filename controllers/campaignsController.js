@@ -63,7 +63,7 @@ exports.createAutoCampaign = async (req, res) => {
     }
         
     catch(err) {
-        res.send("Click on Show Total Amount.")
+        res.send("Fill all the input fields to continue.")
             // status: "Fail",
             // msg: err
         
