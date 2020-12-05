@@ -1,3 +1,57 @@
+/* join our newsletter */
+
+#newsletterId{
+    min-height: 20vh;
+    padding: 5rem 5rem;
+}
+
+#newsletter-fields{
+    padding: 5rem;
+    margin: 5rem;
+    
+}
+
+.nl{
+    width: 70vw;
+    -moz-box-shadow:  0 0 4px #ff0707;
+    -webkit-box-shadow:  0 0 4px #ff0707;
+     box-shadow:  0 0 4px #ff0707;
+     border: none !important;
+     outline: none;
+     padding-left: 3rem;
+     font-size: 2rem;
+}
+
+.nl:active{
+    outline: none;
+}
+
+#newsletter-btn{
+    margin-left: -15rem;
+    font-size: 2rem;
+    border: none;
+    background: transparent;
+    padding: 1.5rem 1.4rem;
+    border: 1px solid #ff0707;
+    border-radius: 30px;
+    font-family: Helvetica, sans-serif;
+    color: #ff0707;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px rgba(255, 0, 0, 0.6);
+    outline: none;
+}
+
+#newsletter-btn:active{
+    outline: none;
+}
+
+#newsletter-btn:hover{
+    background: red;
+    color: #fff;
+    border-radius: 30px;
+    
+}
+
 /* carousel indicators */
 
 
@@ -1434,6 +1488,28 @@ p.card-text.mb-5.mt-5.h2.text-justify.pl-2.pr-2{
         margin-top: 1px;
         padding-top: 0;
     } */
+
+    #newsletterId{
+        min-height: 5vh;
+    margin-bottom: -10rem !important;
+    }
+
+    #newsletter-fields{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    }
+
+    .nl{
+        width: 90vw;
+    }
+
+    #newsletter-btn{
+        margin-left: 0;
+        margin: 2rem 0;
+    }
 
 
     .container-fluid.word-change{
