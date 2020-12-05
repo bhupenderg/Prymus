@@ -46,16 +46,16 @@ exports.signup = async (req, res) => {
             to: req.body.email,
             from: 'info@prymus.co.in',
             subject: 'You are Successfully Registered with Us 👏',
-            html: `<td style="font-size:6px; line-height:10px; padding:0px 0px 0px 0px;" valign="top" align="center">
+            html: `
+
+            <div><td style="font-size:6px; line-height:10px; padding:0px 0px 0px 0px;" valign="top" align="center">
             <img class="max-width" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px; max-width:100% !important; width:100%; height:auto !important;" width="600" alt="" data-proportionally-constrained="true" data-responsive="true" src="http://cdn.mcauto-images-production.sendgrid.net/247288e1af428f2a/5947ccfd-0d26-4304-8552-4296679d01f6/4723x1740.png">
-          </td>
-          <br>
-                <div><h1style="text-align: center"><span style="font-size: 24px; font-family: &quot;arial black&quot;, helvetica, sans-serif"><strong>Dear ${req.body.name} </h1> </div>
-                </br>
-                <br><div><h2>Thank you for registering with us!!!</h2></div></br>             
-                <br><div><p>Click here to <a href = "https://www.prymus.co.in/registerclient" target="_blank">login</a> into your account.</p></div></br>
-                <div><p>You can now begin your <span style = "font-weight: 600;"> Advertising Journey </span> with <span style = "font-weight: 600; color: blue;"> PRYMUS BRANDCOM INDIA PVT LTD! </span></p></div>
-                </div>
+          </td></div>
+            <div style="text-align: center; font-family: Veranda, CenturyGothic, AppleGothic;">
+			<h1 style="color: red; font-weight: bold">Dear ${req.body.name}</h1>
+			 <h1>Thank You for registering with us!!</h1> 
+		<p style="font-size: 2rem">Click here to <a href="https://www.prymus.co.in/registerclient" target="_blank">login</a>  into your account.</p>	<p>You can now begin your <h1>Advertising Journey</h1> with <h1 style="color: blue">PRYMUS BRANDCOM INDIA PVT LTD</h1> </p>		
+		</div>
             `
             
           
