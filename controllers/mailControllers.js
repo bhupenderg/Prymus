@@ -68,3 +68,7 @@ exports.getContact = (req, res) => {
     res.send(`<h1>Your query is submitted successfully. One of our representative will get back to you shortly.</h1>`)
 }
 
+exports.getNewsletter = (req, res) => {
+    res.send(`<h1>Thanks for subscribing to our newsletter.</h1>`)
+}
+
