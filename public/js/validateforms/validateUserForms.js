@@ -9,6 +9,8 @@
         const userRegisterState = document.getElementById('user-register-state')
         const userRegisterPin = document.getElementById('user-register-pin')
         const userRegisterCountry = document.getElementById('user-register-country')
+
+        
         
 
         // Small User Register
@@ -37,210 +39,86 @@
     const userFormRegister = document.getElementById('userFormRegister')
     userFormRegister.addEventListener('submit', (e) => {
 
-        userRegisterName.addEventListener('focusout', () => {
-            let regex = /^[a-zA-Z ]{0,60}$/
-
         
-            if(!regex.test(userRegisterName.value)) {
-                userRegisterName.classList.add('error')
-                smallUserNameRegister.style.visibility = 'visible'
-                smallUserNameRegister.innerText = 'Your name should contain letters only.'
-            
-                } else if(   userRegisterName.value.length === 0) {
-                        userRegisterName.className = ''
+            // let regex = /^[a-zA-Z ]{0,60}$/
+            // // let regex = /^\S+@\S+$/
+        
+            // if(!regex.test(userRegisterName.value)) {
+            //     e.preventDefault()
+
+            //      userRegisterName.classList.add('error')
+            //      smallUserNameRegister.style.visibility = 'visible'
+            //      smallUserNameRegister.innerText = 'Name is invalid!!'
+                
+            // }   else if(!/^\S+@\S+$/.test((userRegisterEmail.value))){
+            //     e.preventDefault()
+            //      userRegisterEmail.classList.add('error')
+            //      smallUserEmailRegister.style.visibility = 'visible'
+            //      smallUserEmailRegister.innerText = 'Email is invalid!!'
+            // } else 
+            if(userRegisterPassword.value !== userRegisterPasswordConfirm.value) {
+                e.preventDefault()
+                 userRegisterPassword.classList.add('error')
+                 smallUserPasswordRegister.style.visibility = 'visible'
+                 smallUserPasswordRegister.innerText = 'Values for Password and Password Confirm do not match!!'
+            } else if(userRegisterPassword.value.length < 8) {
+                e.preventDefault()
+                 userRegisterPassword.classList.add('error')
+                 smallUserPasswordRegister.style.visibility = 'visible'
+                 smallUserPasswordRegister.innerText = 'Password should be of atleast 8 digits!!'
+                } 
+            // else if(userRegisterPhone.value.length > 10) {
+
+            //      e.preventDefault()   
+            //      userRegisterPhone.classList.add('error')
+            //      smallUserPhoneRegister.style.visibility = 'visible'
+            //      smallUserPhoneRegister.innerText = 'Phone No. can not contain more than 10 digits!!'
+            // } else if(userRegisterPin.value.length != 6) {
+            //     e.preventDefault()   
+            //     userRegisterPin.classList.add('error')
+            //     smallUserPinRegister.style.visibility = 'visible'
+            //     smallUserPinRegister.innerText = 'Pin No. should be of 6 digits!!'
+            // } else if(userRegisterCountry.value.toLowerCase() !== "india"){
+            //     e.preventDefault()   
+            //     userRegisterCountry.classList.add('error')
+            //     smallUserCountryRegister.style.visibility = 'visible'
+            //     smallUserCountryRegister.innerText = 'Country must be India!!'
+            // }
+
+             
+                
+
+
+                else{
+
+
+                    userFormRegister.submit()
+                
                 }
-
-                else {
-                    userRegisterName.classList.remove('error')
-                    userRegisterName.classList.add('success')
-                    smallUserNameRegister.style.visibility = 'hidden'
-            }
-        
-                    })
-                })
+    }) 
+                
 
                     
-            
-                            
-                                
-            
-    
-
-    
-
-        // username validation
-    //     userRegisterName.addEventListener('keyup', (e) =>{
-            
-    //         let regex = /^[a-zA-Z ]{0,60}$/
-
-        
-    //     if(!regex.test(userRegisterName.value)) {
-    //              userRegisterName.classList.add('error')
-    //              smallUserNameRegister.style.visibility = 'visible'
-    //              smallUserNameRegister.innerText = 'Your name should contain letters only.'
-    //             e.preventDefault()
-
-    //     } 
-            
-    //     })
-
-    //     // user email validation
-
-    //     userRegisterEmail.addEventListener('focusout', () =>{
-            
-    //         userEmailValidation()
-            
-    //     })
-
-    //     // user phone validation
-
-    //         userRegisterPhone.addEventListener('keyup', () => {
-    //         if(userRegisterPhone.value.toString().length > 10) {
-    //                 userRegisterPhone.classList.add('error')
-    //                 smallUserPhoneRegister.style.visibility = 'visible'
-    //                 smallUserPhoneRegister.innerText = 'Phone No. should contain 10 digits only.'
-
-    //         } else if(userRegisterPhone.value.toString().length === 0) {
-    //             const userRegisterPhone.className = ''
-    //         }
-
-    //         else {
-    //                 userRegisterPhone.classList.remove('error')
-    //                 userRegisterPhone.classList.add('success')
-    //                 smallUserPhoneRegister.style.visibility = 'hidden'
-    //         }
-    //     })
-
-    //     // User City Validation
-
-    //          userRegisterCity.addEventListener('focusout', () => {
-    //         if(  userRegisterCity.value.length <= 2) {
-    //                  userRegisterCity.classList.add('error')
-    //                  smallUserCityRegister.style.visibility = 'visible'
-
-    //                  smallUserCityRegister.innerText = 'You must enter correct city name.'
-    //         }
-
-    //         else if(     userRegisterCity.value.toString().length === 0) {
-    //                  userRegisterCity.className = ''
-    //         }
-
-    //         else {
-    //                  userRegisterCity.classList.remove('error')
-    //                  userRegisterCity.classList.add('success')
-    //                  smallUserCityRegister.style.visibility = 'hidden'
-    //         }
-
-    //     })
-
-
-    //     // User State Validation
-
-
-    //     const userRegisterState.addEventListener('focusout', () => {
-    //         if(userRegisterState.value.length <= 2) {
-    //             userRegisterState.classList.add('error')
-    //             smallUserStateRegister.style.visibility = 'visible'
-
-    //             smallUserStateRegister.innerText = 'You must enter correct state name.'
-    //         }
-
-    //         else if(userRegisterState.value.toString().length === 0) {
-    //             userRegisterState.className = ''
-    //         }
-
-    //         else {
-    //             const userRegisterState.classList.remove('error')
-    //             const userRegisterState.classList.add('success')
-    //             const smallUserStateRegister.style.visibility = 'hidden'
-    //         }
-
-    //     })
-
-
-    //     // Pin code validation
-
-
-    //     const userRegisterPin.addEventListener('focusout', () => {
-    //         if(  userRegisterPin.value.toString().length < 6 ||   userRegisterPin.value.toString().length > 6) {
-    //                  userRegisterPin.classList.add('error')
-    //                  smallUserPinRegister.style.visibility = 'visible'
-
-    //                  smallUserPinRegister.innerText = 'You must enter correct pin number.'
-    //         }
-
-    //         else if(     userRegisterPin.value.toString().length === 0) {
-    //                  userRegisterPin.className = ''
-    //         }
-
-    //         else {
-    //                  userRegisterPin.classList.remove('error')
-    //                  userRegisterPin.classList.add('success')
-    //                  smallUserPinRegister.style.visibility = 'hidden'
-    //         }
-
-    //     })
-
-
-    //     // Country Validation
-
-
-    //          userRegisterCountry.addEventListener('focusout', () => {
-
-    //         let countryName =    userRegisterCountry.value.trim().toLowerCase()
-    //         if(countryName !== 'india') {
-    //                  userRegisterCountry.classList.add('error')
-    //                  smallUserCountryRegister.style.visibility = 'visible'
-
-    //                  smallUserCountryRegister.innerText = 'You must enter correct country name.'
-    //         }
-
-    //         else if(     userRegisterCountry.value.toString().length === 0) {
-    //                  userRegisterCountry.className = ''
-    //         }
-
-    //         else {
-    //                  userRegisterCountry.classList.remove('error')
-    //                  userRegisterCountry.classList.add('success')
-    //                  smallUserCountryRegister.style.visibility = 'hidden'
-    //         }
-
-    //     })
-
-        
-
-            
-
-        
-    
-
-
-    // // Methods
-
-    
-
-        
-    
 
 
     // //Email validation
 
 
-    //     let regex = /^\S+@\S+$/
-    //     if(!regex.test(const userRegisterEmail.value)) {
-    //              userRegisterEmail.classList.add('error')
-    //              smallUserEmailRegister.style.visibility = 'visible'
-    //              smallUserEmailRegister.innerText = 'Please provide a correct email.'
+        // let regex = /^\S+@\S+$/
+        // if(!regex.test(userRegisterEmail.value)) {
+                //  userRegisterEmail.classList.add('error')
+                //  smallUserEmailRegister.style.visibility = 'visible'
+                //  smallUserEmailRegister.innerText = 'Please provide a correct email.'
 
-    //     } else if(   userRegisterEmail.value.length === 0) {
-    //              userRegisterName.className = ''
-    //     }
+        // } else if(   userRegisterEmail.value.length === 0) {
+        //          userRegisterName.className = ''
+        // }
 
-    //     else {
-    //              userRegisterEmail.classList.remove('error')
-    //              userRegisterEmail.classList.add('success')
-    //              smallUserEmailRegister.style.visibility = 'hidden'
-    //     }
+        // else {
+        //          userRegisterEmail.classList.remove('error')
+        //          userRegisterEmail.classList.add('success')
+        //          smallUserEmailRegister.style.visibility = 'hidden'
+        // }
     
 
     

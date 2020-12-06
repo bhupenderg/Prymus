@@ -250,6 +250,43 @@ app.get('/our-services/website-redesign', (req, res) => {
 })
 
 
+app.get('/our-services/paid-advertisement', (req, res) => {
+    res.render('paid-advertisement')
+})
+
+app.get('/our-services/sms-marketing', (req, res) => {
+    res.render('sms-marketing')
+})
+
+app.get('/our-services/whatsapp-marketing', (req, res) => {
+    res.render('whatsapp-marketing')
+})
+
+app.get('/our-services/restricted-photoshoot', (req, res) => {
+    res.render('restricted-photoshoot')
+})
+
+app.get('/our-services/creative-photoshoot', (req, res) => {
+    res.render('creative-photoshoot')
+})
+
+app.get('/our-services/digital-brand-designing', (req, res) => {
+    res.render('digital-brand-designing')
+})
+
+app.get('/our-services/product-package-designing', (req, res) => {
+    res.render('product-package-designing')
+})
+
+app.get('/our-services/audio-editing', (req, res) => {
+    res.render('audio-editing')
+})
+
+app.get('/our-services/video-editing', (req, res) => {
+    res.render('video-editing')
+})
+
+
 app.get('/career', (req, res) => {
     res.render('career')
 })
