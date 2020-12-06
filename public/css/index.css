@@ -1458,6 +1458,20 @@ p.card-text.mb-5.mt-5.h2.text-justify.pl-2.pr-2{
         box-shadow: 5px 5px 5px rgba(0, 0, 255, .7);
     }
 
+    #newsletter-fields{
+
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+
+    #newsletter-btn{
+        margin-left: 0;
+        margin-top: 5rem;
+    }
+
 
 }
 
@@ -1488,6 +1502,20 @@ p.card-text.mb-5.mt-5.h2.text-justify.pl-2.pr-2{
         margin-top: 1px;
         padding-top: 0;
     } */
+
+
+    .container-fluid.text-center.mt-5.pt-5.btns-mob{
+        margin-bottom: 5rem !important;
+    }
+
+    .container-fluid.text-center.mission.p-5{
+        padding: 0 !important;
+    } 
+
+    .container-fluid.ourServices{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    } 
 
     #newsletterId{
         min-height: 5vh;
