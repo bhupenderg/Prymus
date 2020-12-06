@@ -18,11 +18,11 @@
 }
 .tail-select, .tail-select *{
     outline: none;
-    user-select: none;
-    -o-user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
+    user-select: text;
+    -o-user-select: text;
+    -ms-user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
 }
 .tail-select{
     width: 275px;
