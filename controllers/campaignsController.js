@@ -32,8 +32,8 @@ exports.createAutoCampaign = async (req, res) => {
         // const email_marketing = req.body.email_marketing
         // const seo = req.body.seo
         // const smo = req.body.smo
-        // const image = req.file
-        // const image_url = image.path
+        const images = req.file
+        // const image_url = images.path
         const clientId = req.session.user.id
         const select_days = req.body.select_days
         const amount = req.body.amount
@@ -42,11 +42,14 @@ exports.createAutoCampaign = async (req, res) => {
         let gst_val = parseInt(complete) * 18/100
         const totalAmount = parseInt(complete) + parseInt(gst_val)
         // let total = parseInt(facebook_marketing)  + parseInt(linkedin_marketing)  + parseInt(instagram_marketing)  + parseInt(email_marketing)  + parseInt(seo)  + parseInt(smo) 
-        
+        console.log(images)
+        // console.log(images.path)
+        console.log("----------------")
         const newCampaign =  await AutoCampaign.create({
             whatsapp_no,
             company_name,
             website,
+            // image_url,
             position,
             category,
             gst,
@@ -63,7 +66,7 @@ exports.createAutoCampaign = async (req, res) => {
     }
         
     catch(err) {
-        res.send("Fill all the input fields to continue.")
+        res.send("Fill all the input fields.")
             // status: "Fail",
             // msg: err
         
@@ -79,6 +82,7 @@ exports.createCustomCampaign = async (req, res) => {
         const website = req.body.website
         const position = req.body.position
         const category = req.body.category
+        const images = req.file
         // const facebook_marketing = req.body.facebook_marketing
         // const linkedin_marketing = req.body.linkedin_marketing
         // const instagram_marketing = req.body.instagram_marketing
@@ -202,7 +206,7 @@ exports.createCustomCampaign = async (req, res) => {
     }
 
     catch(err) {
-        res.send(err)
+        res.send("Fill all the input fields.")
             // status: "Fail",
             // msg: err
         

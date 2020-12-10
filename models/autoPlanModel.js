@@ -45,7 +45,7 @@ const autoPlanSchema = new Schema({
     },
 
     image_url: {
-        type: String,
+        type: Array,
         trim: true
     },
     clientId: {

@@ -72,7 +72,7 @@ const store = new MongoStore({
 
 
 
-app.use(multer({storage: fileStorage, fileFilter: fileFilter}).single('image'))
+app.use(multer({storage: fileStorage, fileFilter: fileFilter}).array('images'))
 app.use(flash())
 
 let sessionOptions = session({

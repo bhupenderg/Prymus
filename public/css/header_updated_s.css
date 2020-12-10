@@ -135,7 +135,7 @@ header.header{
 }
 
 .nav-container ul li a{
-    font-size: 1.8rem;
+    font-size: 1.6rem !important;
     text-decoration: none;
     color: #000;
     font-weight: 600;
