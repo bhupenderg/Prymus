@@ -1,21 +1,19 @@
-#delete-plan{
-    width: 20rem;
-    height: 4rem;
-    font-size: 2rem;
-    background-color: red;
+input#delete-plan{
+    padding: 1rem 6rem;
+    background: red;
     color: #fff;
+    font-size: 2rem;
     border-radius: 30px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, .6);
     outline: none;
 }
 
-#delete-plan:hover{
+
+input#delete-plan:hover{
     transform: translateY(-3px);
 }
 
-#delete-plan:active{
+input#delete-plan:active{
     transform: translateY(1px);
-    outline: none;
 }
 
 .payment-block{
@@ -32,7 +30,7 @@ form{
 }
 
 .btn-success {
-    background-color: blue !important;
+    background-color: red !important;
 }
 
 @media only screen and (max-width: 850px) {

@@ -49,17 +49,17 @@
 <!-- container-2 -->
 
     <% myplan.forEach(plan => { %>
-        <div class="container-fluid" style="margin-top: 15rem !important; margin-bottom: 15rem;">
+        <div class="container-fluid payment-block" style="margin-top: 15rem !important; margin-bottom: 15rem;">
             <div class="row">
-                <div class="col-lg-12 text-center main-heading">
-                    <h1 class="display-2">Contratulations, You have successfully created your plan.</h1>
+                <div class="col-lg-12 col-md-12 text-center main-heading">
+                    <h1 class="display-2 head-text">Congratulations, You have successfully created your plan.</h1>
                 </div>
             </div>
 
 
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1 class="display-4 p-5">Your Plan id: <%= plan._id %></h1>
+                    <h1 class="display-4 p-5 para-text">Your Plan id: <span class="blue fat"> <%= plan._id %> </span></h1>
                 </div>
             </div>
 
@@ -67,44 +67,44 @@
 
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="display-4 p-5" >The amount you have chosen for Facebook Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.facebook_marketing %></span></h2>    
+                    <h2 class="display-4 p-5 para-text">The amount you have chosen for <span class="blue fat">Facebook</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.facebook_marketing %></span></h2>    
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <h2 class="display-4 p-5" >The amount you have chosen for Instagram Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.instagram_marketing %></span></h2>
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">Instagram</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.instagram_marketing %></span></h2>
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <h2 class="display-4 p-5" >The amount you have chosen for Linkedin Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.linkedin_marketing %></span></h2>
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">Linkedin</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.linkedin_marketing %></span></h2>
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <h2 class="display-4 p-5" >The amount you have chosen for Youtube Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.youtube_marketing %></span></h2>
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">Youtube</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.youtube_marketing %></span></h2>
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <h2 class="display-4 p-5" >The amount you have chosen for Google Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.google_marketing %></span></h2>
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">Google</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.google_marketing %></span></h2>
+                </div>
+
+                <!-- <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">Email</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.email_marketing %></span></h2>
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <h2 class="display-4 p-5" >The amount you have chosen for Email Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.email_marketing %></span></h2>
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">Pinterest</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.pin_marketing %></span></h2>
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <h2 class="display-4 p-5" >The amount you have chosen for Pinterest Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.pin_marketing %></span></h2>
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">SEO</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.seo_marketing %></span></h2>
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <h2 class="display-4 p-5" >The amount you have chosen for SEO Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.seo_marketing %></span></h2>
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">SMO</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.smo_marketing %></span></h2>
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <h2 class="display-4 p-5" >The amount you have chosen for SMO Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.smo_marketing %></span></h2>
-                </div>
-
-                <div class="col-lg-12 text-center">
-                    <h2 class="display-4 p-5" >The amount you have chosen for SMS Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.sms_marketing %></span></h2>
-                </div>
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">SMS</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.sms_marketing %></span></h2>
+                </div> -->
 
                 
                 <!-- <div class="col-lg-12 text-center">

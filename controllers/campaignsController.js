@@ -120,34 +120,34 @@ exports.createCustomCampaign = async (req, res) => {
         const google_marketing = req.body.google_marketing || 0
 
 
-        const email_days = req.body.email_days
-        const email_price_per_day = req.body.email_price_per_day
-        const email_marketing = req.body.email_marketing || 0
+        // const email_days = req.body.email_days
+        // const email_price_per_day = req.body.email_price_per_day
+        // const email_marketing = req.body.email_marketing || 0
 
 
-        const pin_days = req.body.pin_days
-        const pin_price_per_day = req.body.pin_price_per_day
-        const pin_marketing = req.body.pin_marketing || 0
+        // const pin_days = req.body.pin_days
+        // const pin_price_per_day = req.body.pin_price_per_day
+        // const pin_marketing = req.body.pin_marketing || 0
 
 
-        const seo_days = req.body.seo_days
-        const seo_price_per_day = req.body.seo_price_per_day
-        const seo_marketing = req.body.seo_marketing || 0
+        // const seo_days = req.body.seo_days
+        // const seo_price_per_day = req.body.seo_price_per_day
+        // const seo_marketing = req.body.seo_marketing || 0
 
 
-        const smo_days = req.body.smo_days
-        const smo_price_per_day = req.body.smo_price_per_day
-        const smo_marketing = req.body.smo_marketing || 0
+        // const smo_days = req.body.smo_days
+        // const smo_price_per_day = req.body.smo_price_per_day
+        // const smo_marketing = req.body.smo_marketing || 0
 
 
-        const sms_days = req.body.sms_days
-        const sms_price_per_day = req.body.sms_price_per_day
-        const sms_marketing = req.body.sms_marketing || 0
+        // const sms_days = req.body.sms_days
+        // const sms_price_per_day = req.body.sms_price_per_day
+        // const sms_marketing = req.body.sms_marketing || 0
 
         // const image = req.file
         // const image_url = image.path
         const clientId = req.session.user.id
-        let amount = parseInt(facebook_marketing) + parseInt(instagram_marketing) + parseInt(linkedin_marketing) + parseInt(pin_marketing) + parseInt(google_marketing) + parseInt(email_marketing) + parseInt(youtube_marketing) + parseInt(seo_marketing) + parseInt(smo_marketing) + parseInt(sms_marketing)
+        let amount = parseInt(facebook_marketing) + parseInt(instagram_marketing) + parseInt(linkedin_marketing) + parseInt(google_marketing) + parseInt(youtube_marketing)
         
 
         // let amount = parseInt(facebook_marketing) + parseInt(instagram_marketing) + parseInt(linkedin_marketing) + parseInt(pin_marketing) + + parseInt(google_marketing)
@@ -173,27 +173,27 @@ exports.createCustomCampaign = async (req, res) => {
         insta_days,
         insta_price_per_day,
         instagram_marketing,
-        pin_days,
-        pin_price_per_day,
-        pin_marketing,
+        // pin_days,
+        // pin_price_per_day,
+        // pin_marketing,
         google_days,
         google_price_per_day,
         google_marketing,
         youtube_days,
         youtube_price_per_day,
         youtube_marketing,
-        email_days,
-        email_price_per_day,
-        email_marketing,
-        seo_days,
-        seo_price_per_day,
-        seo_marketing,
-        smo_days,
-        smo_price_per_day,
-        smo_marketing,
-        sms_days,
-        sms_price_per_day,
-        sms_marketing,
+        // email_days,
+        // email_price_per_day,
+        // email_marketing,
+        // seo_days,
+        // seo_price_per_day,
+        // seo_marketing,
+        // smo_days,
+        // smo_price_per_day,
+        // smo_marketing,
+        // sms_days,
+        // sms_price_per_day,
+        // sms_marketing,
         clientId,
         amount,
         totalAmount
