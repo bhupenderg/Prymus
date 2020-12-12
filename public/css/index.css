@@ -3,7 +3,8 @@
     width: 100vw;
     padding: 5rem;
     height: 80vh;
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
+    margin-top: -10rem;
 
 }
 
@@ -18,7 +19,7 @@
 
 .container-1_buttons{
     width: 100vw;
-    height: 10vh;
+    height: 20vh;
     padding: 0 10rem;
     margin-bottom: 5rem;
     
@@ -223,9 +224,15 @@ h1 a{
 }
 
 #part-one{
-    font-size: 8rem;
+    font-size: 5rem;
+}
+b.is-visible{
+    font-size: 5rem !important;
 }
 
+b.is-hidden{
+    font-size: 5rem !important;
+}
 span.cd-words-wrapper{
     width: auto !important;
 }
@@ -236,6 +243,9 @@ span.cd-words-wrapper{
 
 h1.cd-headline.rotate-1{
     width: 100%;
+    font-family: 'Roboto Condensed';
+    color: #000;
+    
 }
 
 
