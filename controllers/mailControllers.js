@@ -100,8 +100,29 @@ exports.getNewsletter = async (req, res) => {
           
     
         })
+
+        const mailedBack = await transporter.sendMail({
     
-        if(!mailed){
+
+            to: req.body.email,
+            from: 'info@prymus.co.in',
+            subject: 'Newsletter Subscription',
+            html: `
+                  
+                  <h2>Yay!!! You have just signed up for our newsletter subscription 💌</h2>
+                  <h2>We will soon be sending you our newsletters here.</h2> 
+                  
+
+                  <h3>Cheers,</h3>
+                  <h3>Team Prymus</h3>
+    
+            `
+            
+          
+    
+        })
+    
+        if(!mailedBack){
             console.log("Something wrong")
         }
     
