@@ -1,9 +1,22 @@
 /* first slider starts */
+.c-img{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+}
+.c-img h1{
+    font-size: 2.5rem;
+    text-align: justify;
+}
+
 .container-one-desk{
     width: 100vw;
     padding: 5rem;
     height: 80vh;
-    margin-bottom: 15rem;
+    margin-bottom: 8rem;
     margin-top: -10rem;
 
 }
