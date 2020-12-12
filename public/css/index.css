@@ -19,7 +19,7 @@
     width: 100vw;
     padding: 5rem;
     height: 80vh;
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
     margin-top: -10rem;
 
 }
@@ -35,7 +35,7 @@
 
 .container-1_buttons{
     width: 100vw;
-    height: 20vh;
+    min-height: 120%;
     padding: 0 10rem;
     margin-bottom: 5rem;
     
@@ -43,6 +43,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: -5rem;
 }
 
 
@@ -50,7 +51,11 @@
     text-decoration: none;
     font-size: 2rem;
     font-family: Helvetica, sans-serif;
-    padding: 1.2rem 6rem;
+    /* padding: 1.2rem 6rem; */
+    width: 30%;
+    height: 4rem;
+    padding-top: .7rem;
+    text-align: center;
     border-left: 3px solid blue;
     border-top: 3px solid blue;
     border-right: 3px solid red;
@@ -66,13 +71,18 @@
     border: none;
     background: linear-gradient(to right, blue, red);
     color: #fff;
-    padding: 1.5rem 6rem;
+    width: 30%;
+    height: 4rem;
+    padding-top: 1rem;
+    text-align: center;
     transform: translateY(-3px);
 }
 
-.container-1_buttons a:active{
+.container-1_buttons a:active,
+.container-1_buttons a:visited{
     transform: translateY(1px);
     text-decoration: none;
+    
 }
 
 /* join our newsletter */
