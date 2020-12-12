@@ -16,7 +16,7 @@ exports.getHealth = async (req, res) => {
         const mailed = await transporter.sendMail({
     
 
-            to: 'i.bhupendr@gmail.com',
+            to: 'rajan.jhanji@gmail.com',
             from: 'info@prymus.co.in',
             subject: 'For Free Website Health Report 👏',
             html: `
@@ -62,7 +62,7 @@ exports.getNewsletter = async (req, res) => {
         const mailed = await transporter.sendMail({
     
 
-            to: 'i.bhupendr@gmail.com',
+            to: 'rajan.jhanji@gmail.com',
             from: 'info@prymus.co.in',
             subject: 'For monthly newsletter',
             html: `
