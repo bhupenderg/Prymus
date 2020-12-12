@@ -1,3 +1,6 @@
+
+
+
 /* first slider starts */
 .c-img{
     
@@ -21,7 +24,8 @@
     height: 80vh;
     margin-bottom: 3rem;
     margin-top: -10rem;
-
+    position: relative;
+    z-index: -1;
 }
 
 .carousel-item img{
@@ -38,12 +42,12 @@
     min-height: 120%;
     padding: 0 10rem;
     margin-bottom: 5rem;
-    
+    margin-top: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: -5rem;
+    /* margin-top: -5rem; */
 }
 
 
@@ -63,7 +67,7 @@
     color: #000;
     border-radius: 30px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
-    
+    margin-top: 1rem;
 }
 
 .container-1_buttons a:hover{
@@ -84,6 +88,8 @@
     text-decoration: none;
     
 }
+
+
 
 /* join our newsletter */
 
@@ -1235,11 +1241,21 @@ h1.display-3{
 
 
 
-@media only screen and (max-width: 1200px) {
-    .button-container {
-        margin-top: -10rem;
+
+
+
+  /* @media screen and (min-width: 1380px) {
+    .container-1_buttons {
+        margin-top: 3rem;
     }
-}
+  }  
+
+
+@media only screen and (max-width: 1530px) {
+    .container-1_buttons {
+        margin-top: 3rem;
+    }
+} */
 
 
 @keyframes comeDown{
