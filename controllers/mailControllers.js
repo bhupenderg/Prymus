@@ -30,8 +30,33 @@ exports.getHealth = async (req, res) => {
           
     
         })
+
+
+        const mailedBack = await transporter.sendMail({
     
-        if(!mailed){
+
+            to: req.body.email,
+            from: 'info@prymus.co.in',
+            subject: 'Free Website Health Report',
+            html: `
+                  <h1>Hello ${req.body.name},</h1><br><br>
+                  <h2>Thank you for approaching us 💗</h2>
+                  <h2>Our team is analyzing your website ${req.body.wlink}.</h2> 
+                  <h2>In the next 48 hours, you will recieve your free website health report.</h2>
+
+                  <h3>Cheers,</h3>
+                  <h3>Team Prymus</h3>
+    
+            `
+            
+          
+    
+        })
+
+
+        
+    
+        if(!mailedBack){
             console.log("Something wrong")
         }
     
