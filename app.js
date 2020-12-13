@@ -322,9 +322,9 @@ app.get('/', (req, res) => {
 //     res.render('coming-soon')
 // })
 
-app.use('*', (req, res) => {
-    res.send("<h1>Error 404 Page not found!")
-})
+// app.use('*', (req, res) => {
+//     res.send("<h1>Error 404 Page not found!")
+// })
 
 
 mongoose.connect('mongodb+srv://prymususermain:prymususermain@test-cluster1.mxenq.mongodb.net/test-cluster1?retryWrites=true&w=majority', 

@@ -569,7 +569,7 @@
     <div class="heading-health text-center">
         <h1 class="display-1 headFont">JOIN OUR NEWS LETTER</h1>
     </div>
-    <form action="/join-newsletter" method="post" class="m-5">
+    <form action="/join-newsletter" method="post" class="m-5" id="join-newsletter">
     
      <div class="newsletter" id="newsletter-fields">
          <input type="email" class="nl" name="email" laceholder="Ener your email here..." required>
@@ -580,6 +580,12 @@
 
             
     </form>
+
+    <div class="heading-health text-center">
+        <h1 class="display-1 headFont" id="newsLetter-msg"></h1>
+    </div>
+
+    
 </div>
 
 <!-- Join Our News Letter Ends  -->
@@ -674,18 +680,18 @@
         <div class="heading-health text-center">
             <h1 class="display-1 headFont">GET FREE WEBSITE HEALTH REPORT</h1>
         </div>
-        <form action="/website-health" method="post" class="m-5">
+        <form action="/website-health" method="post" class="m-5" id="webHealth-form">
             <div class="row mt-5">
                 <div class="col-lg-4 offset-lg-1 pt-5">
                     <div class="form-group">
-                        <input type="text" name="name" class="form-control whInput" placeholder="Enter Name" required>
+                        <input type="text" name="name" class="form-control whInput" id="whName" placeholder="Enter Name" >
                     </div>
                 </div>    
             
 
                 <div class="col-lg-4 offset-lg-2 pt-5">
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control whInput" placeholder="Enter Email" required>
+                        <input type="email" name="email" class="form-control whInput" id="whEmail" placeholder="Enter Email">
                     </div>
                 </div>    
             </div>
@@ -695,24 +701,28 @@
             <div class="row">
                 <div class="col-lg-4 offset-lg-1 pt-5">
                     <div class="form-group">
-                        <input type="text" name="mobile" class="form-control whInput" placeholder="Enter Mobile No." required>
+                        <input type="text" name="mobile" class="form-control whInput" id="whMobile" placeholder="Enter Mobile No.">
                     </div>
                 </div>    
             
 
                 <div class="col-lg-4 offset-lg-2 pt-5">
                     <div class="form-group">
-                        <input type="text" name="wlink" class="form-control whInput" placeholder="Enter Website Link" required>
+                        <input type="text" name="wlink" class="form-control whInput" id="whLink" placeholder="Enter Website Link">
                     </div>
                 </div>    
             </div>
 
             <div class="row text-center mt-5">
                 <div class="col text-center mt-5">
-                    <input type="submit" class="btn btn-success whSubmit" name="submit" value="SUBMIT">
+                    <input type="submit" class="btn btn-success whSubmit" id="wh-btn" name="submit" value="SUBMIT">
                 </div>
             </div>
         </form>
+
+        <div class="heading-health text-center">
+            <h1 class="display-1 headFont" id="webHealth-msg"></h1>
+        </div>
     </div>
 
 
@@ -764,7 +774,10 @@ $(document).keydown(function(e){
 }); 
     </script>
 
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+<script src="/js/mailFormsjs.js"></script>
+<script src="/js/webhealth.js"></script>
 
     
 </body>

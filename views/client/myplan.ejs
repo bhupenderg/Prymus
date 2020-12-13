@@ -81,6 +81,13 @@
                         </div>
 
                         <div class="col-lg-12 text-center m-5 p-5">
+                            <form action="/campaignupdate-auto/<%= plan._id %>" method="GET">
+                                
+                                <input type="submit" value="Update" name="update-btn" id="update-plan">
+                            </form>
+                        </div>
+
+                        <div class="col-lg-12 text-center m-5 p-5">
                             <form action="/delete-plan" method="POST">
                                 <input type="hidden" name="delete" value="<%= plan._id %>">
                                 <input type="submit" value="Delete" name="delete-btn" id="delete-plan">

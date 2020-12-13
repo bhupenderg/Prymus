@@ -8,6 +8,14 @@ router.post('/campaignregister-custom', campaignController.createCustomCampaign)
 
 router.post('/campaignregister-auto', campaignController.createAutoCampaign)
 
+router.get('/campaignupdate-custom/:id', authController.mustBeLoggedIn, campaignController.updateCustomCampaign)
+
+router.get('/campaignupdate-auto/:id', authController.mustBeLoggedIn, campaignController.updateAutoCampaign)
+
+router.post('/updatedata-custom', campaignController.updateCustomData)
+
+router.post('/updatedata-auto', campaignController.updateAutoData)
+
 router.get('/campaignregister-custom', authController.mustBeLoggedIn, campaignController.getCampaign)
 
 router.get('/campaignregister-auto', authController.mustBeLoggedIn, campaignController.getAutoCampaign)

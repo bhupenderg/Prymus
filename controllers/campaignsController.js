@@ -61,7 +61,7 @@ exports.createAutoCampaign = async (req, res) => {
         
         console.log(req.body)
         console.log(newCampaign)
-        res.send("<h1>Campaign created successfully. Go and see your plan <a href = '/myplan'>here.</h1>")
+        res.redirect('/mycustomplan')
         
     }
         
@@ -201,7 +201,7 @@ exports.createCustomCampaign = async (req, res) => {
         
         console.log(req.body)
         console.log(newCampaign)
-        res.send("<h1>Campaign created successfully. Go and see your plan <a href = '/mycustomplan'>here.</h1>")
+        res.redirect('/mycustomplan')
         
     }
 
@@ -279,3 +279,101 @@ exports.deleteCustomPlan = async(req, res) => {
     
 
 }
+
+
+exports.updateCustomCampaign = async (req, res) => {
+    // try{
+    //     const updatedCampaign = Campaign.findByIdAndUpdate(req.params.id, req.body, {
+    //         new: true,
+    //         runValidators: true
+    //     })
+
+    //     res.send(updatedCampaign)
+    // }
+
+    // catch(err) {
+    //     res.send("Server Error, Please come back after some time.")
+    // }
+
+    try{
+        const campaign = await Campaign.findById(req.params.id)
+        console.log(req.params.id)
+        res.render('updateCustomPlan', {
+            campaign
+        })
+    }
+
+    catch(err) {
+        res.send(err)
+    }
+}
+
+exports.updateCustomData = async (req, res) => {
+    try{
+            const updatedCampaign = await Campaign.findOneAndUpdate ({_id : req.body.id}, req.body, {
+                new: true
+            })
+    
+            res.redirect('/mycustomplan')
+
+            console.log("Done")
+        }
+    
+        catch(err) {
+            res.send("Server is down. Please come back later.")
+        }
+
+    
+
+    
+}
+
+    exports.updateAutoCampaign = async (req, res) => {
+        // try{
+        //     const updatedCampaign = Campaign.findByIdAndUpdate(req.params.id, req.body, {
+        //         new: true,
+        //         runValidators: true
+        //     })
+    
+        //     res.send(updatedCampaign)
+        // }
+    
+        // catch(err) {
+        //     res.send("Server Error, Please come back after some time.")
+        // }
+    
+        try{
+            const campaign = await AutoCampaign.findById(req.params.id)
+            console.log(req.params.id)
+            res.render('updateAutoPlan', {
+                campaign
+            })
+        }
+    
+        catch(err) {
+            res.send(err)
+        }
+    }
+
+
+    exports.updateAutoData = async (req, res) => {
+        try{
+                const updatedCampaign = await Campaign.findOneAndUpdate ({_id : req.body.id}, req.body, {
+                    new: true
+                })
+        
+                res.redirect('/myautoplan')
+    
+                console.log("Done")
+            }
+        
+            catch(err) {
+                res.send("Server is down. Please come back later.")
+            }
+    
+        
+    
+        
+    }
+    
+    
