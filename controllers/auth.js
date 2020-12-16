@@ -1,4 +1,5 @@
 //const jwt = require('jsonwebtoken')
+const crypto = require('crypto')
 const Client = require('../models/clientModel')
 const bcrypt = require('bcryptjs');
 var postmark = require("postmark");
@@ -226,4 +227,96 @@ exports.logout = (req, res) => {
     req.session.destroy(function() {
         res.redirect('/registerclient')
     })
+}
+
+
+
+exports.forgotPassword = async (req, res, next) => {
+
+    try{
+        const client = await Client.findOne({ email: req.body.email })
+
+    if(!client) {
+        res.send("There is no user with email address.")
+    }
+
+
+    const resetToken =  client.createPasswordResetToken()
+    await client.save({ validateBeforeSave: false })
+
+
+    const resetURL = `${req.protocol}://${req.get(
+        'host'
+    )}/clients/resetPassword/${resetToken}`;
+
+    const message = `${resetURL}`
+    const mailed = await transporter.sendMail({
+    
+
+        to: req.body.email,
+        from: 'info@prymus.co.in',
+        subject: 'Your password request token only valid for 10 mins',
+        html: `
+                ${message}
+        `
+        
+      
+
+    })
+
+    if(!mailed){
+        console.log("Fail")
+    }
+
+    else{
+        console.log("Success")
+    }
+
+    res.send("Your password reset token has been sent to your email.")
+    }   
+
+    catch(err) {
+
+        client.passwordResetToken = undefined
+        client.passwordResetExpires = undefined
+        await client.save({ validateBeforeSave: false })
+        res.send("There was some error sending email. Try again later!")
+    }
+
+}
+exports.resetPassword = async (req, res, next) => {
+
+    try{
+        
+    // get user based on token
+    const hashedToken = crypto.createHash('sha256').update(req.params.token).digest('hex')
+
+    const client = await Client.findOne({ 
+        passwordResetToken: hashedToken,
+        passwordResetExpires: { $gt: Date.now() } 
+    });
+
+    // if user is there and token is not expired, set new password
+
+    if(!client) {
+        return res.send("Token is invalid or has expired.")
+    }
+
+    client.password = req.body.password
+    client.passwordConfirm = req.body.passwordConfirm
+    client.passwordResetToken = undefined
+    client.passwordResetExpires = undefined
+
+    await client.save();
+    // update changed passwordat property for the user
+
+
+    // log the user in
+    }
+
+    catch(err) {
+        res.send(err)
+    }
+
+
 }

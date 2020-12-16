@@ -13,6 +13,10 @@ router.get('/registermanager', clientsController.getRegisterManager)
 router.post('/registerclient', authController.signup)
 
 router.post('/myaccount', authController.login)
+
+router.post('/forgotPassword', authController.forgotPassword)
+router.post('/resetPassword/:token', authController.resetPassword)
+
 router.post('/logout', authController.logout)
 
 

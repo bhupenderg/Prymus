@@ -1,3 +1,4 @@
+const crypto = require('crypto')
 const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt = require('bcryptjs');
@@ -68,11 +69,23 @@ const clientSchema = new Schema({
     termsandconditionsRetailer: {
         type: String,
         required: [true, 'Must check terms and condition Box']
-    }
+    },
+
+    passwordChangedAt: Date,
+    passwordResetToken: String,
+    passwordResetExpires: Date
 
 },
 {
     timestamps: true
+})
+
+
+clientSchema.pre('save', function(next) {
+    if(!this.isModified('password') || this.isNew) return next()
+    this.passwordChangedAt = Date.now()
+    next()
+
 })
 
 clientSchema.pre('save', async function(next) {
@@ -91,6 +104,22 @@ clientSchema.pre('save', async function(next) {
 
 clientSchema.methods.correctPassword = async function(candidatePassword, clientPassword) {
     return await bcrypt.compare(candidatePassword, clientPassword)
+}
+
+clientSchema.methods.createPasswordResetToken = function() {
+
+    const resetToken = crypto.randomBytes(32).toString('hex')
+    this.passwordResetToken =  crypto
+    .createHash('sha256')
+    .update(resetToken)
+    .digest('hex')
+
+    console.log({resetToken}, this.passwordResetToken)
+
+    this.passwordResetExpires = Date.now() + 10 * 60 * 1000
+
+    return resetToken
+
 }
 
 
