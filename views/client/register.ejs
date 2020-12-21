@@ -35,11 +35,11 @@
         <div class="register-form-container" id="user-register-form-container">
             <h3>Already Registered? <span class="login-n">Login Here!</span></h3>
             <h1> Retailer Register Here!</h1>
-            <form action="/registerclient" method="POST" id="userFormRegister">
+            <form action="/registerclient" method="POST" id="userFormRegister" onsubmit="return validateRegister()">
                 <input type="text" name="name" id="user-register-name" placeholder="Enter Name" required>
                 <small id="small-register-userName">Error Message</small>
 
-                <input type="email" name="email" id="user-register-email" placeholder="Enter Email" required>
+                <input type="text" name="email" id="user-register-email" placeholder="Enter Email" required>
                 <small id="small-register-userEmail">Error Message</small>
 
                 <input type="password" name="password" id="user-register-password" placeholder="Enter Password" required>
@@ -48,7 +48,7 @@
                 <input type="password" name="passwordConfirm" id="user-register-password-confirm" placeholder="Password Confirm" required>
                 <small id="small-register-userPasswordConfirm">Error Message</small>
 
-                <input type="tel" name="phone" id="user-register-phone" placeholder="Enter Phone No." required>
+                <input type="number" name="phone" id="user-register-phone" placeholder="Enter Phone No." required>
                 <small id="small-register-userPhone">Error Message</small>
 
                 <input type="text" name="city" id="user-register-city" placeholder="Enter City" required>
@@ -57,7 +57,7 @@
                 <input type="text" name="state" id="user-register-state" placeholder="Enter State" required>
                 <small id="small-register-userState">Error Message</small>
 
-                <input type="text" name="pincode" id="user-register-pin" placeholder="Enter Pin Code" required>
+                <input type="number" name="pincode" id="user-register-pin" placeholder="Enter Pin Code" required>
                 <small id="small-register-userPin">Error Message</small>
 
                 <input type="text" name="country" id="user-register-country" placeholder="Country" required>

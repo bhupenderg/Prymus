@@ -21,7 +21,12 @@ exports.signup = async (req, res) => {
 
     const errorVal = []
     try{
-        
+        const email = req.body.email
+        const client = await Client.findOne({email})
+
+        if(client) {
+            res.send(`You are already registered with us. Please <a href = "/registerclient">Login</a> here to proceed!!`)
+        }
 
         const newClient = await Client.create(req.body)
 
@@ -105,7 +110,11 @@ exports.signup = async (req, res) => {
 
         console.log(err)
         
-        res.send("You are already registered with us. Try login")
+        if(err.errors.email){
+           return res.send(`Please provide a valid email. <a href = "/registerclient">Register</a> Here!!`)
+        }
+
+        res.send(`Server down. Please come back later.`)
     }
         
 

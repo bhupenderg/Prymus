@@ -36,37 +36,165 @@
 
     // Form event
 
-    const userFormRegister = document.getElementById('userFormRegister')
-    userFormRegister.addEventListener('submit', (e) => {
+   
+    function validateRegister() {
 
+        let regex = /^[a-zA-Z ]{0,60}$/
+            // let regex = /^\S+@\S+$/
         
-            // let regex = /^[a-zA-Z ]{0,60}$/
-            // // let regex = /^\S+@\S+$/
-        
-            // if(!regex.test(userRegisterName.value)) {
-            //     e.preventDefault()
+            if(!regex.test(userRegisterName.value)) {
 
-            //      userRegisterName.classList.add('error')
-            //      smallUserNameRegister.style.visibility = 'visible'
-            //      smallUserNameRegister.innerText = 'Name is invalid!!'
+                 userRegisterName.classList.add('error')
+                 smallUserNameRegister.style.visibility = 'visible'
+                 smallUserNameRegister.innerText = 'Name is invalid!!'
+                 userRegisterName.focus()
+                 return false
                 
-            // }   else if(!/^\S+@\S+$/.test((userRegisterEmail.value))){
-            //     e.preventDefault()
-            //      userRegisterEmail.classList.add('error')
-            //      smallUserEmailRegister.style.visibility = 'visible'
-            //      smallUserEmailRegister.innerText = 'Email is invalid!!'
-            // } else 
+            }
+            else{
+                userRegisterName.classList.remove('error')
+                userRegisterName.classList.add('success')
+                smallUserNameRegister.style.visibility = 'hidden'
+            
+                 
+            }
+            if(!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test((userRegisterEmail.value))){
+                 userRegisterEmail.classList.add('error')
+                 smallUserEmailRegister.style.visibility = 'visible'
+                 smallUserEmailRegister.innerText = 'Email is invalid!!'
+                 userRegisterEmail.focus()
+                 return false
+            }  
+
+            else{
+                userRegisterEmail.classList.remove('error')
+                userRegisterEmail.classList.add('success')
+                smallUserEmailRegister.style.visibility = 'hidden'
+            }
+
+
             if(userRegisterPassword.value !== userRegisterPasswordConfirm.value) {
-                e.preventDefault()
+                
                  userRegisterPassword.classList.add('error')
                  smallUserPasswordRegister.style.visibility = 'visible'
                  smallUserPasswordRegister.innerText = 'Values for Password and Password Confirm do not match!!'
-            } else if(userRegisterPassword.value.length < 8) {
-                e.preventDefault()
+                 userRegisterPassword.focus()
+                 return false
+            }
+            
+            else{
+                userRegisterPassword.classList.remove('error')
+                userRegisterPassword.classList.add('success')
+                smallUserPasswordRegister.style.visibility = 'hidden'
+            }
+
+
+            if(userRegisterPassword.value.length < 8) {
+                
                  userRegisterPassword.classList.add('error')
                  smallUserPasswordRegister.style.visibility = 'visible'
                  smallUserPasswordRegister.innerText = 'Password should be of atleast 8 digits!!'
+                 userRegisterPassword.focus()
+                 return false
+                
+                }
+                
+                else{
+                userRegisterPassword.classList.remove('error')    
+                userRegisterPassword.classList.add('success')
+                smallUserPasswordRegister.style.visibility = 'hidden'
+                }
+
+            if(userRegisterPhone.value.length >= 15 || userRegisterPhone.value.length < 6) {
+
+                        userRegisterPhone.classList.add('error')
+                        smallUserPhoneRegister.style.visibility = 'visible'
+                        smallUserPhoneRegister.innerText = 'Phone No. is incorrect!'
+                        userRegisterPhone.focus()
+                        return false
                 } 
+
+            else{
+
+                userRegisterPhone.classList.remove('error')
+                userRegisterPhone.classList.add('success')
+                smallUserPhoneRegister.style.visibility = 'hidden'
+
+            }    
+
+            if(!regex.test(userRegisterCity.value)) {
+
+                userRegisterCity.classList.add('error')
+                smallUserCityRegister.style.visibility = 'visible'
+                smallUserCityRegister.innerText = 'City name is invalid!!'
+                userRegisterCity.focus()
+                return false
+               
+            }
+            else{
+               userRegisterCity.classList.remove('error')
+               userRegisterCity.classList.add('success')
+               smallUserCityRegister.style.visibility = 'hidden'
+           
+                
+            }
+
+
+            if(!regex.test(userRegisterState.value)) {
+
+            userRegisterState.classList.add('error')
+            smallUserStateRegister.style.visibility = 'visible'
+            smallUserStateRegister.innerText = 'State is invalid!!'
+            userRegisterState.focus()
+            return false
+           
+            }
+           else{
+           userRegisterState.classList.remove('error')
+           userRegisterState.classList.add('success')
+           smallUserStateRegister.style.visibility = 'hidden'
+       
+            
+            }
+
+
+            if(userRegisterPin.value.length > 6 || userRegisterPin.value.length > 6) {
+                userRegisterPin.classList.add('error')
+                smallUserPinRegister.style.visibility = 'visible'
+                smallUserPinRegister.innerText = 'Pin is invalid!!'
+                userRegisterPin.focus()
+                return false
+            }
+
+            else{
+                userRegisterPin.classList.remove('error')
+                userRegisterPin.classList.add('success')
+                smallUserPinRegister.style.visibility = 'hidden'
+            }
+
+
+            if(!regex.test(userRegisterCountry.value)) {
+
+                userRegisterCountry.classList.add('error')
+                smallUserCountryRegister.style.visibility = 'visible'
+                smallUserCountryRegister.innerText = 'Country is invalid!!'
+                userRegisterCountry.focus()
+                return false
+               
+                }
+               else{
+               userRegisterCountry.classList.remove('error')
+               userRegisterCountry.classList.add('success')
+               smallUserCountryRegister.style.visibility = 'hidden'
+           
+                
+                }
+
+
+
+    }
+        
+            
             // else if(userRegisterPhone.value.length > 10) {
 
             //      e.preventDefault()   
@@ -89,13 +217,7 @@
                 
 
 
-                else{
 
-
-                    userFormRegister.submit()
-                
-                }
-    }) 
                 
 
                     
