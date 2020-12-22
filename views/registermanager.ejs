@@ -477,7 +477,7 @@
         <div class="register-form-container" id="manager-register-form-container">
             <h3>Already Registered? <span class="login-n">Login Here!</span></h3>
             <h1>Manager Register Here!</h1>
-            <form action="/coming-soon" method="POST">
+            <form action="/manager-account" method="POST">
                 <input type="text" name="name" id="manager-register-name" placeholder="Enter Name" required>
                 <small id="small-register-managerName">Error Message</small>
 
@@ -504,6 +504,18 @@
 
                 <input type="text" name="country" id="manager-register-country" placeholder="Country" required>
                 <small id="small-register-managerCountry">Error Message</small>
+
+                <label for="Aadhar-Front" class="label-id">Aadhar Card Front</label>
+                <input type="file" name="aadhar-front" id="aadhar-front" required>
+
+                <label for="Aadhar-Back" class="label-id">Aadhar Card Back</label>
+                <input type="file" name="aadhar-back" id="aadhar-back" required>
+
+                <label for="Other ID" class="label-id">Passport/ License</label>
+                <input type="file" name="other-id" id="other-id" required>
+
+                <label for="Pan-Card" class="label-id">Pan Card</label>
+                <input type="file" name="pan-card" id="pan-card" required style="margin-bottom: 2rem;">
 
 
                 <label for="Terms and Conditions" class="labelTerms" id="labelTerms">Retailer Terms And Conditions, Cancellation, Refund Policy Agreement</label>

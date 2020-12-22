@@ -137,7 +137,13 @@ io.on('connection', function(socket){
 
 // chat system ends
 
+app.post('/manager-account', (req, res) => {
+    res.send("<h1>We will notify you in next 48-72 hours.</h1><h1>Back to <a href='/'>website</a></h1>")
+})
 
+app.post('/comingsoon', (req, res) => {
+    res.send("<h1>Our team is working on your account. We will notify you in next 48-72 hours.</h1><h1>Back to <a href='/'>website</a></h1>")
+})
 
 app.get('/affiliate-register', (req, res) => {
     res.render('affiliate-register')

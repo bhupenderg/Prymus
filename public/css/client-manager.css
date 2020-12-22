@@ -5,9 +5,15 @@ span.login-n{
     box-shadow: 5px 5px 5px rgba(0, 0, 255, .6);
 }
 
+.label-id{
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
 #labelTerms {
     font-size: 2rem;
 }
+
 
 #labelTerms h3:nth-child(last) {
     margin-bottom: 3rem;
