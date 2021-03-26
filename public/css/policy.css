@@ -1,0 +1,27 @@
+.container-policy{
+    padding: 0 10rem;
+    margin-bottom: 15rem;
+    text-align: justify;
+}
+
+p{
+    font-size: 2rem;
+    /* text-align: justify; */
+}
+
+h1{
+    font-size: 3rem;
+    /* text-align: justify; */
+}
+
+li{
+    font-size: 2rem;
+    text-align: justify;
+}
+
+
+@media only screen and (max-width: 850px) {
+    .container-policy{
+        padding: 0 3rem;
+    }
+}

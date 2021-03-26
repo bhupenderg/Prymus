@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prymus- Technical Blogs">
+    <meta name="author" content="Prymus">
+    <link rel="icon" href="/images/prymus.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link type="text/css" rel="stylesheet" href="/css/css-select/tail.select-default.css" />
+    
+    <link rel="stylesheet" href="/css/header_updated_s.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/campaign-register.css">
+    <link rel="stylesheet" href="/css/select.css">
+    <link rel="stylesheet" href="/css/footer1.css">
+
+    <link type="text/css" rel="stylesheet" href="css/tail.select-default.css" />
+    
+    <title>PRYMUS</title>
+
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180719275-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180719275-1');
+</script>
+
+    
+</head>
+<body>
+
+    <% if (user) { %>
+        <%- include ('./includes/header_updated_s.ejs') %>     
+    <% } else { %>
+        <%- include ('./includes/header_updated_n.ejs') %>
+    <% } %>
+
+    <!-- Al Starts -->
+
+    <div class="all-data">
+
+        <!-- Heading Starts -->
+        <div class="heading-container">
+            <!-- <div><h1 id="auto-heading"><a href="#auto-plan">Automated Plan</a></h1></div> -->
+            <div><h1 id="custom-heading"><a href="#customize-plan">Pay Here & We Will Design Plan For You.</a></h1></div>
+        </div>
+        <!-- Heading Ends -->
+
+        <!-- Form Container Stars -->
+
+        <div class="plan-form-container" id="automatic-form-container">
+            <form action="/updatedata-auto" method="POST" enctype="multipart/form-data">
+
+                <input type="hidden" name="id" placeholder="Company Website" value="<%= campaign.id %>" required>
+                
+                <input type="text" name="website" id="company-website" value="<%= campaign.website %>" placeholder="Company Website">
+                <input type="number" name="whatsapp_no" id="whatsapp_no" placeholder="Whatsapp No" value="<%= campaign.website %>" required>
+                <input type="text" name="gst" id="gst_no" value="<%= campaign.website %>" placeholder="GST No">
+                
+                <input type="number" name="amount" id="amount" placeholder="Minimun Amount Should Be Rs 5000" min="5000" required>
+                <input type="file" name="images" id="images" multiple>
+                
+                    <label for="Days" id="label-select-days">No. of Days</label>
+                    <select name="select_days" id="select-days" onchange="totalFb()" required>
+                        <option value="0">Select Here</option>
+                        <option value="7">7 Days</option>
+                        <option value="15">15 Days</option>
+                        <option value="30">1 Month</option>
+                        <option value="60">2 Months</option>
+                        <option value="90">3 Months</option>
+                        <option value="180">6 Months</option>
+                        <option value="360">12 Months</option>
+                    </select>
+                 
+                    
+                    <div class="showTotal">
+                        <input type="number" name="totalAmount" class="total-amount" id="totalAmount" readonly>
+                        <h1 id="showTotal">Show Total</h1>
+                        <h2></h2>
+                    </div>
+                <!-- <input type="file" name="image_url" id="files-auto-plan" multiple> -->
+
+                <!-- <input type="number" name="plan-amount" id="plan-amount" placeholder="Enter The Amount You Want To Purchase Plan For">
+                <input type="number" name="total-amount" id="total-amount" value="0">
+                <h2></h2> -->
+
+
+                <input type="submit" value="Update" name="auto-form-submit" class="update_plan-btn" id="update_plan-btn">
+
+                <script src="/js/campaign-register.js"></script> 
+                <script src="/js/showTotalAmount.js"></script> 
+                <script src="/js/select.js"></script>
+
+                <script src="/js/header_updated_s.js"></script>
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="/js/js-select/tail.select-full.min.js"></script>
+                
+                <script>
+                    tail.select('#selectaAndhraPradesh', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+                    // 
+
+                    tail.select('#selectAssam', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    // 
+
+
+                    tail.select('#selectBihar', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    // 
+
+
+                    tail.select('#selectChhasttisgarh', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+
+                    // 
+
+
+
+                    tail.select('#selectDelhi', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+
+                    // 
+
+
+
+                    tail.select('#selectGujarat', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+
+                    // 
+
+
+
+                    tail.select('#selectHaryna', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+
+                    tail.select('#selectHimachalPradesh', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+                    tail.select('#selectjammuandkashmir', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectjharkhand', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectkarnataka', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectkerala', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectmadhyapradesh', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+                    tail.select('#selectmaharashtra', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+
+                    //
+
+
+                    tail.select('#selectmanipur', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectmizoram', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+                    tail.select('#selectodisha', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+                    
+                    tail.select('#selectpuducherry', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectpunjab', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectrajasthan', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+
+                    //
+
+
+                    tail.select('#selectsikkim', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selecttamilNadu', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selecttelangana', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+
+                    //
+
+
+                    tail.select('#selecttripura', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectuttarpradesh', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+                    //
+
+                    tail.select('#selectuttarakhand', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectwestbengal', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+                    // tail.select('#select', {
+                    //     search: true,
+                    //     descriptions: true,
+                    //     hideSelected: true,
+                    //     hideDisabled: true,
+                    //     multiLimit: Infinity,
+                    //     multiShowCount: true,
+                    //     multiContainer: true,
+                    //     searchFocus: true,
+                    //     searchConfig: [".optgrp"]
+                    // });
+
+
+                        
+
+                        
+
+                </script>
+
+                <script src="/js/showcities.js"></script>
+
+                <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+                <script src="/js/patchData-custom.js"></script>
+              
+
+</body>
+
+</html>
+                
+
+</body>
+
+</html>

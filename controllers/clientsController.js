@@ -1,4 +1,6 @@
 const Campaign = require('../models/campaignModel')
+const AutoCampaign = require('../models/autoPlanModel')
+
 const Client = require('../models/clientModel')
 
 exports.doesNameExist = function(req, res) {
@@ -14,22 +16,33 @@ exports.doesNameExist = function(req, res) {
 }
 
 exports.getRegisterClient = async(req, res) => {
-    res.render('client/register')
+    res.render('client/register', {
+        errors: req.flash('errors')
+    })
 }
 
-exports.getMyPlan = async (req, res) => {
+
+// getRegisterManager
+
+exports.getRegisterManager = async(req, res) => {
+    res.render('registermanager', {
+        errors: req.flash('errors')
+    })
+}
+
+exports.getMyAutoPlan = async (req, res) => {
     try{
         const clientId = req.session.user.id
-    const myplan = await Campaign.find({clientId, payment_done: "no"})
+    const myplan = await AutoCampaign.find({clientId, payment_done: "no"}).sort([['_id', -1]])
     
     //console.log(myplan)
 
     if(myplan.length === 0) {
-        res.send("<h1>You have not created any plans yet. Create your plan <a href = '/campaignregister'>here</a> and take your business to the next level.")
+        return res.send("<h1>You have not created any plans yet. Create your plan <a href = '/campaignregister'>here</a> and take your business to the next level.")
     }
     
     res.render('client/myplan', {
-        myplan: myplan
+        myplan
     })
     }
     catch(err) {
@@ -37,6 +50,33 @@ exports.getMyPlan = async (req, res) => {
     }
     
 }
+
+
+exports.getMyCustomPlan = async (req, res) => {
+    try{
+        const clientId = req.session.user.id
+    const myplan = await Campaign.find({clientId, payment_done: "no"}).sort([['_id', -1]])
+    
+    //console.log(myplan)
+
+    if(myplan.length === 0) {
+        return res.send("<h1>You have not created any plans yet. Create your plan <a href = '/campaignregister'>here</a> and take your business to the next level.")
+    }
+    
+    res.render('client/mycustomplan', {
+        myplan
+    })
+    }
+    catch(err) {
+        console.log(err)
+    }
+    
+}
+
+
+
+
+
 
 
 // payments

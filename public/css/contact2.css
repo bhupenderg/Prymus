@@ -1,0 +1,123 @@
+#visit {
+    padding-top: 20rem !important;
+}
+
+#address-logo{
+    margin-top: 5rem;
+}
+
+.card-title.mb-4.subHeadFont:nth-child(2) {
+    margin-top: 5rem;
+}
+
+.card-img-top.align-self-center.mb-3.pl-4.pr-4.address.email{
+    width: 10rem;
+}
+
+#visit-text {
+    font-size: 7rem;
+    color: red;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.card.text-center.one-card{
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    background: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+    border-radius: 15px;
+    font-family: Helvetica, sans-serif;
+}
+
+.card-img-top.align-self-center.mb-3.pl-4.pr-4.address {
+    width: 8rem;
+    height: 5rem;
+}
+
+.container-fluid.ourServices.pt-5.mt-5.mb-5.mt-5 {
+    background-color: blue;
+}
+
+#mobile{
+    display: none;
+}
+
+div.card.text-center.one-card.desktop {
+    height: 90vh;
+}
+
+img.card-img-top.align-self-center.mb-3.pl-4.pr-4.address {
+    margin-top: 3rem;
+}
+
+#com-logo{
+    width: 30rem;
+    height: 15rem;
+}
+
+.card.text-center.one-card {
+    margin-bottom: 3rem;
+}
+
+input.form-control.whInput{
+    /* border-left: 3px solid blue;
+    border-top: 3px solid blue;
+    border-right: 3px solid red;
+    border-bottom: 3px solid red; */
+    border-radius: 30px;
+    height: 4.5rem;
+    font-size: 2rem;
+}
+
+textarea.form-control.whInput{
+    /* border-left: 3px solid blue;
+    border-top: 3px solid blue;
+    border-right: 3px solid red;
+    border-bottom: 3px solid red; */
+    border-radius: 30px;
+    
+    font-size: 2rem;
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.btn.btn-success.whSubmit {
+    background: #fff;
+    color: #000;
+    outline: none;
+}
+
+.btn.btn-success.whSubmit:hover{
+    transform: translateY(-3px);
+    background: linear-gradient(to right, blue, red);
+    color: #fff;
+}
+
+.btn.btn-success.whSubmit:active{
+    transform: translateY(1px);
+    outline: none;
+}
+
+@media only screen and (max-width: 850px) {
+    #mobile{
+        display: inline-block;
+    }
+
+    #desktop{
+        display: none;
+    }
+    .card-title.mb-4.subHeadFont:nth-child(2) {
+        margin-top: 0;
+    }
+}

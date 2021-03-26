@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prymus- Technical Blogs">
+    <meta name="author" content="Prymus">
+    <link rel="icon" href="/images/prymus.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link type="text/css" rel="stylesheet" href="/css/css-select/tail.select-default.css" />
+    
+    <link rel="stylesheet" href="/css/header_updated_s.css">
+    <link rel="stylesheet" href="/css/campaign-register.css">
+    <link rel="stylesheet" href="/css/select.css">
+    <link rel="stylesheet" href="/css/footer1.css">
+
+    <link type="text/css" rel="stylesheet" href="css/tail.select-default.css" />
+    
+    <title>PRYMUS</title>
+
+       <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180719275-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180719275-1');
+</script>
+
+    
+</head>
+<body>
+
+    <% if (user) { %>
+        <%- include ('./includes/header_updated_s.ejs') %>     
+    <% } else { %>
+        <%- include ('./includes/header_updated_n.ejs') %>
+    <% } %>
+
+    <!-- Al Starts -->
+
+    <div class="all-data">
+
+        <!-- Heading Starts -->
+        <div class="heading-container">
+            <!-- <div><h1 id="auto-heading"><a href="#auto-plan">Automated Plan</a></h1></div> -->
+            <div><h1 id="custom-heading"><a href="#customize-plan">Customize Your Plan</a></h1></div>
+        </div>
+        <!-- Heading Ends -->
+
+        <!-- Form Container Stars -->
+
+        <div class="plan-form-container" id="automatic-form-container">
+            <form action="/updatedata-custom" method="POST" id="update-custom-form" enctype="multipart/form-data">
+                <!-- <input type="text" name="company_name" id="company-name" placeholder="Company Name" required> -->
+                <input type="hidden" name="id" placeholder="Company Website" value="<%= campaign.id %>" required>
+                <input type="text" name="website" id="company-website" placeholder="Company Website" value="<%= campaign.website %>" required>
+                <input type="number" name="whatsapp_no" id="whatsapp_no" placeholder="Whatsapp No" value="<%= campaign.whatsapp_no %>" required>
+                <input type="text" name="gst" id="gst_no" value="<%= campaign.gst %>" placeholder="GST No">
+                <!-- <input type="text" name="position" id="position" placeholder="Position" required>
+                <input type="text" name="category" id="category" placeholder="Business Category" required> -->
+                <div class="main-customizer" id="main-customizer">
+
+                    <!-- facebook starts -->
+                    <div class="headings-container">
+                        <h1>Customize For Facebook Ads:</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="fb_days" id="fb-days" onchange="totalFb()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <!-- <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option> -->
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="fb_price_per_day" id="fb-price-per-day" onchange="totalFb()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="facebook_marketing" class="total-amount" id="total-fb" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- facebook ends -->
+        
+                    <!-- instagram starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For Instagram Ads:</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="insta_days" id="insta-days" class="custom-plan-select" onchange="totalInsta()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <!-- <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option> -->
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="insta_price_per_day" id="insta-price-per-day" onchange="totalInsta()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="instagram_marketing" class="total-amount" id="total-insta" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- Linkedin starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For Linkedin Ads:</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="link_days" id="link-days" onchange="totalLink()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <!-- <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option> -->
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="link_price_per_day" id="link-price-per-day" onchange="totalLink()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="linkedin_marketing" class="total-amount" id="total-link" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- Linkedin Ends -->
+        
+                    <!-- Youtube starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For Youtube Ads:</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="youtube_days" id="youtube-days" onchange="totalYoutube()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <!-- <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option> -->
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="youtube_price_per_day" id="youtube-price-per-day" onchange="totalYoutube()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="youtube_marketing" class="total-amount" id="total-youtube" readonly="true">
+                        </div>
+                        
+                        
+                    </div>
+        
+                    <!-- Youtube Ends -->
+        
+                    <!-- Google starts -->
+        
+                    <div class="headings-container">
+                        <h1>Customize For Google Ads:</h1>
+                    </div>
+                    <div class="data-container" id="data-container-fb">
+                        <div class="fb-data" id="fb-data-days">
+                        <label for="Days">No. of Days</label>
+                        <select name="google_days" id="google-days" onchange="totalGoogle()">
+                            <option value="0">Select Here</option>
+                            <option value="7">7 Days</option>
+                            <option value="15">15 Days</option>
+                            <option value="30">1 Month</option>
+                            <!-- <option value="60">2 Months</option>
+                            <option value="90">3 Months</option>
+                            <option value="180">6 Months</option>
+                            <option value="360">12 Months</option> -->
+                        </select>
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-price">
+        
+                        <label for="Price Per day">Price Per Day</label>
+                        <select name="google_price_per_day" id="google-price-per-day" onchange="totalGoogle()">
+                            <option value="0">Select Here</option>
+                            <option value="500">Rs 500</option>
+                            <option value="1000">Rs 1000</option>
+                            <option value="1500">Rs 1500</option>
+                            <option value="2000">Rs 2000</option>
+                            <option value="3000">Rs 3000</option>
+                            <option value="4000">Rs 4000</option>
+                            <option value="5000">Rs 5000</option>
+                        </select>
+        
+                        </div>
+        
+                        <div class="fb-data" id="fb-data-total">
+                            <label for="total">Total Amount</label>
+                            <input type="number" name="google_marketing" class="total-amount" id="total-google" readonly="true">
+                        </div>
+                        
+                        
+                    </div>  
+        
+                    <!-- Google Ends -->
+
+                    <!-- Other Options -->
+
+                    <!-- <a class="btn-primary btn-block mb-4" data-toggle="collapse" data-target="#collapse-btn-1" style="height: 6rem; text-align: center; text-decoration: none; color: #fff; font-size: 3rem; cursor: pointer;">Other Options</a>
+        
+        
+                    <!-- Email starts -->
+                    <div class="collapse mb-5" id="collapse-btn-1">
+                        <div class="headings-container">
+                            <h1>Customize For Email</h1>
+                        </div>
+                        <div class="data-container" id="data-container-fb">
+                            <div class="fb-data" id="fb-data-days">
+                            <label for="Days">No. of Days</label>
+                            <select name="email_days" id="email-days" onchange="totalEmail()">
+                                <option value="0">Select Here</option>
+                                <option value="7">7 Days</option>
+                                <option value="15">15 Days</option>
+                                <option value="30">1 Month</option>
+                                <option value="60">2 Months</option>
+                                <option value="90">3 Months</option>
+                                <option value="180">6 Months</option>
+                                <option value="360">12 Months</option>
+                            </select>
+                            </div>
+            
+                            <div class="fb-data" id="fb-data-price">
+            
+                            <label for="Price Per day">Price Per Day</label>
+                            <select name="email_price_per_day" id="email-price-per-day" onchange="totalEmail()">
+                                <option value="0">Select Here</option>
+                                <option value="500">Rs 500</option>
+                                <option value="1000">Rs 1000</option>
+                                <option value="1500">Rs 1500</option>
+                                <option value="2000">Rs 2000</option>
+                                <option value="3000">Rs 3000</option>
+                                <option value="4000">Rs 4000</option>
+                                <option value="5000">Rs 5000</option>
+                            </select>
+            
+                            </div>
+            
+                            <div class="fb-data" id="fb-data-total">
+                                <label for="total">Total Amount</label>
+                                <input type="number" name="email_marketing" class="total-amount" id="total-email" readonly="true">
+                            </div>
+                            
+                            
+                        </div> -->
+            
+                        <!-- Email Ends -->
+            
+                        <!-- Pinterest starts -->
+            
+                        <!-- <div class="headings-container">
+                            <h1>Customize For Pinterest</h1>
+                        </div>
+                        <div class="data-container" id="data-container-fb">
+                            <div class="fb-data" id="fb-data-days">
+                            <label for="Days">No. of Days</label>
+                            <select name="pin_days" id="pin-days" onchange="totalPin()">
+                                <option value="0">Select Here</option>
+                                <option value="7">7 Days</option>
+                                <option value="15">15 Days</option>
+                                <option value="30">1 Month</option>
+                                <option value="60">2 Months</option>
+                                <option value="90">3 Months</option>
+                                <option value="180">6 Months</option>
+                                <option value="360">12 Months</option>
+                            </select>
+                            </div>
+            
+                            <div class="fb-data" id="fb-data-price">
+            
+                            <label for="Price Per day">Price Per Day</label>
+                            <select name="pin_price_per_day" id="pin-price-per-day" onchange="totalPin()">
+                                <option value="0">Select Here</option>
+                                <option value="500">Rs 500</option>
+                                <option value="1000">Rs 1000</option>
+                                <option value="1500">Rs 1500</option>
+                                <option value="2000">Rs 2000</option>
+                                <option value="3000">Rs 3000</option>
+                                <option value="4000">Rs 4000</option>
+                                <option value="5000">Rs 5000</option>
+                            </select>
+            
+                            </div>
+            
+                            <div class="fb-data" id="fb-data-total">
+                                <label for="total">Total Amount</label>
+                                <input type="number" name="pin_marketing" class="total-amount" id="total-pin" readonly="true">
+                            </div>
+                            
+                            
+                        </div> -->
+            
+                        <!-- Pinterest Ends -->
+            
+            
+                        <!-- SEO starts -->
+            
+                        <!-- <div class="headings-container">
+                            <h1>Customize For SEO</h1>
+                        </div>
+                        <div class="data-container" id="data-container-fb">
+                            <div class="fb-data" id="fb-data-days">
+                            <label for="Days">No. of Days</label>
+                            <select name="seo_days" id="seo-days" onchange="totalSeo()">
+                                <option value="0">Select Here</option>
+                                <option value="7">7 Days</option>
+                                <option value="15">15 Days</option>
+                                <option value="30">1 Month</option>
+                                <option value="60">2 Months</option>
+                                <option value="90">3 Months</option>
+                                <option value="180">6 Months</option>
+                                <option value="360">12 Months</option>
+                            </select>
+                            </div>
+            
+                            <div class="fb-data" id="fb-data-price">
+            
+                            <label for="Price Per day">Price Per Day</label>
+                            <select name="seo_price_per_day" id="seo-price-per-day" onchange="totalSeo()">
+                                <option value="0">Select Here</option>
+                                <option value="500">Rs 500</option>
+                                <option value="1000">Rs 1000</option>
+                                <option value="1500">Rs 1500</option>
+                                <option value="2000">Rs 2000</option>
+                                <option value="3000">Rs 3000</option>
+                                <option value="4000">Rs 4000</option>
+                                <option value="5000">Rs 5000</option>
+                            </select>
+            
+                            </div>
+            
+                            <div class="fb-data" id="fb-data-total">
+                                <label for="total">Total Amount</label>
+                                <input type="number" name="seo_marketing" class="total-amount" id="total-seo" readonly="true">
+                            </div>
+                            
+                            
+                        </div> -->
+            
+                        <!-- SEO Ends -->
+            
+            
+            
+                        <!-- SMO starts -->
+<!--             
+                        <div class="headings-container">
+                            <h1>Customize For SMO</h1>
+                        </div>
+                        <div class="data-container" id="data-container-fb">
+                            <div class="fb-data" id="fb-data-days">
+                            <label for="Days">No. of Days</label>
+                            <select name="smo_days" id="smo-days" onchange="totalSmo()">
+                                <option value="0">Select Here</option>
+                                <option value="7">7 Days</option>
+                                <option value="15">15 Days</option>
+                                <option value="30">1 Month</option>
+                                <option value="60">2 Months</option>
+                                <option value="90">3 Months</option>
+                                <option value="180">6 Months</option>
+                                <option value="360">12 Months</option>
+                            </select>
+                            </div>
+            
+                            <div class="fb-data" id="fb-data-price">
+            
+                            <label for="Price Per day">Price Per Day</label>
+                            <select name="smo_price_per_day" id="smo-price-per-day" onchange="totalSmo()">
+                                <option value="0">Select Here</option>
+                                <option value="500">Rs 500</option>
+                                <option value="1000">Rs 1000</option>
+                                <option value="1500">Rs 1500</option>
+                                <option value="2000">Rs 2000</option>
+                                <option value="3000">Rs 3000</option>
+                                <option value="4000">Rs 4000</option>
+                                <option value="5000">Rs 5000</option>
+                            </select>
+            
+                            </div>
+            
+                            <div class="fb-data" id="fb-data-total">
+                                <label for="total">Total Amount</label>
+                                <input type="number" name="smo_marketing" class="total-amount" id="total-smo" readonly="true">
+                            </div>
+                            
+                            
+                        </div> -->
+            
+                        <!-- SMO Ends -->
+            
+            
+                        <!-- SMS starts -->
+            
+                        <!-- <div class="headings-container">
+                            <h1>Customize For SMS</h1>
+                        </div>
+                        <div class="data-container" id="data-container-fb">
+                            <div class="fb-data" id="fb-data-days">
+                            <label for="Days">No. of Days</label>
+                            <select name="sms_days" id="sms-days" onchange="totalSms()">
+                                <option value="0">Select Here</option>
+                                <option value="7">7 Days</option>
+                                <option value="15">15 Days</option>
+                                <option value="30">1 Month</option>
+                                <option value="60">2 Months</option>
+                                <option value="90">3 Months</option>
+                                <option value="180">6 Months</option>
+                                <option value="360">12 Months</option>
+                            </select>
+                            </div>
+            
+                            <div class="fb-data" id="fb-data-price">
+            
+                            <label for="Price Per day">Price Per Day</label>
+                            <select name="sms_price_per_day" id="sms-price-per-day" onchange="totalSms()">
+                                <option value="0">Select Here</option>
+                                <option value="500">Rs 500</option>
+                                <option value="1000">Rs 1000</option>
+                                <option value="1500">Rs 1500</option>
+                                <option value="2000">Rs 2000</option>
+                                <option value="3000">Rs 3000</option>
+                                <option value="4000">Rs 4000</option>
+                                <option value="5000">Rs 5000</option>
+                            </select>
+            
+                            </div>
+            
+                            <div class="fb-data" id="fb-data-total">
+                                <label for="total">Total Amount</label>
+                                <input type="number" name="sms_marketing" class="total-amount" id="total-sms" readonly="true">
+                            </div>
+                            
+                            
+                        </div> -->
+                    </div>
+            
+                    </div>      
+
+                    
+        
+                    
+                    <!-- SMS Ends -->
+        
+                    <!-- <div>
+        
+                    <input type="file" name="images" id="images" multiple>
+                      
+                </div> -->
+                    
+                    <div class="showTotal">
+                        <input type="number" name="totalAmount" class="total-amount" id="totalAmount" readonly>
+                        <h1 id="showTotalCustom">Show Total</h1>
+                        <h2></h2>
+                    </div>
+                <!-- <input type="file" name="image_url" id="files-auto-plan" multiple> -->
+
+                <!-- <input type="number" name="plan-amount" id="plan-amount" placeholder="Enter The Amount You Want To Purchase Plan For">
+                <input type="number" name="total-amount" id="total-amount" value="0"> -->
+                <!-- <h2></h2> -->
+
+                <!-- Select Starts Here -->
+
+                <!-- <input type="text" name="input-state" class="input-state" placeholder="Select Area For Digital Marketing" autocomplete="off"> -->
+                        
+                
+                    <!-- <div class="select-state"> -->
+                        <!-- <div id="states-1">
+                        </div>
+                
+                        <div id="states-2">
+                        </div>
+                
+                        <div id="states-3">
+                        </div>
+                
+                        <div id="states-4">
+                        </div>
+                
+                        <div id="states-5">
+                        </div> -->
+                
+                        <!-- <div id="states-all">
+                            
+                        </div>
+                
+                        
+                    
+                
+                    
+                
+                    <div class="select-city-container">
+                        <div class="select-city">
+                            
+                        </div>
+                    </div>	 -->
+                
+                
+                    <!-- tail select  Andhra Pradesh-->
+                
+                    <!-- <div class="citiesContainer" id="andhraPradeshCitiesContainer">
+                        <h1>CLOSE</h1>
+                    <div class="container" id="selectId">
+                        <div class="row"> -->
+                            <!-- <div class="col-md-8"> -->
+                                
+                    
+
+                    <input type="submit" value="Update" name="auto-form-submit" class="update_plan-btn" id="update_plan-btn">
+
+
+                <!-- Select Ends Here -->
+
+            </form>
+        </div>
+
+        <!-- Form container Ends -->
+
+                    <div class="select-city"> </div>
+                      <!-- Customize form container stars here -->
+
+
+    
+    
+
+
+        
+
+
+    <!-- All Ends Here -->
+
+    
+
+
+
+    
+</script> -->
+                <script src="/js/campaign-register.js"></script> 
+                <script src="/js/select.js"></script>
+                <script src="/js/showTotalCustom.js"></script> 
+                <script src="/js/header_updated_s.js"></script>
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="/js/js-select/tail.select-full.min.js"></script>
+                
+                <script>
+                    tail.select('#selectaAndhraPradesh', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+                    // 
+
+                    tail.select('#selectAssam', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    // 
+
+
+                    tail.select('#selectBihar', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    // 
+
+
+                    tail.select('#selectChhasttisgarh', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+
+                    // 
+
+
+
+                    tail.select('#selectDelhi', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+
+                    // 
+
+
+
+                    tail.select('#selectGujarat', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+
+                    // 
+
+
+
+                    tail.select('#selectHaryna', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+
+                    tail.select('#selectHimachalPradesh', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+                    tail.select('#selectjammuandkashmir', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectjharkhand', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectkarnataka', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectkerala', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectmadhyapradesh', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+                    tail.select('#selectmaharashtra', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+
+                    //
+
+
+                    tail.select('#selectmanipur', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectmizoram', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+                    tail.select('#selectodisha', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+                    
+                    tail.select('#selectpuducherry', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectpunjab', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectrajasthan', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+
+                    //
+
+
+                    tail.select('#selectsikkim', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selecttamilNadu', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selecttelangana', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+
+                    //
+
+
+                    tail.select('#selecttripura', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectuttarpradesh', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+                    //
+
+                    tail.select('#selectuttarakhand', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+
+                    tail.select('#selectwestbengal', {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: Infinity,
+                        multiShowCount: true,
+                        multiContainer: true,
+                        searchFocus: true,
+                        searchConfig: [".optgrp"]
+                    });
+
+
+                    //
+
+                    // tail.select('#select', {
+                    //     search: true,
+                    //     descriptions: true,
+                    //     hideSelected: true,
+                    //     hideDisabled: true,
+                    //     multiLimit: Infinity,
+                    //     multiShowCount: true,
+                    //     multiContainer: true,
+                    //     searchFocus: true,
+                    //     searchConfig: [".optgrp"]
+                    // });
+
+
+                        
+
+                        
+
+                </script>
+
+                <script src="/js/showcities.js"></script>
+
+                <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+                <script src="/js/patchData-custom.js"></script>
+              
+
+</body>
+
+</html>

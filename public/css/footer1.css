@@ -1,0 +1,93 @@
+.footer{
+    width: 100vw;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: red;
+    margin-top: 5rem;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5rem !important;
+}
+
+.footer .data-container{
+    width: 100vw;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 5rem 10rem;
+}
+
+.footer .data-container h1{
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer .data-container p{
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.all-rights{
+    width: 100vw;
+    height: 10%;
+    /* background-color: green; */
+}
+
+.all-rights{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.all-rights h1{
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+p a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media only screen and (max-width: 850px) {
+
+    .footer{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .footer .data-container .contact{
+        width: 100vw;
+        height: 100%;
+    }
+
+    .footer .data-container .contact h1{
+        width: 100vw;
+        
+    }
+
+    .footer{
+        width: 100vw;
+
+    }
+    .footer .data-container{
+        flex-direction: column;
+        padding: 0;
+        display: block;
+        width: 100vw;
+        text-align: center;
+    }
+
+    .all-rights h1{
+        padding-top: 2rem;
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Prymus- Technical Blogs">
+    <meta name="author" content="Prymus">
+    <link rel="icon" href="/images/prymus.png" type="image/gif" sizes="16x16">
+
+    
+    <!-- <link rel="stylesheet" href="/css/header.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/css/header_updated_s.css">
+    <link rel="stylesheet" href="/css/myplan.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    
+    <!-- <link rel="stylesheet" href="/css/seo.css"> -->
+    <link rel="stylesheet" href="/css/chat.css">
+
+    <style>
+        
+    </style>
+    
+
+    <title>PRYMUS</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180719275-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180719275-1');
+</script>
+
+</head>
+<body>
+    
+
+    <% if (user) { %>
+        <%- include ('../includes/header_updated_s.ejs') %>     
+    <% } else { %>
+        <%- include ('includes/header_updated_n.ejs') %>
+    <% } %>
+
+    
+
+        
+
+
+    
+    <!-- footer starts -->
+
+    <%- include('../footer.ejs') %>
+
+    <% if (user) { %>
+        <div id="chat-wrapper" class="chat-wrapper shadow border-left border-right"></div>
+        <script src="/socket.io/socket.io.js"></script>
+    <% } %>
+
+
+
+<script src="/js/index.js"></script>  
+<script src="/js/chat.js"></script>  
+
+<script src="/js/header_updated_s.js"></script>
+<script src="/js/header_updated_n.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

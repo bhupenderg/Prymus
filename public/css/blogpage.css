@@ -1,0 +1,122 @@
+.container-one{
+    width: 100vw;
+
+    /* background-color: red; */
+
+}
+
+
+#myCarousel-desk{
+    padding-top: 15rem;
+}
+div.btn.btn-primary.item-1_btn{
+    padding: 2rem 7rem;
+    font-size: 3rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-55%);
+    border-radius: 30px;
+    background-color: white;
+    color: blue;
+    border: 2px red;
+}
+
+div.btn.btn-primary.item-1_btn:hover{
+    background-color: blue;
+    color: white;
+    
+}
+
+.section.blog-cards{
+    width: 100vw;
+    min-height: 60vh;
+    background-color: rgb(247, 181, 221);
+    padding: 5rem;
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-card{
+    width: 60%;
+    min-height: 100%;
+    background-color: red;
+    border: 3px solid blue;
+    padding: 3rem;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.data-card{
+    width: 35%;
+    min-height: 100%;
+    background-color: blue;
+    border: 3px solid red;
+    padding: 3rem;
+    margin: 3rem;
+}
+
+.heading-blog{
+    font-size: 5rem;
+    color: #fff;
+    padding: 1rem;
+
+}
+
+.para-blog{
+    font-size: 3rem;
+    padding: 3rem;
+    text-align: center;
+    
+}
+
+.btn-blog{
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    color: #fff;
+    border: 3px solid blue;
+    border-radius: 30px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+
+.data-card h2{
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
+
+
+/* Trending */
+
+.special-blogs{
+    width: 30vw;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5rem;
+    margin: 3rem;
+}
+@media screen and (max-width: 450px) {
+    .section.blog-cards{
+        flex-direction: column;
+    }
+
+    .blog-card {
+        width: 100vw;
+    }
+
+    .data-card{
+        width: 100vw;
+    }
+}

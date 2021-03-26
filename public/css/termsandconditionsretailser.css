@@ -1,0 +1,46 @@
+.container-fluid.text-center{
+    padding-top: 15rem;
+}
+
+#terms{
+    padding: 20rem 10rem;
+}
+
+#terms h1{
+    font-size: 5rem;
+    color: #000;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+}
+
+#terms h3{
+    font-size: 2.2rem;
+    line-height: 3rem;
+    color: #000;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 850px){
+    #terms h1{
+        font-size: 3rem;
+        color: #000;
+        margin-bottom: 3rem;
+        margin-top: 5rem;
+    }
+    
+}
+
+
+@media only screen and (max-width: 450px){
+
+    #terms{
+        padding: 15rem 2rem;
+    }
+    #terms h1{
+        font-size: 3rem;
+        color: #000;
+        margin-bottom: 3rem;
+        margin-top: 5rem;
+    }
+    
+}

@@ -1,25 +1,446 @@
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+
+
+
+.hideClass{
+  display: none !important;
 }
 
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
+
+/* selected cities starts */
+.showing-cities{
+  width: 100vw;
+  padding: 3rem 10rem;
+  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-body{
-    font-family: Century Gothic, sans-serif;
-    line-height: 1.7;
-    color: #777;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    position: relative;
+
+.showing-cities h1{
+  width: 40vw;
+  height: 10vh;
+  /* border: 3px solid red; */
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000;
+  border-left: 3px solid blue;
+  border-top: 3px solid blue;
+  border-bottom: 3px solid red;
+  border-right: 3px solid red;
+  border-radius: 20px;
+}
+
+.showing-cities h1:hover{
+  transform: translateY(-3px);
+  transition: all 200ms;
+  border-radius: 20px;
+  cursor: pointer;
+  background: linear-gradient(to right, blue, red);
+  color: #fff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+}
+
+.showing-cities h1:active{
+  box-shadow: 5px 5px 5px rgba(255, 0, 0, .5);
+  transform: translateY(1px);
+  transform: all 300ms;
+}
+
+
+.showSelctedCities{
+  width: 80vw;
+  padding: 5rem 5rem;
+  border-radius: 20px;
+  min-height: 140%;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+  background-color: azure;
+}
+
+.showSelctedCities .selectedCities h2{
+  text-align: center;
+}
+
+/* selected cities ends */
+
+
+/* all data class starts here */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.all-data{
+  width: 100vw;
+  min-height: 80vh;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.all-data .heading-container {
+  width: 100%;
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.all-data .heading-container div h1 {
+  font-size: 4vw;
+  cursor: pointer;
+}
+
+.all-data .heading-container div h1 a {
+  text-decoration: none;
+}
+
+#auto-heading a{
+  color: red;
+}
+
+#auto-heading a:hover{
+  color: green;
+  
+}
+
+#auto-heading:hover{
+  transform: translateY(-3px);
+  transition: transform 500ms ease-out;
+}
+
+#auto-heading:active{
+  transform: translateY(1px);
+  transition: transform 100ms ease-out;
+}
+
+#auto-heading a:active{
+  color: green;
+  transform: translateY(1px);
+}
+
+#custom-heading a{
+  color: blue;
+}
+
+#custom-heading:hover{
+  transform: translateY(-3px);
+  transition: transform 500ms ease-out;
+}
+
+  #custom-heading:active{
+    transform: translateY(1px);
+    transition: transform 100ms ease-out;
+  }
+
+#custom-heading a:hover{
+  color: green;
+  
+}
+
+#custom-heading a:active{
+  color: green;
+
+}
+
+.plan-form-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.plan-form-container form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #ff4f03; */
+}
+
+.plan-form-container form input{
+  width: 40%;
+  height: 4rem;
+  margin: 1% 0;
+  border-radius: 2px solid black;
+  border-radius: 50px;
+  padding: 0 3rem;
+  font-size: 1.2vw;
+}
+
+.plan-form-container form input:focus{
+  border: 3px solid green;
+  background-color: rgb(202, 250, 250);
+  outline: none;
+}
+
+label#label-select-days{
+  font-size: 2rem;
+}
+
+select#select-days{
+    width: 42rem;
+    height: 5rem;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+    outline: none;
+
+}
+
+select#select-days:active,
+select#select-days:link{
+  outline: none;
+}
+
+
+
+
+
+.plan-btn{
+  
+  
+  width: 12% !important;
+  height: 5rem !important;
+  background: linear-gradient(to right, blue, red);
+  border-left: 2px solid blue;
+  background-origin: 2px solid blue;
+  border-right: 2px solid red;
+  border-bottom: 2px solid red;
+  border-radius: 50px;
+  margin: 2rem 0;
+  box-shadow: 2px 5px 5px 2px rgba(255, 0, 0, 0.685);
+  font-size: 2.5rem;
+
+}
+
+.plan-btn:hover{
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+.plan-btn:active{
+  transform: translateY(1px);
+  outline: none;
+}
+.plan-btn:focus{
+  outline: none;
+}
+
+#custom-plan-submit{
+  align-self: center;
+}
+
+#main-customizer{
+  width: 100%;
+  min-height: 20rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10rem;
+  
+}
+
+#main-customizer .headings-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  
+}
+
+#main-customizer .headings-container h1{
+  font-size: 3rem;
+  color: rgb(255, 66, 66);
+}
+
+#main-customizer .data-container {
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  margin-bottom: 3rem;
+}
+
+#main-customizer .data-container .fb-data{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+#main-customizer .data-container .fb-data label{
+  font-size: 2.2rem;
+}
+
+#main-customizer .data-container .fb-data select {
+  width: 80%;
+  height: 4rem;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+#main-customizer .data-container .fb-data input {
+  width: 80%;
+  height: 4rem;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+#fb-data-days{
+  flex: 1;
+}
+
+#fb-data-price{
+  flex: 1;
+}
+#fb-data-total{
+  flex: 1;
+}
+
+.showTotal{
+  font-size: 5rem;
+  color: blue;
+  /* box-shadow: 3px 3px 3px blue; */
+  text-align: center;
+  border-radius: 20px;
+  padding: 3rem;
+  border: 3px solid blue; 
+}
+
+.showTotal:active,
+.showTotal:visited{
+  color: red;
+  border: none;
+  border: 3px solid red; 
+  
+}
+
+
+.showTotal h1{
+  font-size: 5rem;
+}
+
+
     
+@media only screen and (max-width: 850px) {
+
+  .all-data .heading-container {
+    margin-bottom: 2rem;
+  }
+
+  .all-data .heading-container div h1 {
+    font-size: 5vw;
+  }
+
+  .plan-form-container form input{
+    width: 75%;
+    height: 5rem;
+    margin: 3% 0;
+    font-size: 2.5rem;
+  }
+
+  .plan-btn {
+    width: 28%;
+    font-size: 2.7rem;
+    color: white;
+  }
+
+  #main-customizer .data-container{
+    flex-direction: column;
+  }
+  .plan-form-container form input[type=submit]{
+    width: 18rem !important;
+  }
+
 }
+
+
+
+
+
+@media only screen and (max-width: 450px) {
+
+  .showing-cities h1{
+    width: 90vw;
+    font-size: 2rem;
+  }
+
+  .all-data .heading-container {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+
+  .all-data .heading-container div h1 {
+    font-size: 8vw;
+  }
+
+  .plan-form-container form input{
+    width: 90%;
+    height: 4rem;
+    margin: 3% 0;
+    font-size: 2rem;
+  }
+
+  .plan-btn {
+    width: 40%;
+    font-size: 2rem;
+    color: white;
+  }
+
+  select#select-days{
+    width: 30rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -139,13 +560,13 @@ margin-top: 3rem;
 
 
 
-.footer-container{
+/* .footer-container{
     width: 100%;
     position: fixed;
     bottom: 0;
-}
+} */
 
-.footer{
+/* .footer{
   width: 100%;
   height: 10vh;
   background: black;
@@ -154,9 +575,8 @@ margin-top: 3rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 2vh;
-  font-weight: 600;
-}
+  
+} */
     
   input[type="file"]{
       border: 2px solid #000;

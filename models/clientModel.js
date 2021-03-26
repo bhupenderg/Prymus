@@ -1,3 +1,4 @@
+const crypto = require('crypto')
 const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt = require('bcryptjs');
@@ -7,12 +8,12 @@ const Schema = mongoose.Schema
 const clientSchema = new Schema({
      name: {
          type: String,
-         required: [true, 'Fill in your name'],
+         required: [true, 'Name is missing'],
          trim: true
      },
      email: {
         type: String,
-        required: [true, 'Please provide an email address'],
+        required: [true, 'Email address is missing'],
         trim: true,
         unique: true,
         lowercase: true,
@@ -20,13 +21,13 @@ const clientSchema = new Schema({
      },
      password: {
         type: String,
-        required: [true, 'Please provide a password'],
+        required: [true, 'Password is missing'],
         minlength: 8,
         select: false
     },
     passwordConfirm: {
         type: String,
-        required: true,
+        required: [true, 'Confirm Password is missing'],
         validate : {
             validator: function(el) {
               return el === this.password
@@ -37,37 +38,54 @@ const clientSchema = new Schema({
 
     phone:{
         type: Number,
-        required: true,
+        required: [true, "Phone No. is missing"],
         trim: true,
         minlength: 10,
         maxlength: 10
     },
     city:{
         type: String,
-        required: true,
+        required: [true, "City is missing"],
         trim: true
     },
     state:{
         type: String,
-        required: true,
+        required: [true, "State is missing"],
         trim: true
     },
     pincode:{
         type: Number,
-        required: true,
+        required: [true, "Pincode is missing."],
         trim: true
     },
     country:{type: String,
-        required: true,
+        required: [true, "Country is missing"],
         trim: true},
     confirmation:{
         type: Boolean,
         default: false
-    }    
+    },
+    
+    termsandconditionsRetailer: {
+        type: String,
+        required: [true, 'Must check terms and condition Box']
+    },
+
+    passwordChangedAt: Date,
+    passwordResetToken: String,
+    passwordResetExpires: Date
 
 },
 {
     timestamps: true
+})
+
+
+clientSchema.pre('save', function(next) {
+    if(!this.isModified('password') || this.isNew) return next()
+    this.passwordChangedAt = Date.now()
+    next()
+
 })
 
 clientSchema.pre('save', async function(next) {
@@ -86,6 +104,22 @@ clientSchema.pre('save', async function(next) {
 
 clientSchema.methods.correctPassword = async function(candidatePassword, clientPassword) {
     return await bcrypt.compare(candidatePassword, clientPassword)
+}
+
+clientSchema.methods.createPasswordResetToken = function() {
+
+    const resetToken = crypto.randomBytes(32).toString('hex')
+    this.passwordResetToken =  crypto
+    .createHash('sha256')
+    .update(resetToken)
+    .digest('hex')
+
+    console.log({resetToken}, this.passwordResetToken)
+
+    this.passwordResetExpires = Date.now() + 10 * 60 * 1000
+
+    return resetToken
+
 }
 
 

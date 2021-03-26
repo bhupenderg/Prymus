@@ -1,28 +1,4 @@
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
 
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-body{
-    font-family: Century Gothic, sans-serif;
-    line-height: 1.7;
-    color: #777;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    position: relative;
-    
-}
-
-
-@media only screen and (min-width: 916px){
 
 .form-contact{
     width: 100vw;
@@ -39,7 +15,7 @@ body{
 }
 
 .form-contact .form-contact-heading h1{
-    color: #ff4f03;
+    color: rgb(255, 0, 0);
     font-size: 5vw;
     text-transform: capitalize;
 }
@@ -52,6 +28,14 @@ body{
     align-items: center;
     height: 100%;
     background-color: #fff;
+}
+
+.form-contact .contact-form input::placeholder{
+    font-size: 2rem;
+}
+
+.form-contact .contact-form textarea::placeholder{
+    font-size: 2.5rem;
 }
 
 .genereal-details{
@@ -154,20 +138,25 @@ body{
     width: 12vw;
     height: 7vh;
     cursor: pointer;
-    background: #ff4f03;
-    color: white;
+    background: #fff;
+    color: #000;
     font-size: 1.6vw;
     border-radius: 50px;
     outline: none;
-    border: 2px solid #ff4f03;
+    border-top: 3px solid blue;
+    border-left: 3px solid blue;
+    border-right: 3px solid red;
+    border-bottom: 3px solid red;
+    box-shadow: 3px 3px 3px red;
 }
 
 .general-submit-btn:hover{
     transform: translateY(-10px);
     transition: all 1s;
-    background: #fff;
-    color: #000;
+    background: linear-gradient(to right, blue, red);
+    color: #fff;
     border: 3px solid #ff4f03;
+    box-shadow: 3px 3px 3px blue;
     
 }
 .general-submit-btn:active{
@@ -185,7 +174,7 @@ body{
 }
 .design-campaign a{
     text-decoration: none;
-    color: #ff4f03 !important;
+    color: rgb(255, 66, 66) !important;
 }
 
 .design-campaign a:hover{
@@ -207,23 +196,145 @@ body{
     color: #000;
 }
 
-.footer-container{
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+
+
+
+@media only screen and (max-width: 850px) {
+
+    .form-contact {
+        min-height: 100vh;
+    }
+    .form-contact .form-contact-heading h1{
+        font-size: 5rem;
+    }
+
+    form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .general-info-1.general-details{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 3rem;
+    }
+
+    .general-details input{
+        margin-left: 0;
+        width: 80%;
+        font-size: 3rem;
+    }
+
+    .general-details input::placeholder{
+        font-size: 2.5rem !important;
+    }
+    .general-details textarea{
+        font-size: 4rem;
+    }
+
+    .general-details input:first-child{
+        margin-left: 0;
+    }
+
+    .general-info-2.general-details{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 3rem;
+        margin-top: -4rem;
+    }
+
+    .general-info-3.general-details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 3rem;
+        margin-top: -4rem;   
+    }
+
+    .general-submit input[type=submit]{
+        font-size: 3rem;
+        width: 25rem;
+        color: rgb(102, 39, 39);
+
+    }
+
+    .design-campaign{
+        margin-top: -10rem;
+    }
 }
 
-.footer{
-    width: 100%;
-    height: 10vh;
-    background: black;
-    font: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 2vh;
-    font-weight: 600;
-}
+@media only screen and (max-width: 450px){
+
+    .form-contact{
+        min-height: 160vh !important;
+        
+        
+    }
+
+    form{
+        padding: 2rem 1rem;
+    }
+    
+    .form-contact .form-contact-heading{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    .form-contact .form-contact-heading h1{
+        font-size: 2.5rem;
+    }
+    
+    .general-info-1.general-details{
+        padding: 1rem;
+    }
+    .general-info-2.general-details{
+        padding: 1rem;
+        margin-top: -2rem;
+    }
+
+    .general-info-3.general-details{
+        padding: 1rem;
+        margin-top: -2rem;
+    }
+
+    .general-details textarea{
+        padding: 1rem 2rem;
+        width: 80%;
+    }
+
+    .design-campaign {
+    -webkit-box-flex: inherit;
+        display: flex;
+    /* justify-content: flex-start; */ 
+    text-align: center;
+    padding-top: -git 20% ;
+    vertical-align: top;
+    }
+
+    .design-campaign > h1{
+        font-size: 3rem;
+    }
+
+    .design-campaign a h1{
+        font-size: 1.8rem;
+    }
+
+    .design-campaign a{
+        margin-top: 3rem;
+    }
 
 }

@@ -1,0 +1,220 @@
+.visit-us-container{
+    display: flex;
+    justify-content: center;
+    padding:0 10rem;
+    align-items: center;
+    padding-top: 20rem;
+    padding-bottom: 5rem;
+}
+
+h1#visit-us{
+    font-size: 7rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: red;
+}
+
+.container-fluid.pt-5.pb-5{
+    margin-bottom: 10rem;
+}
+ 
+
+.container-fluid-1{
+    width: 100%;
+    min-height: 80vh;
+    background-color: rgb(207, 195, 179);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 5rem;
+}
+
+.boxes{
+    margin-top:10%;
+    width: 30%;
+    height: 50vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+
+    
+}
+
+.boxes h1{
+    font-size: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    color: red;
+}
+
+.boxes h2{
+    font-size: 2rem;
+
+    color: #000;
+}
+
+.webHealth{
+    width: 100vw;
+    
+    min-height: 125vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.headFont{
+    font-size: 7rem;
+    /* font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; */
+    font-family: 'Roboto Condensed', sans-serif;
+    color: red;
+}
+
+form:nth-child(2) {
+    width: 90vw;
+    padding: 3rem 5rem;
+    border: 1px solid red;
+    box-shadow: 5px 5px 5px rgba(255, 0, 0, .6);
+    margin-bottom: 5rem;
+}
+
+form input[type=text] {
+    height: 4rem !important;
+    border-radius: 3rem !important;
+    padding-left: 3rem !important;
+    font-size: 2rem !important;
+    
+}
+
+form input[type=email] {
+    height: 4rem !important;
+    border-radius: 3rem !important;
+    padding-left: 3rem !important;
+    font-size: 2rem !important;
+    
+}
+
+form textarea{
+    height: 10rem !important;
+    border-radius: 3rem !important;
+    padding-left: 3rem !important;
+    font-size: 2rem !important;
+}
+
+#whSubmit{
+    width: 20% !important;
+    height: 6rem !important;
+    border-left: 3px solid red;
+    border-top: 3px solid blue;
+    border-right: 3px solid blue;
+    border-bottom: 3px solid red;
+    border-radius: 30px !important;
+    font-size: 2.5rem;
+}
+
+#whSubmit:hover{
+    background: linear-gradient(to right, blue, red);
+    color: white;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(255, 0, 0, .6);
+}
+
+
+
+@media only screen and (max-width: 850px) {
+
+    .container-fluid-1{
+        flex-direction: column;
+        padding-bottom: 10rem;
+    }
+
+    .boxes{
+        width: 80%;
+        margin-top: 10rem;
+    }
+    .boxes h1{
+        font-size: 5rem;
+        /* color: #fff; */
+    }
+
+    .boxes h2{
+        font-size: 3rem;
+        /* color: #fff; */
+    }
+
+    .webHealth{
+        height: 155vh;
+    }
+
+    form input{
+        height: 6rem !important;
+    }
+
+    form textarea{
+        height: 12rem !important;
+    }
+
+    #whSubmit{
+        width: 70% !important;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    #visit-us{
+        font-size: 2rem !important;
+    }
+
+    #website-health{
+        
+        min-height: 190vh;
+        height: 230vh;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+
+
+    .boxes{
+        width: 95%;
+        margin-top: 10rem;
+    }
+
+    .boxes h1{
+        font-size: 3rem;
+    }
+
+    .boxes h2{
+        font-size: 2rem;
+    }
+
+    .headFont{
+        font-size: 5rem !important;
+    }
+
+    form{
+        padding: 0 !important;
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+    form input{
+        height: 4rem !important;
+        font-size: 1.8rem !important;
+    }
+
+    form textarea {
+        font-size: 1.4rem !important;
+    }
+
+    #whSubmit{
+        width: 80% !important;
+        font-size: 2rem !important;
+    }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Prymus- Technical Blogs">
+    <meta name="author" content="Prymus">
+    <link rel="icon" href="/images/prymus.png" type="image/gif" sizes="16x16">
+
+    
+    <!-- <link rel="stylesheet" href="/css/header.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/css/header_updated_s.css">
+    <link rel="stylesheet" href="/css/myplan.css">
+    <link rel="stylesheet" href="/css/footer1.css">
+    
+    <!-- <link rel="stylesheet" href="/css/seo.css"> -->
+    <link rel="stylesheet" href="/css/chat.css">
+
+    <style>
+        
+    </style>
+    
+
+    <title>PRYMUS</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180719275-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180719275-1');
+</script>
+
+</head>
+<body>
+    
+
+    <% if (user) { %>
+        <%- include ('../includes/header_updated_s.ejs') %>     
+    <% } else { %>
+        <%- include ('includes/header_updated_n.ejs') %>
+    <% } %>
+
+
+<!-- container-2 -->
+
+    <% myplan.forEach(plan => { %>
+        <div class="container-fluid payment-block" style="margin-top: 15rem !important; margin-bottom: 15rem;">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center main-heading">
+                    <h1 class="display-2 head-text">Congratulations, You have successfully created your plan.</h1>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="display-4 p-5 para-text">Your Plan id: <span class="blue fat"> <%= plan._id %> </span></h1>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5 para-text">The amount you have chosen for <span class="blue fat">Facebook</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.facebook_marketing %></span></h2>    
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">Instagram</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.instagram_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">Linkedin</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.linkedin_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">Youtube</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.youtube_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">Google</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.google_marketing %></span></h2>
+                </div>
+
+                <!-- <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">Email</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.email_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">Pinterest</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.pin_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">SEO</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.seo_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">SMO</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.smo_marketing %></span></h2>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5 para-text" >The amount you have chosen for <span class="blue fat">SMS</span> Marketing is Rs <span style="color: green; font-weight: bold;"><%= plan.sms_marketing %></span></h2>
+                </div> -->
+
+                
+                <!-- <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >The amount you have chosen is Rs <span style="color: green; font-weight: bold;"><%= plan.amount %></span> </h2>
+                </div> -->
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-4 p-5" >Amount to be paid(including 10% Agency Commision and 18% G.S.T) of your plan is Rs <span style="color: green; font-weight: bold;"><%= plan.totalAmount %></span> </h2>
+                </div>
+
+
+                <div class="col-lg-12 text-center m-5 p-5">
+                    <form action="/campaignupdate-custom/<%= plan._id %>" method="GET">
+                        
+                        <input type="submit" value="Update" name="update-btn" id="update-plan">
+                    </form>
+                </div>
+
+                <div class="col-lg-12 text-center m-5 p-5">
+                    <form action="/delete-custom-plan" method="POST">
+                        <input type="hidden" name="delete" value="<%= plan._id %>">
+                        <input type="submit" value="Delete" name="delete-btn" id="delete-plan">
+                    </form>
+                </div>
+                        
+            </div>
+        
+
+                        <div class="payment col-lg-12 text-center"></div>
+                        <form action="/meTrnPay" method="post">
+                            
+                            <input type="hidden" value="WL0000000027698" id="mid" name="mid">
+                            <input type="hidden" value="6375b97b954b37f956966977e5753ee6" id="encKey" name="encKey">
+                            <input type="hidden" value="<%= plan._id %>" id="hdnOrderID" name="hdnOrderID">
+                            <input type="hidden" value="<%= plan.totalAmount %>" id="trnAmt" name="trnAmt">
+                            <input type="hidden" value="INR" id="currency" name="currency">
+                            <input type="hidden" value="S" id="meTransReqType" name="meTransReqType">
+                            <input type="hidden" value="http://localhost:8000/meTrnSuccess" id="resUrl" name="resUrl">
+                            
+                            <input type="submit" class="btn btn-success btn-block pl-5 pr-5" name="CHECKOUT" value="CHECKOUT" style="height: 8rem; font-size: 5rem;" />
+                            
+                        </form>
+                        
+                    </div>
+                 
+                
+        </div>
+
+        <% }) %>   
+
+
+        <!-- footer starts -->
+
+    <%- include('../footer1.ejs') %>
+
+    <% if (user) { %>
+        <div id="chat-wrapper" class="chat-wrapper shadow border-left border-right"></div>
+        <script src="/socket.io/socket.io.js"></script>
+    <% } %>
+
+
+
+<script src="/js/index.js"></script>  
+<script src="/js/chat.js"></script>  
+
+<script src="/js/header_updated_s.js"></script>
+<script src="/js/header_updated_n.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

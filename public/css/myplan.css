@@ -1,108 +1,76 @@
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-body{
-    font-family: Century Gothic, sans-serif;
-    line-height: 1.7;
-    color: #777;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    
-    position: relative;
-    background: #fff;
-}
-.container-1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 130%;
-    margin: auto;
-    margin-top: 20rem;
-}
-
-.headings-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-}
-.headings-container h1{
-    font-size: 3vw;
-}
-
-
-
-.headings-container h2{
-    font-size: 2.5vw;
-    color: #ff4f03;
-}
-
-.data-container{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.data-container .data-name{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.data-container .data-name h3{
-    color: #000;
-    font-size: 1.6vw;
-}
-.data-container .data-value{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.data-container .data-value h3{
-    color: #ff4f03;
-    font-size: 1.6vw;
-}
-
-.payment{
-    width: 100%;
-    height: 20vh;
-    background: #000;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.payment h1{
-    font-size: 3vw;
-    
-}
-
-.payment h1 a{
-    text-decoration: none;
+input#update-plan{
+    padding: 1rem 6rem;
+    background: green;
     color: #fff;
+    font-size: 2rem;
+    border-radius: 30px;
+    outline: none;
+}
+
+input#update-plan:hover{
+    transform: translateY(-3px);
+}
+
+input#update-plan:active{
+    transform: translateY(1px);
+}
+
+
+input#delete-plan{
+    padding: 1rem 6rem;
+    background: red;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 30px;
+    outline: none;
+}
+
+
+input#delete-plan:hover{
+    transform: translateY(-3px);
+}
+
+input#delete-plan:active{
+    transform: translateY(1px);
+}
+
+.payment-block{
+
+    height: 120%;
+    
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-success {
+    background-color: red !important;
+}
+
+@media only screen and (max-width: 850px) {
+    .display-2{
+        font-size: 3rem !important;
+    }
+
+    .display-4{
+        font-size: 2.5rem !important;
+        text-align: justify;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .display-2{
+        font-size: 3rem !important;
+    }
+
+    .display-4{
+        font-size: 2rem !important;
+    }
+
+    
 }

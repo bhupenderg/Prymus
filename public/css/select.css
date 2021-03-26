@@ -1,0 +1,235 @@
+*{
+	margin: 0;
+}
+
+*, *:before, *:after {
+    -webkit-user-select: text; /* Chrome/Safari */        
+    -moz-user-select: text; /* Firefox */
+    -ms-user-select: text; /* IE10+ */
+}
+
+
+.statesnsearch{
+	width: 100vw;
+	height: 120%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #E1DAD8;
+	overflow: hidden;
+}
+
+.search-states{
+	
+}
+
+.search-states .sates-search-form{
+	margin-top: 40px;
+}
+
+.search-states .sates-search-form input{
+	width: 280px;
+	height: 25px;
+	border: none;
+	border-bottom: 3px solid green;
+	background: transparent;
+}
+
+.search-states .sates-search-form input:focus {
+	outline: none;
+}
+
+.selet-state-container{
+	width: 100vw;
+	height: 100vh;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	overflow: hidden;
+
+}
+
+#states-all{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 5px;
+}
+
+#states-all p{
+	display: none;
+	color: green;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+#states-all p:hover{
+	transform: translateY(-1px);
+}
+
+#states-all p:focus {
+	display: none;
+}
+
+#states-all p:after{
+	display: none;
+}
+
+#states-all p:active{
+	transform: translateY(0);
+	-webkit-tap-highlight-color:transparent;
+}
+
+#states-all a{
+	text-decoration: none;
+	color: #8C0C1B;
+}
+
+.citiesContainer{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(100, 140, 90, .6);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/*align-items: center;*/
+	text-align: center;
+	display: none;
+	z-index: 10000;
+}
+
+.tail-select .select-label .label-inner{
+	font-size: 2rem !important;
+}
+
+.tail-select input[type="text"]{
+	font-size: 2rem !important;
+}
+
+.tail-select .select-dropdown ul li.dropdown-option{
+	font-size: 2rem;
+}
+#selectId{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+}
+
+
+#andhrapradeshCitiesContainer{
+	display: none;
+}
+
+#assamCitiesContainer{
+	display: none;
+}
+
+#biharCitiesContainer{
+	display: none;
+}
+
+#chhattisgarhCitiesContainer{
+	display: none;
+}
+#delhiCitiesContainer{
+	display: none;
+}
+
+#gujaratCitiesContainer{
+	display: none;
+}
+
+#haryanaCitiesContainer{
+	display: none;
+}
+
+#himachalpradeshCitiesContainer{
+	display: none;
+}
+
+#jammuandkashmirCitiesContainer{
+	display: none;
+}
+
+#jharkhandCitiesContainer{
+	display: none;
+}
+
+#karnatakaCitiesContainer{
+	display: none;
+}
+
+#keralaCitiesContainer{
+	display: none;
+}
+
+#madhyapradeshCitiesContainer{
+	display: none;
+}
+
+#maharashtraCitiesContainer{
+	display: none;
+}
+
+#manipurCitiesContainer{
+	display: none;
+}
+
+#mizoramCitiesContainer{
+	display: none;
+}
+
+#odishaCitiesContainer{
+	display: none;
+}
+
+#puducherryCitiesContainer{
+	display: none;
+}
+
+#punjabCitiesContainer{
+	display: none;
+}
+
+#rajasthanCitiesContainer{
+	display: none;
+}
+
+#sikkimCitiesContainer{
+	display: none;
+}
+
+#tamilNaduCitiesContainer{
+	display: none;
+}
+
+#telanganaCitiesContainer{
+	display: none;
+}
+
+#tripuraCitiesContainer{
+	display: none;
+}
+
+#uttarpradeshCitiesContainer{
+	display: none;
+}
+
+#uttarakhandCitiesContainer{
+	display: none;
+}
+
+#westbengalCitiesContainer{
+	display: none;
+}

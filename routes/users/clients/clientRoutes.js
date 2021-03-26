@@ -6,11 +6,17 @@ const router = express.Router()
 //const campaignController = require('../controllers/campaignsController')
 
 router.get('/registerclient', clientsController.getRegisterClient)
+router.get('/registermanager', clientsController.getRegisterManager)
 
 //auth
 
 router.post('/registerclient', authController.signup)
+
 router.post('/myaccount', authController.login)
+
+router.post('/forgotPassword', authController.forgotPassword)
+router.post('/resetPassword/:token', authController.resetPassword)
+
 router.post('/logout', authController.logout)
 
 
@@ -31,7 +37,11 @@ router.put('/isverified', clientsController.isVerified)
 //     res.send("client registered")
 // })
 
-router.get('/myplan', authController.mustBeLoggedIn, clientsController.getMyPlan)
+// router.get('/getcustomplan', clientsController.getCustomPlan)
+
+router.get('/myplan', authController.mustBeLoggedIn, clientsController.getMyAutoPlan)
+router.get('/mycustomplan', authController.mustBeLoggedIn, clientsController.getMyCustomPlan)
+// router.get('/mycustomplan', authController.mustBeLoggedIn, clientsController.getMyCustomPlan)
 
 // Payments
 

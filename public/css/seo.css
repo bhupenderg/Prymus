@@ -82,7 +82,14 @@ body{
     width: 100%;
     height: 40vh;
     background: #000;
-    margin-top: -.2%;
+    margin-top: -.5%;
+}
+
+.seo-triangle-container-2{
+    width: 100%;
+    height: 40vh;
+    background: #fff;
+    margin-top: -.5%;
 }
 
 .seo-triangle{
@@ -97,10 +104,22 @@ body{
         border: none;
 }
 
+.seo-triangle-2{
+    width: 100%;
+        height: 40vh;
+        background: #000;
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+}
+
 .seo-triangle h1{
     text-transform: capitalize;
     font-size: 5vw;
-    color: #ff4f03;
+    color: red;
     margin-bottom: 5%;
 }
 
@@ -119,9 +138,10 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    border-left: 12px solid #ff4f03;
+    border-left: 12px solid red;
     margin-left: 5%;
     padding-left: -50px;
+    padding-bottom: 2rem;
     
 }
 
@@ -150,11 +170,11 @@ body{
     display: block;
     width: 120px;
     height: 120px;
-    border: 3px solid #ff4f03;
+    border: 3px solid red;
     border-radius: 50%;
     position: absolute;
     left: -1.8%;
-    background: #ff4f03;
+    background: red;
     
 }
 
@@ -166,7 +186,7 @@ body{
 }
 
 .para-color{
-    color: #ff4f03;
+    color: red;
     font-size: 1.8vw;
 }
 .para-white{
@@ -198,7 +218,7 @@ body{
 }
 
 .seo-recent-stories h1{
-    color: #ff4f03;
+    color: red;
     margin-bottom: 3rem;
     text-transform: capitalize;
 }
@@ -210,7 +230,7 @@ body{
 }
 
 .seo-recent-stories a{
-    color: #ff4f03;
+    color: red;
     text-decoration: none;
     padding: 1.5rem 3rem;
     border: 2px solid black;
@@ -253,7 +273,7 @@ body{
 
 .seo-connect-us h1{
     text-transform: capitalize;
-    color: #ff4f03;
+    color: red;
     font-size: 2.5vw;
     transform: translateY(-120%);
 }
@@ -270,13 +290,13 @@ body{
 
 .seo-connect-us a:hover{
     color: #fff;
-    background: #ff4f03;
+    background: red;
     border: none;
     transform: translateY(-70%);
-    border: 3px solid #ff4f03;
+    border: 3px solid red;
 }
 
-.footer-container{
+/* .footer-container{
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -293,40 +313,40 @@ body{
     align-items: center;
     font-size: 2vh;
     font-weight: 600;
-}
+} */
 
 
 
 @keyframes wordsChanger{
     0% {
         content: 'leads';
-        color: #ff4f30;
+        color: red;
         
     }
 
     20% {
         content: 'users';
-        color: #ff4f03;
+        color: red;
     }
 
     40% {
         content: 'revenue';
-        color: #ff4f03;
+        color: red;
     }
 
     60% {
         content: 'sales';
-        color: #ff4f03;
+        color: red;
     }
     
     80% {
         content: 'conversions';
-        color: #ff4f03;
+        color: red;
     }
 
     100% {
         content: 'leads';
-        color: #ff4f03;
+        color: red;
         
     }
 }
@@ -490,6 +510,7 @@ body{
         .seo-triangle{
             margin-top: -1.5px;
             height: 60px;
+            margin-bottom: 10rem;
         }
 
         .seo-container-2{

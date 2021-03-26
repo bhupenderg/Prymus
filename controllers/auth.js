@@ -1,4 +1,5 @@
 //const jwt = require('jsonwebtoken')
+const crypto = require('crypto')
 const Client = require('../models/clientModel')
 const bcrypt = require('bcryptjs');
 var postmark = require("postmark");
@@ -11,33 +12,60 @@ const sendgridTransport = require('nodemailer-sendgrid-transport')
 const transporter = nodemailer.createTransport(sendgridTransport({
     
     auth: {
-        //api_key: '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',
-        api_key: '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'
+            // api_key: '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',
+               api_key: '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'
     }
 }))
 
 exports.signup = async (req, res) => {
+
+    const errorVal = []
     try{
+        const email = req.body.email
+        const client = await Client.findOne({email})
+
+        if(client) {
+            res.send(`You are already registered with us. Please <a href = "/registerclient">Login</a> here to proceed!!`)
+        }
+
         const newClient = await Client.create(req.body)
+
+        
         
         if(!newClient){
-            return res.status(400).json({
+            return console.log(res.status(400).json({
                 status: "Fail",
                 data: {
                     msg: "You are already registered. Login to proceed!",
                     client: newClient
                 }
-            })
+            }))
+            // console.log("Hello")
+            // return res.send("You are already registered. Login to proceed.")
         }
 
+        console.log("test1")
         
             const mailed = await transporter.sendMail({
     
 
             to: req.body.email,
             from: 'info@prymus.co.in',
-            subject: 'Signed up succeeded',
-            html: '<h1 style = "color: green;"> You have successfully signed up! Now you can create your own marketing plan by signing in to your account.</h1>'
+            subject: 'You are Successfully Registered with Us 👏',
+            html: `
+
+            <div><td style="font-size:6px; line-height:10px; padding:0px 0px 0px 0px;" valign="top" align="center">
+            <img class="max-width" border="0" style="display:block; color:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif; font-size:16px; max-width:100% !important; width:100%; height:auto !important;" width="600" alt="" data-proportionally-constrained="true" data-responsive="true" src="http://cdn.mcauto-images-production.sendgrid.net/247288e1af428f2a/5947ccfd-0d26-4304-8552-4296679d01f6/4723x1740.png">
+          </td></div>
+            <div style="text-align: center; font-family: Veranda, CenturyGothic, AppleGothic;">
+			<h1 style="color: red; font-weight: bold">Dear ${req.body.name}</h1>
+			 <h1>Thank You for registering with us!!</h1> 
+		<p style="font-size: 2rem">Click here to <a href="https://www.prymus.co.in/registerclient" target="_blank">login</a>  into your account.</p>	<p>You can now begin your <h1>Advertising Journey</h1> with <h1 style="color: blue">PRYMUS BRANDCOM INDIA PVT LTD</h1> </p>		
+		</div>
+            `
+            
+          
+
         })
 
         if(!mailed){
@@ -47,6 +75,10 @@ exports.signup = async (req, res) => {
         else{
             console.log("Success")
         }
+
+        console.log("test2")
+
+    
 
         // isVerified()
 
@@ -75,15 +107,27 @@ exports.signup = async (req, res) => {
 
     }
     catch(err){
-        res.send(err)
+
+        console.log(err)
+        
+        if(err.errors.email){
+           return res.send(`Please provide a valid email. <a href = "/registerclient">Register</a> Here!!`)
+        }
+
+        res.send(`Server down. Please come back later.`)
     }
+        
+
+    }
+
+    
 
 
     // send email
 
     
     
-}
+
 
 
 // const isVerified = async function(req, res) {
@@ -104,7 +148,9 @@ exports.login = async (req, res, next) => {
         const password = req.body.password
     
         if(!email || !password){
-            return next(new Error("Please provide email and password"))
+            // return next(new Error("Please provide email and password"))
+
+            return res.send("Please provide valid email and password to login.")
         }
     
         const client = await Client.findOne({email: email}).select('+password')
@@ -182,12 +228,104 @@ exports.mustBeLoggedIn = function(req, res, next) {
     }
 
     else{
-        res.redirect('/connect-with-us')
+        res.redirect('/registerclient')
     }
 }
 
 exports.logout = (req, res) => {
     req.session.destroy(function() {
-        res.redirect('/connect-with-us')
+        res.redirect('/registerclient')
     })
+}
+
+
+
+exports.forgotPassword = async (req, res, next) => {
+
+    try{
+        const client = await Client.findOne({ email: req.body.email })
+
+    if(!client) {
+        res.send("There is no user with email address.")
+    }
+
+
+    const resetToken =  client.createPasswordResetToken()
+    await client.save({ validateBeforeSave: false })
+
+
+    const resetURL = `${req.protocol}://${req.get(
+        'host'
+    )}/clients/resetPassword/${resetToken}`;
+
+    const message = `${resetURL}`
+    const mailed = await transporter.sendMail({
+    
+
+        to: req.body.email,
+        from: 'info@prymus.co.in',
+        subject: 'Your password request token only valid for 10 mins',
+        html: `
+                ${message}
+        `
+        
+      
+
+    })
+
+    if(!mailed){
+        console.log("Fail")
+    }
+
+    else{
+        console.log("Success")
+    }
+
+    res.send("Your password reset token has been sent to your email.")
+    }   
+
+    catch(err) {
+
+        client.passwordResetToken = undefined
+        client.passwordResetExpires = undefined
+        await client.save({ validateBeforeSave: false })
+        res.send("There was some error sending email. Try again later!")
+    }
+
+}
+exports.resetPassword = async (req, res, next) => {
+
+    try{
+        
+    // get user based on token
+    const hashedToken = crypto.createHash('sha256').update(req.params.token).digest('hex')
+
+    const client = await Client.findOne({ 
+        passwordResetToken: hashedToken,
+        passwordResetExpires: { $gt: Date.now() } 
+    });
+
+    // if user is there and token is not expired, set new password
+
+    if(!client) {
+        return res.send("Token is invalid or has expired.")
+    }
+
+    client.password = req.body.password
+    client.passwordConfirm = req.body.passwordConfirm
+    client.passwordResetToken = undefined
+    client.passwordResetExpires = undefined
+
+    await client.save();
+    // update changed passwordat property for the user
+
+
+    // log the user in
+    }
+
+    catch(err) {
+        res.send(err)
+    }
+
+
 }
